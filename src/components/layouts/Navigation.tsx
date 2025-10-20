@@ -2,8 +2,8 @@
 
 export default function Navigation() {
     return (
-        <nav className="absolute z-10 top-5 max-w-7xl w-full p-5 rounded-full flex justify-between">
-            <img src="Arvo_logo_rb.png" alt="" className=" h-8"/>
+        <nav className="absolute z-10 top-5 left-1/2 transform -translate-x-1/2 max-w-7xl w-full p-5 rounded-full flex justify-between gap-6">
+            <img src="Arvo_logo_rb.png" alt="" className="h-8"/>
             <div className="flex gap-5 text-white">
                 <a href="#" className="cursor-pointer hover:text-green-primary hover:underline underline-offset-5s">Home</a>
                 <a href="#" className="cursor-pointer hover:text-green-primary hover:underline underline-offset-5s">Projects</a>
