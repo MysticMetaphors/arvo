@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type ArvoCardProps = {
   title?: string;
@@ -21,9 +22,11 @@ export default function ArvoCard({ title = '', description = '', image = '', ico
              transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
              hover:shadow-green-primary/20"
     >
-      <img
-        src={image}
+      <Image
+        src={`/${image}`}
         alt={title}
+        width={800}
+        height={800}
         className="w-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-70"
       />
 
@@ -37,7 +40,7 @@ export default function ArvoCard({ title = '', description = '', image = '', ico
               <div className="lg:flex gap-4 hidden">
                 {icons ?
                   icons.map((icon, i) => (
-                    <img key={i} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-original.svg`} className="lg:w-8 md:w-6 " />
+                    <Image key={i} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-original.svg`} className="lg:w-8 md:w-6 " />
                   ))
                   : ''}
 

@@ -16,11 +16,11 @@ export const BackgroundRippleEffect = ({
     col: number;
   } | null>(null);
   const [rippleKey, setRippleKey] = useState(0);
-  const ref = useRef<any>(null);
+  // const ref = useRef<any>(null);
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       className={cn(
         "absolute inset-0 h-full w-full",
         "[--cell-border-color:var(--color-neutral-700)] [--cell-fill-color:var(--color-green-900)] [--cell-shadow-color:var(--color-green-800)]",

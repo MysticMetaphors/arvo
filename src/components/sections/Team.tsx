@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Team() {
   return (
@@ -37,8 +38,9 @@ export default function Team() {
               viewport={{ once: true }}             
               className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700"
             >
-              <img
-                src="MY_IMG.jpg"
+              <Image
+                width={800} height={800}
+                src="/MY_IMG.jpg"
                 alt="Team member"
                 className="w-full h-full sm:w-30 sm:h-30 rounded-lg object-cover mb-4 sm:mb-0"
               />

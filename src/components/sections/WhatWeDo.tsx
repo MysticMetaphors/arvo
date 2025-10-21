@@ -4,12 +4,36 @@ import { motion } from "framer-motion";
 
 export default function WhatWeDo() {
   const services = [
-    {icon: "globe",service: "Websites & Landing Pages"},
-    {icon: "bag-shopping",service: "E-commerce Development"},
-    {icon: "bars-progress",service: "Admin Systems & Dashboards"},
-    {icon: "plug",service: "AI & Web3 Integrations"},
-    {icon: "mobile",service: "Mobile App Development"},
-    {icon: "pen-nib",service: "Custom Web Applications"},
+    {
+      icon: "globe",
+      service: "Websites & Landing Pages",
+      description: "We craft responsive, high-converting websites and landing pages designed to make a strong first impression and drive results."
+    },
+    {
+      icon: "bag-shopping",
+      service: "E-commerce Development",
+      description: "Build powerful online stores with secure payment systems, intuitive user experience, and efficient product management tools."
+    },
+    {
+      icon: "bars-progress",
+      service: "Admin Systems & Dashboards",
+      description: "Custom-built dashboards that help you track, manage, and analyze your business operations with real-time data insights."
+    },
+    {
+      icon: "plug",
+      service: "AI & Web3 Integrations",
+      description: "Integrate cutting-edge AI and blockchain solutions to enhance automation, personalization, and digital trust in your platform."
+    },
+    {
+      icon: "mobile",
+      service: "Mobile App Development",
+      description: "Create cross-platform mobile apps with smooth performance, engaging design, and seamless user experience."
+    },
+    {
+      icon: "pen-nib",
+      service: "Custom Web Applications",
+      description: "Develop tailored web applications built to meet your specific business needs — from concept to deployment."
+    }
   ];
 
   return (
@@ -55,7 +79,7 @@ export default function WhatWeDo() {
                 {service.service}
               </h3>
               <p className="text-gray-400 text-md">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nihil cupiditate laboriosam ipsam accusamus.
+                {service.description}
               </p>
             </motion.div>
           ))}

@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 export default function MissionVision() {
   return (
     <section className="relative bg-black-primary overflow-hidden">
-      {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-2xl bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
-      <div className="mx-auto px-6 md:px-20 py-10 z-10">
-        <div className="text-center grid grid-cols-1 sm:grid grid-cols-2 gap-8 mb-8 2xl:mb-16">
+      {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full lg:w-2xl bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
+      <div className="mx-auto px-6 lg:px-20 py-10 z-10">
+        <div className="text-center flex flex-col md:flex-row gap-8 mb-8 2xl:mb-16">
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative overflow-hidden w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
+            className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
             <BackgroundRippleEffect />
             <h2 className="text-xl text-green-400 mb-4 font-bold">Mission</h2>
             <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
@@ -24,7 +24,7 @@ export default function MissionVision() {
             </p>
             <div className="flex relative items-center p-8 px-16">
               <div className="absolute z-1 top-30 h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></div>
-              <div className="absolute top-20 z-10 -right-0 shadow-[0_0_20px_#00FF99] rounded-3xl">
+              <div className="absolute top-10 md:top-20 z-10 -right-15 md:-right-0 shadow-[0_0_20px_#00FF99] rounded-3xl">
                 <Suspense fallback={''}>
                   <Phone>
                   <header className="h-14 bg-gray-900 border-b border-gray-700 flex items-center justify-between px-4">
@@ -96,7 +96,7 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative overflow-hidden w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
+            className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
             <BackgroundRippleEffect />
             <div className="z-10">
               <h2 className="text-xl z-10 text-green-400 mb-4 font-bold">Vision</h2>
@@ -104,7 +104,7 @@ export default function MissionVision() {
                 scalable, and affordable technology that drives long-term growth and community impact.
               </p>
             </div>
-            <div className="flex relative items-center p-4 px-16">
+            <div className="flex relative items-center p-4 px-0 md:px-16">
               <div className="relative flex justify-between mx-auto my-6 w-full max-w-lg">
                 <div className="z-10 text-2xl p-3 px-4.5 rounded-sm bg-green-400 text-gray-900 shadow-[0_0_20px_#00FF99]">
                   <i className="fa-solid fa-lightbulb"></i>

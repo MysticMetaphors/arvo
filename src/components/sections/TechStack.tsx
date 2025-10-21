@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function TechStack() {
   const stacks = [
@@ -64,7 +65,7 @@ export default function TechStack() {
               className="flex flex-col items-center justify-center bg-gray-900 border border-gray-800 rounded-xl 
                          p-6 w-32 h-32 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg hover:shadow-green-primary/20"
             >
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" className="w-14 mb-3" />
+              <Image alt="python" width={800} height={800} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" className="w-14 mb-3" />
               <span className="text-gray-300 text-sm font-medium">Python</span>
             </motion.div>
             <motion.div
@@ -75,7 +76,7 @@ export default function TechStack() {
               className="flex flex-col items-center justify-center bg-gray-900 border border-gray-800 rounded-xl 
                          p-6 w-32 h-32 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg hover:shadow-green-primary/20"
             >
-              <img src="Wix.png" className="w-14 mb-3" />
+              <Image alt="wix" width={800} height={800} src="/Wix.png" className="w-14 mb-3" />
               <span className="text-gray-300 text-sm font-medium">Wix</span>
             </motion.div>
             <motion.div
@@ -86,7 +87,7 @@ export default function TechStack() {
               className="flex flex-col items-center justify-center bg-gray-900 border border-gray-800 rounded-xl 
                          p-6 w-32 h-32 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg hover:shadow-green-primary/20"
             >
-              <img src="Shopify.png" className="w-14 mb-3" />
+              <Image alt="shopify" width={800} height={800} src="/Shopify.png" className="w-14 mb-3" />
               <span className="text-gray-300 text-sm font-medium">Shopify</span>
             </motion.div>
             <motion.div
@@ -97,7 +98,7 @@ export default function TechStack() {
               className="flex flex-col items-center justify-center bg-gray-900 border border-gray-800 rounded-xl 
                          p-6 w-32 h-32 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg hover:shadow-green-primary/20"
             >
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" className="w-14 mb-3" />
+              <Image alt="next" width={800} height={800} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" className="w-14 mb-3" />
               <span className="text-gray-300 text-sm font-medium">Next.js</span>
             </motion.div>
           </div>
