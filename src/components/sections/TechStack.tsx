@@ -6,7 +6,6 @@ export default function TechStack() {
   const stacks = [
     { name: "Laravel", icon: "devicon-laravel-plain colored" },
     { name: "CodeIgniter", icon: "devicon-codeigniter-plain colored" },
-    { name: "Next.js", icon: "devicon-nextjs-plain" },
     { name: "React.js", icon: "devicon-react-original colored" },
     { name: "Vue.js", icon: "devicon-vuejs-plain colored" },
     { name: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
@@ -99,7 +98,7 @@ export default function TechStack() {
                          p-6 w-32 h-32 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg hover:shadow-green-primary/20"
             >
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" className="w-14 mb-3" />
-              <span className="text-gray-300 text-sm font-medium">Shopify</span>
+              <span className="text-gray-300 text-sm font-medium">Next.js</span>
             </motion.div>
           </div>
         </div>

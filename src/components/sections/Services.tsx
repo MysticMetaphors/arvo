@@ -9,7 +9,7 @@ export default function Services() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-20 lg:px-6">
           <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
             <h2 className="mb-4 text-4xl leading-tight font-extrabold text-white"><span className="text-green-primary">Our Services</span></h2>
-            <p className="mb-5 text-gray-400 sm:text-xl">Choose a plan that fits your needs — from getting started to full-scale growth.</p>
+            <p className="mb-5 text-gray-400 sm:text-md">Choose a plan that fits your needs — from getting started to full-scale growth.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 gap-10">

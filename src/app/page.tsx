@@ -1,4 +1,6 @@
+import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
+import MissionVision from "@/components/sections/MissionVision";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import Team from "@/components/sections/Team";
@@ -14,7 +16,8 @@ export default function Home() {
       <Services />
       <TechStack />
       <Team />
-      {/* <Contact /> */}
+      <MissionVision />
+      <Contact />
     </div>
   );
 }
