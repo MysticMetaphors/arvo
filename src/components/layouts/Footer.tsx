@@ -68,28 +68,7 @@ export default function Footer() {
                                         rel="noopener noreferrer"
                                         className="text-blue-400"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            className="w-6 h-6"
-                                        >
-                                            <path
-                                                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
-                                                2.76 2.24 5 5 5h14c2.76 0 5-2.24 
-                                                5-5v-14c0-2.76-2.24-5-5-5zm-11 
-                                                19h-3v-10h3v10zm-1.5-11.268c-.966 
-                                                0-1.75-.784-1.75-1.75s.784-1.75 
-                                                1.75-1.75 1.75.784 
-                                                1.75 1.75-.784 1.75-1.75 
-                                                1.75zm13.5 11.268h-3v-5.604c0-1.337-.027-3.063-1.867-3.063-1.869 
-                                                0-2.156 1.46-2.156 
-                                                2.966v5.701h-3v-10h2.879v1.367h.041c.401-.757 
-                                                1.379-1.555 2.84-1.555 3.039 
-                                                0 3.6 2.001 3.6 
-                                                4.605v5.583z"
-                                            />
-                                        </svg>
+                                        <i className="fa-brands fa-linkedin text-2xl"></i>
                                     </a>
 
                                 </li>
