@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Services() {
   return (
     <>
@@ -8,9 +12,16 @@ export default function Services() {
             <p className="mb-5 text-gray-400 sm:text-xl">Choose a plan that fits your needs — from getting started to full-scale growth.</p>
           </div>
 
-          <div className="space-y-2 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 gap-10">
 
-            <div className="flex flex-col p-10 mx-auto max-w-lg text-center bg-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }} className="flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg text-center bg-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
               <h3 className="mb-4 text-3xl text-white font-bold">Basic</h3>
               <p className="text-gray-400 sm:text-md">Best option for personal use & for your next project.</p>
 
@@ -41,9 +52,17 @@ export default function Services() {
               </ul>
 
               <a href="#" className="text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
-            </div>
+            </motion.div>
 
-            <div className="relative flex flex-col p-10 mx-auto max-w-lg text-center bg-gradient-to-b from-green-500/20 via-gray-900 to-gray-900 text-gray-900 rounded-lg border-2 border-green-400/70 shadow-xl ring-2 ring-green-500/30">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}          
+              whileInView={{ opacity: 1, y: 0 }}       
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg text-center bg-gradient-to-b from-green-500/20 via-gray-900 to-gray-900 text-gray-900 rounded-lg border-2 border-green-400/70 shadow-xl ring-2 ring-green-500/30">
               <span className="absolute top-3 right-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Most Popular
               </span>
@@ -85,10 +104,17 @@ export default function Services() {
               >
                 Get started
               </a>
-            </div>
+            </motion.div>
 
-
-            <div className="flex flex-col p-10 mx-auto max-w-lg text-center bg-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}          
+              whileInView={{ opacity: 1, y: 0 }}       
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg text-center bg-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
               <h3 className="mb-4 text-3xl text-white font-bold">Advance</h3>
               <p className="text-gray-400 sm:text-md">Best for large scale uses and extended redistribution rights.</p>
 
@@ -118,24 +144,33 @@ export default function Services() {
                 ))}
               </ul>
               <a href="#" className="text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
-            </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}          
+              whileInView={{ opacity: 1, y: 0 }}       
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full max-w-sm lg:max-w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-green-500/30 rounded-lg shadow-lg text-center p-10 text-white">
+              <h3 className="text-3xl font-bold mb-4 text-green-primary">Need a Custom Plan?</h3>
+              <p className="text-gray-300 mb-6">
+                Not sure which package fits your needs? Let’s build a plan that works just for you.
+              </p>
+
+              <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center gap-4">
+                <button className="px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+                  Contact
+                </button>
+                <button className="px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </motion.div>
           </div>
           {/*  */}
-          <div className="mt-10 mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-green-500/30 rounded-2xl shadow-lg text-center p-10 text-white">
-            <h3 className="text-3xl font-bold mb-4 text-green-primary">Need a Custom Plan?</h3>
-            <p className="text-gray-300 mb-6">
-              Not sure which package fits your needs? Let’s build a plan that works just for you.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
-                Contact
-              </button>
-              <button className="px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
 
         </div>
       </section>
