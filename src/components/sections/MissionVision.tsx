@@ -17,7 +17,7 @@ export default function MissionVision() {
             transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
-            <BackgroundRippleEffect />
+            <BackgroundRippleEffect cols={11}/>
             <h2 className="text-xl text-green-400 mb-4 font-bold">Mission</h2>
             <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
               businesses to launch, grow, and adapt faster in today’s digital-first economy
@@ -35,26 +35,21 @@ export default function MissionVision() {
                     </div>
                   </header>
 
-                  <nav className="bg-gray-900 border-b border-gray-700 p-2 flex justify-between">
+                  <nav className="bg-gray-900 border-b border-gray-700 p-4 flex justify-between">
                     <div className="flex flex-col items-center text-slate-300 text-xs">
-                      <i className="fa-solid text-green-primary fa-layer-group"></i>
-                      Overview
+                      <i className="fa-solid text-green-primary fa-layer-group"></i>  
                     </div>
                     <div className="flex flex-col items-center text-slate-300 text-xs">
                       <i className="fa-solid text-green-primary fa-code-merge"></i>
-                      Deployments
                     </div>
                     <div className="flex flex-col items-center text-slate-300 text-xs">
                       <i className="fa-solid text-green-primary fa-chart-simple"></i>
-                      Analytics
                     </div>
                     <div className="flex flex-col items-center text-slate-300 text-xs">
                       <i className="fa-solid text-green-primary fa-user"></i>
-                      Users
                     </div>
                     <div className="flex flex-col items-center text-slate-300 text-xs">
                       <i className="fa-solid text-green-primary fa-gear"></i>
-                      Settings
                     </div>
                   </nav>
 
@@ -97,7 +92,7 @@ export default function MissionVision() {
             transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
-            <BackgroundRippleEffect />
+            <BackgroundRippleEffect cols={11}/>
             <div className="z-10">
               <h2 className="text-xl z-10 text-green-400 mb-4 font-bold">Vision</h2>
               <p className="text-lg z-10 text-justify">A future where every business, no matter the size, has access to smart,
