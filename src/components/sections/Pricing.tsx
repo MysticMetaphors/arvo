@@ -31,12 +31,7 @@ export default function Pricing() {
     "Role-based admin panels",
     "Workflow Automations",
   ]
-  // const custom = [
-  //   "Custom Design & Branding",
-  //   "Custom Website Features",
-  //   "Unlimited Pages",
-  //   "Marketing & Performance",
-  // ]
+
   return (
     <>
       <section id="pricing" className="bg-black-primary">
@@ -237,7 +232,7 @@ export default function Pricing() {
               }}
               viewport={{ once: true, amount: 0.2 }}
               className="w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto">
-              <DetailedPricingComparison />
+              <DetailedPricingComparison/>
             </motion.div>
             : ''
           }

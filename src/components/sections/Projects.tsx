@@ -61,9 +61,9 @@ export default function Projects() {
             ))}
           </div>
           <div className="flex w-full justify-center mt-10">
-            <button className="cursor-pointer px-6 py-2 rounded-full bg-green-400 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+            <a href="/projects" className="cursor-pointer px-6 py-2 rounded-full bg-green-400 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
               View More
-            </button>
+            </a>
           </div>
         </div>
       </section>

@@ -9,13 +9,23 @@ type ArvoCardProps = {
   image?: string;
   icons?: string[];
   index?: number;
+  onView?: boolean;
 };
 
-export default function ArvoCard({ title = '', description = '', image = '', icons = [], index = 0 }: ArvoCardProps) {
+export default function ArvoCard({ title = '', description = '', image = '', icons = [], index = 0, onView }: ArvoCardProps) {
+  const animationProps = onView
+    ? {
+      whileInView: { opacity: 1, y: 0 },
+      viewport: { once: true },
+    }
+    : {
+      animate: { opacity: 1, y: 0 },
+    };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      {...animationProps}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
       viewport={{ once: true }}
       className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden 

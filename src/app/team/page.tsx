@@ -1,44 +1,57 @@
-"use client";
+"use client"
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Team() {
+export default function team() {
   return (
-    <section id="team" className="relative bg-black-primary text-white py-16">
+    <section id="projects" className="relative bg-black-primary overflow-hidden">
       <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 lg:py-20 lg:px-6 gap-18 items-center">
-        {/* Left content */}
-        <div className="h-full z-10">
-          <div>
-            <h2 className="mb-4 text-4xl leading-tight font-extrabold text-white">Who <span className="text-green-primary">we</span> are.</h2>
-            <p className="text-gray-400 text-lg text-justify mb-8">
-              At Arvo, we focus on markets where technology, innovation, and design
-              unlock long-term value. Working here means you’ll collaborate with talented professionals,
-              solve challenging problems, and grow together. Along the way, you may
-              also make lifelong friends and enjoy opportunities that inspire growth.
-            </p>
-            <a href="/team" className="px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
-              See Team
-            </a>
-          </div>
-        </div>
-        <div className="space-y-6 z-10">
-          {Array.from({ length: 3 }, (_, i) =>
+      <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-4 text-4xl leading-tight font-extrabold text-white"
+        >
+          Our <span className="text-green-primary">Team</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-gray-400 mx-auto mb-6"
+        >
+          At Arvo, we focus on markets where technology, innovation, and design
+          unlock long-term value.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
+
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:px-0 lg:pt-12 pt-8 sm:p-6">
+          {Array.from({ length: 12 }, (_, i) =>
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: 50 }}      
-              whileInView={{ opacity: 1, x: 0 }}    
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
-                delay: i * 0.2,                     
+                delay: i * 0.10,
                 ease: "easeOut",
               }}
-              viewport={{ once: true }}             
+              viewport={{ once: true }}
               className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700 
-                        transition-all duration-500 ease-out hover:-translate-y-2
-                        hover:shadow-lg hover:shadow-green-primary/20"
+                                  transition-all duration-500 ease-out hover:-translate-y-2
+                                  hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 width={800} height={800}
@@ -76,6 +89,7 @@ export default function Team() {
           )}
         </div>
       </div>
+
     </section>
   )
 }

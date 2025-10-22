@@ -1,6 +1,10 @@
 "use client";
 
-export default function DetailedPricingComparison() {
+type DetailedPricingProps = {
+  maxWidth?: string;
+};
+
+export default function DetailedPricingComparison({maxWidth = '900px'}: DetailedPricingProps) {
   const plans = [
     {
       name: "Basic",
@@ -45,7 +49,7 @@ export default function DetailedPricingComparison() {
 
   return (
     <div className="overflow-x-auto w-full">
-      <table className="min-w-[900px] border border-gray-800 overflow-hidden">
+      <table className={`min-w-[${maxWidth}] border border-gray-800 overflow-hidden`}>
         <thead className="bg-gray-900 text-gray-300">
           <tr>
             <th className="py-4 px-6 text-left">Features</th>

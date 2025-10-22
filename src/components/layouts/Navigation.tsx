@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navigation() {
@@ -10,15 +11,36 @@ export default function Navigation() {
       <img src="Arvo_logo_rb.png" alt="Logo" className="h-8 z-110 " />
 
       <div className="hidden md:flex gap-6 text-white">
-        {["Home", "Projects", "Team", "Pricing", "Services", "Contact"].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all"
-          >
-            {item}
-          </a>
-        ))}
+        <Link
+          href="/"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Home
+        </Link>
+        <Link
+          href="/projects"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Projects
+        </Link>
+        <Link
+          href="/team"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Team
+        </Link>
+        <Link
+          href="/pricing"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Pricing
+        </Link>
+        <Link
+          href="/services"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Services
+        </Link>
+        <Link
+          href="/contact"
+          className="cursor-pointer hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          Contact
+        </Link>
       </div>
 
       <button
@@ -30,16 +52,48 @@ export default function Navigation() {
 
       {isOpen && (
         <div className="absolute border border-green-primary/50 pt-20 -top-10 left-0 w-full bg-gray-900/90 backdrop-blur-md mt-3 py-5 rounded-lg flex flex-col items-center gap-4 text-white md:hidden">
-          {["Home", "Projects", "Team", "Pricing", "Services", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="cursor-pointer hover:text-green-primary transition-all"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
+          <Link
+            href="/"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/projects"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Projects
+          </Link>
+          <Link
+            href="/team"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Team
+          </Link>
+          <Link
+            href="/pricing"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/services"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            href="/contact"
+            className="cursor-pointer hover:text-green-primary transition-all"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
       )}
     </nav>
