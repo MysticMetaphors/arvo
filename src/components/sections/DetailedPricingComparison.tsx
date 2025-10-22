@@ -1,10 +1,10 @@
 "use client";
 
 type DetailedPricingProps = {
-  maxWidth?: string;
+  setMinWidth?: string;
 };
 
-export default function DetailedPricingComparison({maxWidth}: DetailedPricingProps) {
+export default function DetailedPricingComparison({setMinWidth}: DetailedPricingProps) {
   const plans = [
     {
       name: "Basic",
@@ -49,7 +49,8 @@ export default function DetailedPricingComparison({maxWidth}: DetailedPricingPro
 
   return (
     <div className="overflow-x-auto w-full">
-      <table className={`min-w-[${maxWidth}] border border-gray-800 overflow-hidden`}>
+      
+      <table style={{minWidth: setMinWidth}} className="border border-gray-800 overflow-hidden">
         <thead className="bg-gray-900 text-gray-300">
           <tr>
             <th className="py-4 px-6 text-left">Features</th>

@@ -232,7 +232,7 @@ export default function Pricing() {
               }}
               viewport={{ once: true, amount: 0.2 }}
               className="w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto">
-              <DetailedPricingComparison maxWidth="900px"/>
+              <DetailedPricingComparison setMinWidth="900px"/>
             </motion.div>
             : ''
           }
