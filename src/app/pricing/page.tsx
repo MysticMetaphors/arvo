@@ -235,7 +235,7 @@ export default function pricing() {
           viewport={{ once: true }}
           className="mb-4 text-4xl leading-tight font-extrabold text-white lg:pt-20 pt-8"
         >
-          Choose the <span className="text-green-primary">Perfect Plan</span> for Your Needs
+          Plan Comparison <span className="text-green-primary">Overview</span>
         </motion.h2>
 
         <motion.p
@@ -245,7 +245,7 @@ export default function pricing() {
           viewport={{ once: true }}
           className="text-gray-400 mx-auto mb-6"
         >
-          A collection of projects that reflect our passion for clean design and smart development.
+          Explore each plan’s features side by side to find the one that fits your goals best.
         </motion.p>
 
         <motion.div

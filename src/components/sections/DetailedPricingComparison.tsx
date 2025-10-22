@@ -4,7 +4,7 @@ type DetailedPricingProps = {
   maxWidth?: string;
 };
 
-export default function DetailedPricingComparison({maxWidth = '900px'}: DetailedPricingProps) {
+export default function DetailedPricingComparison({maxWidth}: DetailedPricingProps) {
   const plans = [
     {
       name: "Basic",
