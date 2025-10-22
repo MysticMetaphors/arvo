@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section className="relative bg-black-primary">
+    <section id="contact" className="relative bg-black-primary">
 
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 max-w-7xl">
         <div className="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-2 gap-7">
@@ -62,13 +62,13 @@ export default function Contact() {
               {/* </div> */}
             </div>
           </div>
-          <div className="col-span-3 z-10">{/* bg-radial-[at_100%_100%] from-green-primary from-5% to-gray-900 to-40%  */}
+          <div className="col-span-3 z-10 pl-0 lg:pl-20">{/* bg-radial-[at_100%_100%] from-green-primary from-5% to-gray-900 to-40%  */}
             <motion.form
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
-              action="" className="bg-gradient-to-t from-green-primary/20 via-gray-900 to-gray-900 border border-gray-700 rounded-lg h-full w-full z-10 p-10 flex flex-col gap-5">
+              action="" className="bg-gradient-to-t from-green-primary/20 via-gray-900 to-gray-900 border border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="firstname" className="block text-white mb-2">Firstname</label>
@@ -77,7 +77,7 @@ export default function Contact() {
                     id="firstname"
                     name="firstname"
                     placeholder="Enter your firstname"
-                    className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                   />
                 </div>
 
@@ -88,7 +88,7 @@ export default function Contact() {
                     id="lastname"
                     name="lastname"
                     placeholder="Enter your lastname"
-                    className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                   />
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                   />
                 </div>
 
@@ -112,7 +112,7 @@ export default function Contact() {
                     id="number"
                     name="number"
                     placeholder="Enter your phone number"
-                    className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                   />
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                   name="message"
                   placeholder="Write your message here..."
                   rows={5}
-                  className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                 ></textarea>
               </div>
 

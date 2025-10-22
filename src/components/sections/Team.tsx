@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <section className="relative bg-black-primary text-white py-16">
+    <section id="team" className="relative bg-black-primary text-white py-16">
       <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 lg:py-20 lg:px-6 gap-18 items-center">
@@ -36,7 +36,9 @@ export default function Team() {
                 ease: "easeOut",
               }}
               viewport={{ once: true }}             
-              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700"
+              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700 
+                        transition-all duration-500 ease-out hover:-translate-y-2
+                        hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 width={800} height={800}

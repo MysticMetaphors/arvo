@@ -26,17 +26,14 @@ export default function HomePage() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+          <a href="#contact" className="px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
             Let’s Talk
-          </button>
-          <button className="px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+          </a>
+          <a href="#projects" className="px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
             Our Work
-          </button>
+          </a>
         </div>
 
-        {/* <p className="mt-14 text-gray-400 tracking-wider text-lg">
-          Smart Development. Clear Delivery. Business Growth.
-        </p> */}
       </motion.div>
       <AuroraBackground />
       <div className="absolute bottom-0 left-0 z-40 w-full h-14 bg-linear-to-t from-black-primary to-transparent"></div>

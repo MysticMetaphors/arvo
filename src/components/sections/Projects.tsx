@@ -29,11 +29,11 @@ export default function Projects() {
 
   return (
     <>
-      <section className="relative bg-black-primary overflow-hidden">
+      <section id="projects" className="relative bg-black-primary overflow-hidden">
         <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
 
         <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 z-10">
-          <div className="text-center items-center flex flex-col mb-8 lg:mb-16">
+          <div className="text-center items-center flex flex-col">
             {/* Section Header */}
             <motion.h2
               initial={{ opacity: 0, y: 30 }}

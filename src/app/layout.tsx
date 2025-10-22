@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/layouts/Footer";
 import Navigation from "@/components/layouts/Navigation";
+import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "Arvo",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <ArvoScrollToTopButton />
       </body>
     </html>
   );
