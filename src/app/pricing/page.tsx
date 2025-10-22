@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion";
 import DetailedPricingComparison from "@/components/sections/DetailedPricingComparison";
-import { useState } from "react";
 
 export default function pricing() {
-  const [showComparison, setShowComparison] = useState(false)
 
   const basic = [
     "Custom Page Design",
@@ -229,35 +227,37 @@ export default function pricing() {
             </div>
           </motion.div>
         </div>
+        
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-4 text-4xl leading-tight font-extrabold text-white lg:pt-20 pt-8"
+        >
+          Choose the <span className="text-green-primary">Perfect Plan</span> for Your Needs
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-gray-400 mx-auto mb-6"
+        >
+          A collection of projects that reflect our passion for clean design and smart development.
+        </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-          }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="my-6 w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto">
-          <button onClick={() => setShowComparison(!showComparison)} className={`cursor-pointer px-8 py-3 w-full rounded-lg ${!showComparison ? 'border border-green-400 bg-green-400/80 hover:bg-green-400/60 text-black' : 'border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700'} transition-all duration-300`}>
-            {!showComparison ? 'Show' : 'Close'} Detailed Plan Comparison
-          </button>
-        </motion.div>
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
-        {showComparison ?
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-            }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto">
-            <DetailedPricingComparison maxWidth="1423px"/>
-          </motion.div>
-          : ''
-        }
+        <div className="lg:py-12 py-8">
+          <DetailedPricingComparison maxWidth="1423px" />
+        </div>
       </div>
 
     </section>

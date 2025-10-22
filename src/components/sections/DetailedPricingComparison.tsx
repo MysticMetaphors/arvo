@@ -31,7 +31,7 @@ export default function DetailedPricingComparison({maxWidth = '900px'}: Detailed
     },
     {
       name: "Advance",
-      price: "₱599,999 – ₱999,999",
+      price: "₱599,999 - ₱999,999",
       features: [
         "Responsive Design",
         "SEO Setup",
@@ -147,7 +147,7 @@ export default function DetailedPricingComparison({maxWidth = '900px'}: Detailed
             <td className="py-4 px-6 text-center">
               <a
                 href="#"
-                className="mt-auto text-white bg-gradient-to-r from-gray-900 to-gray-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+                className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
               </a>
@@ -155,7 +155,7 @@ export default function DetailedPricingComparison({maxWidth = '900px'}: Detailed
             <td className="py-4 px-6 text-center">
               <a
                 href="#"
-                className="mt-auto text-white bg-gradient-to-r from-gray-900 to-gray-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+                className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
               </a>
@@ -163,7 +163,7 @@ export default function DetailedPricingComparison({maxWidth = '900px'}: Detailed
             <td className="py-4 px-6 text-center">
               <a
                 href="#"
-                className="mt-auto text-white bg-gradient-to-r from-gray-900 to-gray-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+                className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
               </a>

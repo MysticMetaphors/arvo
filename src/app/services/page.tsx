@@ -73,7 +73,7 @@ export default function services() {
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
               className="group border border-gray-700 rounded-lg bg-gray-900 hover:bg-gray-800
