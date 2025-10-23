@@ -58,7 +58,13 @@ export default function Projects() {
           </div>
           <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:p-12 md:p-2 sm:p-6">
             {projects.map((project, i) => (
-              <ArvoCard key={i} index={i} {...project} icons={["react", "tailwindcss", "html5"]} />
+              <ArvoCard 
+              type="design" 
+              onView={true} 
+              key={i} 
+              index={i} 
+              {...project} 
+              icons={["react", "tailwindcss", "html5"]} />
             ))}
           </div>
           <div className="flex w-full justify-center mt-10">

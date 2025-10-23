@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Arvo",
     images: [
       {
-        url: "https://arvo-alpha.vercel.app/og-image.png",
+        url: "https://arvo-alpha.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Arvo Web Studio",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Arvo | Creative Web Solutions & Development Studio",
     description:
       "Arvo creates exceptional web and e-commerce experiences through design, performance, and innovation.",
-    images: ["https://arvo-alpha.vercel.app/og-image.png"],
+    images: ["https://arvo-alpha.vercel.app/og-image.jpg"],
     creator: "@arvo_team",
   },
   icons: {
@@ -52,9 +52,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://arvo-alpha.vercel.app/",
   },
-  themeColor: "#0f172a",
 };
 
+export const viewport = {
+  themeColor: "#0f172a",
+};
 
 export default function RootLayout({
   children,

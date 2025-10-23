@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 type ArvoCardProps = {
+  type?: string;
   title?: string;
   description?: string;
   image?: string;
@@ -12,7 +13,7 @@ type ArvoCardProps = {
   onView?: boolean;
 };
 
-export default function ArvoCard({ title = '', description = '', image = '', icons = [], index = 0, onView }: ArvoCardProps) {
+export default function ArvoCard({ type = '', title = '', description = '', image = '', icons = [], index = 0, onView }: ArvoCardProps) {
   const animationProps = onView
     ? {
       whileInView: { opacity: 1, y: 0 },
@@ -32,6 +33,12 @@ export default function ArvoCard({ title = '', description = '', image = '', ico
              transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
              hover:shadow-green-primary/20"
     >
+      {type == "design" ?
+        <span className="absolute top-3 right-3 z-10 px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
+          Design
+        </span> : 'err'
+      }
+
       <Image
         src={`/${image}`}
         alt={title}
