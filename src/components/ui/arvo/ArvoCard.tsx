@@ -34,9 +34,9 @@ export default function ArvoCard({ type = '', title = '', description = '', imag
              hover:shadow-green-primary/20"
     >
       {type == "design" ?
-        <span className="absolute top-3 right-3 z-10 px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
+        <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
           Design
-        </span> : 'err'
+        </span> : ''
       }
 
       <Image
