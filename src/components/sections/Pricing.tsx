@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import DetailedPricingComparison from "./DetailedPricingComparison";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Pricing() {
   const [showComparison, setShowComparison] = useState(false)
@@ -198,9 +199,9 @@ export default function Pricing() {
               </p>
 
               <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="cursor-pointer px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+                <Link href="/contact" className="cursor-pointer px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
                   Contact
-                </button>
+                </Link>
                 <button className="cursor-pointer px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
                   Learn More
                 </button>

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import ArvoCard from "../ui/arvo/ArvoCard";
 import { motion } from "framer-motion";
 
@@ -61,9 +62,9 @@ export default function Projects() {
             ))}
           </div>
           <div className="flex w-full justify-center mt-10">
-            <a href="/projects" className="cursor-pointer px-6 py-2 rounded-full bg-green-400 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+            <Link href="/projects" className="cursor-pointer px-6 py-2 rounded-full bg-green-400 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
               View More
-            </a>
+            </Link>
           </div>
         </div>
       </section>
