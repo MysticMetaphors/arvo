@@ -36,7 +36,7 @@ export default function Contact() {
                   transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
                   viewport={{ once: true }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-green-primary/70"></li>
+                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-green-primary/60"></li>
                   <p className="text-md">j3rry.tagle@gmail.com</p>
                 </motion.div>
                 <motion.div
@@ -45,7 +45,7 @@ export default function Contact() {
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
                   viewport={{ once: true }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-green-primary/70"></li>
+                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-green-primary/60"></li>
                   <p className="text-md">+63 917 115 3726</p>
                 </motion.div>
                 <motion.a
@@ -53,13 +53,32 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 2 * 0.1, ease: "easeOut" }}
                   viewport={{ once: true }}
-                  href="https://linkedin.com/in/jerrytagle" className="flex gap-4 items-center">
-                  <li className="fa-brands fa-linkedin-in text-lg p-2 rounded-sm bg-green-primary/70"></li>
-                  <p className="text-md underline">Jerry Tagle</p>
+                  href="https://www.linkedin.com/in/jerrytagle/"
+                  className="flex gap-4 items-center">
+                  <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                  <p className="text-md underline underline-offset-5">Jerry Tagle</p>
+                </motion.a>
+                <motion.a
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 3 * 0.1, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  href="https://slack.com/"
+                  className="flex gap-4 items-center">
+                  <div
+                    className="inline-block w-8 h-8 rounded bg-gray-800"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                      <path fill="#E01E5A" d="M190.1 379.1C190.1 405 168.9 426.2 143 426.2C117.1 426.2 96 405 96 379.1C96 353.2 117.2 332 143.1 332L190.2 332L190.2 379.1zM213.8 379.1C213.8 353.2 235 332 260.9 332C286.8 332 308 353.2 308 379.1L308 496.9C308 522.8 286.8 544 260.9 544C235 544 213.8 522.8 213.8 496.9L213.8 379.1z" />
+                      <path fill="#27aad2ff" d="M260.9 190.1C235 190.1 213.8 168.9 213.8 143C213.8 117.1 235 96 260.9 96C286.8 96 308 117.2 308 143.1L308 190.2L260.9 190.2zM260.9 213.8C286.8 213.8 308 235 308 260.9C308 286.8 286.8 308 260.9 308L143.1 308C117.2 308 96 286.8 96 260.9C96 235 117.2 213.8 143.1 213.8L260.9 213.8z" />
+                      <path fill="#2EB67D" d="M449.9 260.9C449.9 235 471.1 213.8 497 213.8C522.9 213.8 544 235 544 260.9C544 286.8 522.8 308 496.9 308L449.8 308L449.8 260.9zM426.2 260.9C426.2 286.8 405 308 379.1 308C353.2 308 332 286.8 332 260.9L332 143.1C332 117.2 353.2 96 379.1 96C405 96 426.2 117.2 426.2 143.1L426.2 260.9z" />
+                      <path fill="#ECB22E" d="M379.1 449.9C405 449.9 426.2 471.1 426.2 497C426.2 522.9 405 544 379.1 544C353.2 544 332 522.8 332 496.9L332 449.8L379.1 449.8zM379.1 426.2C353.2 426.2 332 405 332 379.1C332 353.2 353.2 332 379.1 332L496.9 332C522.8 332 544 353.2 544 379.1C544 405 522.8 426.2 496.9 426.2L379.1 426.2z" />
+                    </svg>
+                  </div>
+                  <p className="text-md underline underline-offset-5">Arvo</p>
                 </motion.a>
               </div>
-              {/* </Phone> */}
-              {/* </div> */}
+
             </div>
           </div>
           <div className="col-span-3 z-10 pl-0 lg:pl-20">{/* bg-radial-[at_100%_100%] from-green-primary from-5% to-gray-900 to-40%  */}

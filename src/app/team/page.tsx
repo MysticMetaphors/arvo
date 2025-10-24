@@ -6,82 +6,40 @@ import Image from "next/image";
 export default function team() {
   const team = [
     {
-      name: 'Joshua Santos ',
+      name: 'Joshua S.',
       position: 'Lead Developer',
       description: "Joshua guides Arvo’s projects with strategic direction and collaborative leadership.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
     {
-      name: 'Nick Argante',
+      name: 'Nick A.',
       position: 'Lead Researcher',
       description: "Nick leads Arvo’s research direction, uncovering insights that drive innovation and strategic growth.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
     {
-      name: 'Von Bryan Bañal',
-      position: 'UI/UX / Front-End Developer',
+      name: 'Von Brayn B.',
+      position: 'UI/UX / Junior Front-End Developer',
       description: "Bryan leads Arvo’s UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
     {
-      name: 'Romel P. Cubelo',
+      name: 'Romel C.',
       position: 'Lead Developer',
       description: "Romel drives Arvo’s coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
     {
-      name: 'Samuel Daryl',
+      name: 'Samuel D.',
       position: 'Shopify, WordPress & CRM Specialist:',
       description: "Samuel manages Arvo’s Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
     {
-      name: 'Chris Abuel',
+      name: 'Chris A.',
       position: 'Shopify, WordPress & CRM Specialist:',
       description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
-      image: '/MY_IMG.jpg',
-      socials: [
-        { icon: "fa-brands fa-facebook", url: "#" },
-        { icon: "fa-brands fa-twitter", url: "#" },
-        { icon: "fa-brands fa-github", url: "#" },
-        { icon: "fas fa-globe", url: "#" },
-        { icon: "fa-brands fa-linkedin", url: "#" }
-      ]
+      image: '/default.png',
     },
   ]
 
@@ -107,8 +65,7 @@ export default function team() {
           viewport={{ once: true }}
           className="text-gray-400 mx-auto mb-6"
         >
-          At Arvo, we focus on markets where technology, innovation, and design
-          unlock long-term value.
+          At Arvo, we focus on markets where technology, innovation, and design unlock long-term value.
         </motion.p>
 
         <motion.div
@@ -148,14 +105,6 @@ export default function team() {
                 <p className="text-gray-400 text-sm mt-1">
                   {member.description}
                 </p>
-
-                <div className="flex space-x-4 mt-3 text-gray-400">
-                  {member.socials.map((social, i) => (
-                    <a href={social.url} key={i} className="hover:text-green-400 text-green-primary/70">
-                      <i className={social.icon}></i>
-                    </a>
-                  ))}
-                </div>
               </div>
             </motion.div>
           ))}
