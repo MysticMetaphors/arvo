@@ -9,21 +9,9 @@ export default function projects() {
       title: "Fluxo",
       description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
       image: "fluxo.png",
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      image: "fluxo.png",
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      image: "fluxo.png",
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      image: "fluxo.png",
+      url: "https://fluxo-alpha.vercel.app/",
+      design: true,
+      icons: ["react", "tailwindcss", "html5"]
     },
   ];
   return (
@@ -60,7 +48,7 @@ export default function projects() {
 
         <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:pt-12 pt-8 lg:px-0 sm:p-6">
           {projects.map((project, i) => (
-            <ArvoCard onView={false} key={i} index={i} {...project} icons={["react", "tailwindcss", "html5"]} />
+            <ArvoCard onView={false} key={i} index={i} {...project} />
           ))}
         </div>
       </div>

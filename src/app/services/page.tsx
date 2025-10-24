@@ -37,7 +37,7 @@ export default function services() {
   ];
 
   return (
-    <section id="projects" className="relative bg-black-primary overflow-hidden">
+    <section className="relative bg-black-primary overflow-hidden">
       <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">

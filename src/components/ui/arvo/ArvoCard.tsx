@@ -4,16 +4,26 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 type ArvoCardProps = {
-  type?: string;
   title?: string;
   description?: string;
+  design?:boolean;
+  url?:string;
   image?: string;
   icons?: string[];
   index?: number;
   onView?: boolean;
 };
 
-export default function ArvoCard({ type = '', title = '', description = '', image = '', icons = [], index = 0, onView }: ArvoCardProps) {
+export default function ArvoCard({
+   title = '', 
+   description = '', 
+   design,
+   url,
+   image = '', 
+   icons = [], 
+   index = 0, 
+   onView }
+   : ArvoCardProps) {
   const animationProps = onView
     ? {
       whileInView: { opacity: 1, y: 0 },
@@ -33,7 +43,7 @@ export default function ArvoCard({ type = '', title = '', description = '', imag
              transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
              hover:shadow-green-primary/20"
     >
-      {type == "design" ?
+      {design ?
         <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
           Design
         </span> : ''
@@ -62,7 +72,7 @@ export default function ArvoCard({ type = '', title = '', description = '', imag
                   : ''}
 
               </div>
-              <a href="#" className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+              <a href={url} className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
                 Visit
               </a>
             </div>

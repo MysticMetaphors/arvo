@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import DetailedPricingComparison from "@/components/sections/DetailedPricingComparison";
+import Link from "next/link";
 
 export default function pricing() {
 
@@ -98,12 +99,12 @@ export default function pricing() {
               ))}
             </ul>
 
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Get started
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -148,13 +149,12 @@ export default function pricing() {
               ))}
             </ul>
 
-            <a
-
-              href="#"
+            <Link
+              href="/contact"
               className="mt-auto text-white bg-green-500/70 hover:bg-green-600 transition-all duration-200 focus:ring-4 focus:ring-green-400 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Get started
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -195,12 +195,12 @@ export default function pricing() {
               ))}
             </ul>
 
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Get started
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -211,23 +211,23 @@ export default function pricing() {
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
-            className="w-full max-w-sm lg:max-w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-green-500/30 rounded-lg shadow-lg text-center p-10 text-white">
+            className="relative z-10 w-full max-w-sm lg:max-w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-green-500/30 rounded-lg shadow-lg text-center p-10 text-white">
             <h3 className="text-3xl font-bold mb-4 text-green-primary">Need a Custom Plan?</h3>
             <p className="text-gray-300 mb-6">
               Not sure which package fits your needs? Let’s build a plan that works just for you.
             </p>
 
             <div className="flex flex-wrap flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="cursor-pointer px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
+              <Link href="/contact" className="cursor-pointer px-8 py-3 rounded-full bg-green-400 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300">
                 Contact
-              </button>
-              <button className="cursor-pointer px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+              </Link>
+              <Link href="/learnmore" className="cursor-pointer px-8 py-3 bg-green-primary/5 rounded-full border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
                 Learn More
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
-        
+
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

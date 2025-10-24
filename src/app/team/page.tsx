@@ -6,38 +6,38 @@ import Image from "next/image";
 export default function team() {
   const team = [
     {
-      name: 'Joshua S.',
-      position: 'Lead Developer',
-      description: "Joshua guides Arvo’s projects with strategic direction and collaborative leadership.",
+      name: 'Anonymous',
+      position: 'Senior Back-End Developer',
+      description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
       image: '/default.png',
     },
     {
       name: 'Nick A.',
       position: 'Lead Researcher',
-      description: "Nick leads Arvo’s research direction, uncovering insights that drive innovation and strategic growth.",
+      description: "Nick leads Arvo's research direction, uncovering insights that drive innovation and strategic growth.",
       image: '/default.png',
     },
     {
       name: 'Von Brayn B.',
       position: 'UI/UX / Junior Front-End Developer',
-      description: "Bryan leads Arvo’s UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
-      image: '/default.png',
+      description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
+      image: '/team/bryan.jpg',
     },
     {
       name: 'Romel C.',
-      position: 'Lead Developer',
-      description: "Romel drives Arvo’s coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
+      position: 'Senior Back-End Developer',
+      description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
       image: '/default.png',
     },
     {
-      name: 'Samuel D.',
-      position: 'Shopify, WordPress & CRM Specialist:',
-      description: "Samuel manages Arvo’s Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
+      name: 'Anonymous',
+      position: 'Shopify, WordPress & CRM Specialist',
+      description: "manages Arvo's Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
       image: '/default.png',
     },
     {
       name: 'Chris A.',
-      position: 'Shopify, WordPress & CRM Specialist:',
+      position: 'Shopify, Front-End Developer, WordPress & CRM Specialist',
       description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
       image: '/default.png',
     },
@@ -75,7 +75,7 @@ export default function team() {
           viewport={{ once: true }}
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:px-0 lg:pt-12 pt-8 sm:p-6">
+        <div className="relative z-10 grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:px-0 lg:pt-12 pt-8 sm:p-6">
           {team.map((member, i) => (
             <motion.div
               key={i}

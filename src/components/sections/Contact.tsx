@@ -7,7 +7,7 @@ export default function Contact() {
     <section id="contact" className="relative bg-black-primary">
 
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 max-w-7xl">
-        <div className="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-2 gap-7">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2 gap-7">
           <div className="col-span-2 z-10">
             <div>
               <motion.h2
@@ -134,6 +134,19 @@ export default function Contact() {
                     className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label htmlFor="plan" className="block text-white mb-2">Choosen plan</label>
+                <select name="plan" id="plan" className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary">
+                  <option value="" defaultValue={''} hidden>
+                    Select a plan...
+                  </option>
+                  <option value="basic">Basic</option>
+                  <option value="growth">Growth</option>
+                  <option value="advance">Advance</option>
+                  <option value="custom">Custom</option>
+                </select>
               </div>
 
               <div>

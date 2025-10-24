@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function Team() {
   const team = [
     {
-      name: 'Joshua S.',
-      position: 'Lead Developer',
-      description: "Joshua guides Arvo’s projects with strategic direction and collaborative leadership.",
+      name: 'Chris A.',
+      position: 'Shopify, Senior Front-End Developer, WordPress & CRM Specialist',
+      description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
       image: '/default.png',
     },
     {
@@ -22,7 +22,7 @@ export default function Team() {
       name: 'Von Bryan B.',
       position: 'UI/UX / Junior Front-End Developer',
       description: "Bryan leads Arvo’s UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
-      image: '/default.png',
+      image: '/team/bryan.jpg',
     },
   ]
   return (

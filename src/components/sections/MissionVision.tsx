@@ -99,7 +99,7 @@ export default function MissionVision() {
                 scalable, and affordable technology that drives long-term growth and community impact.
               </p>
             </div>
-            <div className="flex relative items-center p-4 px-0 md:px-16">
+            <div className="flex relative items-center p-4 px-0 lg:px-16">
               <div className="relative flex justify-between mx-auto my-6 w-full max-w-lg">
                 <div className="z-10 text-2xl p-3 px-4.5 rounded-sm bg-green-400 text-gray-900 shadow-[0_0_20px_#00FF99]">
                   <i className="fa-solid fa-lightbulb"></i>
