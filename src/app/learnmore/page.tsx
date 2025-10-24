@@ -27,7 +27,7 @@ export default function CustomPackage() {
           className="text-gray-400 mx-auto mb-6"
         >
           Tailored solutions to match your brands goals and creative vision.
-          Choose the features you need, and we'll craft a unique website package
+          Choose the features you need, and we&apos;ll craft a unique website package
           that fits your scope and budget.
         </motion.p>
 
