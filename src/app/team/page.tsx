@@ -21,7 +21,7 @@ export default function team() {
       name: 'Von Brayn B.',
       position: 'UI/UX / Junior Front-End Developer',
       description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
-      image: '/team/bryan.jpg',
+      image: '/team/bryan.png',
     },
     {
       name: 'Romel C.',
