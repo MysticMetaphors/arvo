@@ -18,7 +18,7 @@ export default function Home() {
       <TechStack />
       <Team />
       <MissionVision />
-      <Contact />
+      <Contact onView={true}/>
     </div>
   );
 }

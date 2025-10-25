@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { appendToast } from "@/lib/global";
 
-export default function Contact() {
+type ContactProp = {
+  onView?: boolean,
+}
+
+export default function Contact({ onView }: ContactProp) {
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -58,6 +62,24 @@ export default function Contact() {
     }
   }
 
+  const animationY = onView
+    ? {
+      whileInView: { opacity: 1, y: 0 },
+      viewport: { once: true },
+    }
+    : {
+      animate: { opacity: 1, y: 0 },
+    };
+
+  const animationX = onView
+    ? {
+      whileInView: { opacity: 1, x: 0 },
+      viewport: { once: true },
+    }
+    : {
+      animate: { opacity: 1, x: 0 },
+    };
+
   return (
     <section id="contact" className="relative bg-black-primary">
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 max-w-7xl">
@@ -67,47 +89,41 @@ export default function Contact() {
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                {...animationY}
                 transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-                viewport={{ once: true }}
                 className="mb-4 text-4xl leading-tight font-extrabold text-white">
                 Contact <span className="text-green-primary">Us</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
-                viewport={{ once: true }}
+                {...animationY}
+                transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
                 className="text-gray-400 text-lg text-justify mb-8">
                 Have a question or a project in mind? Arvo is here to help you turn your vision into reality.
                 Reach out to us today — let’s collaborate and create something exceptional together.
               </motion.p>
-              {/* <div className="absolute"> */}
-              {/* <Phone> */}
+
               <div className="space-y-8 p-8">
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  {...animationX}
                   transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-                  viewport={{ once: true }}
                   className="flex gap-4 items-center">
                   <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-green-primary/60"></li>
                   <p className="text-md">j3rry.tagle@gmail.com</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  {...animationX}
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
-                  viewport={{ once: true }}
                   className="flex gap-4 items-center">
                   <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-green-primary/60"></li>
                   <p className="text-md">+63 917 115 3726</p>
                 </motion.div>
                 <motion.a
                   initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  {...animationX}
                   transition={{ duration: 0.5, delay: 2 * 0.1, ease: "easeOut" }}
-                  viewport={{ once: true }}
                   href="https://www.linkedin.com/in/jerrytagle/"
                   className="flex gap-4 items-center">
                   <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
@@ -115,9 +131,8 @@ export default function Contact() {
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  {...animationX}
                   transition={{ duration: 0.5, delay: 3 * 0.1, ease: "easeOut" }}
-                  viewport={{ once: true }}
                   href="https://slack.com/"
                   className="flex gap-4 items-center">
                   <div
@@ -141,9 +156,8 @@ export default function Contact() {
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              {...animationY}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
               action="" className="bg-gradient-to-t from-green-primary/20 via-gray-900 to-gray-900 border border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
@@ -233,8 +247,8 @@ export default function Contact() {
       </div>
 
       {/* toast append */}
-      <div id="append-toast" className="w-full space-y-3 fixed top-5 z-100 flex flex-col items-center justify-center">
-        
+      <div id="append-toast" className="w-full space-y-3 fixed top-5 left-10 md:left-15 z-100 flex flex-col">
+
       </div>
     </section>
   )
