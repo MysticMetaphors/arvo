@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 type DetailedPricingProps = {
   setMinWidth?: string;
 };
@@ -146,28 +148,28 @@ export default function DetailedPricingComparison({setMinWidth}: DetailedPricing
 
             </td>
             <td className="py-4 px-6 text-center">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
-              </a>
+              </Link>
             </td>
             <td className="py-4 px-6 text-center">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
-              </a>
+              </Link>
             </td>
             <td className="py-4 px-6 text-center">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="mt-auto text-white bg-gradient-to-r from-green-900 to-green-700 border border-gray-800 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Get started
-              </a>
+              </Link>
             </td>
           </tr>
         </tbody>

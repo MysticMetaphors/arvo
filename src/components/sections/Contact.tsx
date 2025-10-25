@@ -1,13 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { appendToast } from "@/lib/global";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.target as HTMLFormElement;
+
+    const firstname = (form.elements.namedItem("firstname") as HTMLInputElement).value.trim();
+    const lastname = (form.elements.namedItem("lastname") as HTMLInputElement).value.trim();
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+    const number = (form.elements.namedItem("number") as HTMLInputElement).value.trim();
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
+
+    if (!firstname || !lastname || !email || !number || !message) {
+      appendToast('append-toast', 'error', 'Please complete the form before submitting.')
+      return;
+    }
+
+    const subject = `📨 Message from ${firstname} ${lastname} via Arvo Website`;
+
+    const formData = {
+      access_key: process.env.NEXT_PUBLIC_ACCESS_KEY,
+      from_name: `${firstname} ${lastname}`,
+      firstname,
+      lastname,
+      email,
+      number,
+      message,
+      subject,
+    };
+
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    setLoading(false);
+
+    if (result.success) {
+      appendToast('append-toast', 'success', 'Thanks for reaching out at Arvo!')
+      form.reset();
+    } else {
+      appendToast('append-toast', 'error', 'Unexpected Error Occured!')
+    }
+  }
+
   return (
     <section id="contact" className="relative bg-black-primary">
-
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 max-w-7xl">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2 gap-7">
+
           <div className="col-span-2 z-10">
             <div>
               <motion.h2
@@ -81,8 +136,10 @@ export default function Contact() {
 
             </div>
           </div>
+
           <div className="col-span-3 z-10 pl-0 lg:pl-20">{/* bg-radial-[at_100%_100%] from-green-primary from-5% to-gray-900 to-40%  */}
             <motion.form
+              onSubmit={handleSubmit}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
@@ -136,7 +193,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="plan" className="block text-white mb-2">Choosen plan</label>
                 <select name="plan" id="plan" className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary">
                   <option value="" defaultValue={''} hidden>
@@ -147,7 +204,7 @@ export default function Contact() {
                   <option value="advance">Advance</option>
                   <option value="custom">Custom</option>
                 </select>
-              </div>
+              </div> */}
 
               <div>
                 <label htmlFor="message" className="block text-white mb-2">Message</label>
@@ -173,7 +230,11 @@ export default function Contact() {
         <div className="absolute bottom-0 inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)] pointer-events-none"></div>
         <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100\\' height=\\'100\\' fill=\\'none\\' stroke=\\'%2300FF99\\' stroke-width=\\'0.5\\'/></svg>')]"></div>
+      </div>
 
+      {/* toast append */}
+      <div id="append-toast" className="w-full space-y-3 fixed top-5 z-100 flex flex-col items-center justify-center">
+        
       </div>
     </section>
   )

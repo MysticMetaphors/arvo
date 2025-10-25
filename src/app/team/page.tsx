@@ -37,8 +37,14 @@ export default function team() {
     },
     {
       name: 'Chris A.',
-      position: 'Shopify, Front-End Developer, WordPress & CRM Specialist',
+      position: 'Shopify, Senior Front-End Developer, WordPress & CRM Specialist',
       description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
+      image: '/default.png',
+    },
+    {
+      name: 'Harlene L.',
+      position: 'Cloud Developer, Senior Back-End Developer',
+      description: "Harlene manages Arvo's backend systems and cloud infrastructure, ensuring secure, scalable, and reliable performance across projects.",
       image: '/default.png',
     },
   ]
