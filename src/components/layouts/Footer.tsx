@@ -65,7 +65,7 @@ export default function Footer() {
                 </li>
                 <li className="flex gap-2">
                   <a
-                    href="https://slack.com/"
+                    href="https://join.slack.com/t/arvo-etb3274/shared_invite/zt-3gphlymiu-8slTUnrz6Ngktj0h3KUc0Q"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block w-8 h-8 rounded bg-gray-800"

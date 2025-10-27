@@ -12,10 +12,10 @@ export default function team() {
       image: '/default.png',
     },
     {
-      name: 'Nick A.',
-      position: 'Lead Researcher',
-      description: "Nick leads Arvo's research direction, uncovering insights that drive innovation and strategic growth.",
-      image: '/default.png',
+      name: 'Romel C.',
+      position: 'Senior Back-End Developer',
+      description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
+      image: '/team/romel.png',
     },
     {
       name: 'Von Brayn B.',
@@ -23,10 +23,10 @@ export default function team() {
       description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
       image: '/team/bryan.png',
     },
-    {
-      name: 'Romel C.',
-      position: 'Senior Back-End Developer',
-      description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
+     {
+      name: 'Nick A.',
+      position: 'Lead Researcher',
+      description: "Nick leads Arvo's research direction, uncovering insights that drive innovation and strategic growth.",
       image: '/default.png',
     },
     {

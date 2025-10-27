@@ -6,22 +6,22 @@ import Link from "next/link";
 
 export default function Team() {
   const team = [
-    {
-      name: 'Chris A.',
-      position: 'Shopify, Senior Front-End Developer, WordPress & CRM Specialist',
-      description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
+     {
+      name: 'Anonymous',
+      position: 'Senior Back-End Developer',
+      description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
       image: '/default.png',
     },
     {
-      name: 'Nick A.',
-      position: 'Lead Researcher',
-      description: "Nick oversees Arvo’s development efforts, ensuring quality, efficiency, and innovation across the team.",
-      image: '/default.png',
+      name: 'Romel C.',
+      position: 'Senior Back-End Developer',
+      description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
+      image: '/team/romel.png',
     },
     {
-      name: 'Von Bryan B.',
+      name: 'Von Brayn B.',
       position: 'UI/UX / Junior Front-End Developer',
-      description: "Bryan leads Arvo’s UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
+      description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
       image: '/team/bryan.png',
     },
   ]
