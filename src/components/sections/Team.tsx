@@ -62,9 +62,9 @@ export default function Team() {
             >
               <Image
                 loading="lazy"
-                width={800} height={800}
+                width={300} height={300}
                 src={member.image}
-                alt="Team member"
+                alt={member.name}
                 className="w-full h-full sm:w-30 sm:h-30 md:w-30 md:h-30 rounded-lg object-cover mb-4 sm:mb-0"
               />
 

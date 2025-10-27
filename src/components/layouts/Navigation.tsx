@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,7 +9,7 @@ export default function Navigation() {
 
   return (
     <nav className="z-100 absolute z-10 top-5 left-1/2 transform -translate-x-1/2 max-w-7xl w-full px-6 py-4 bg-transparent flex items-center justify-between rounded-full">
-      <img src="Arvo_logo_rb.png" alt="Logo" className="h-8 z-110 " />
+      <Image height={800} width={800} src="/Arvo_logo_rb.png" alt="Arvo Logo" className="h-8 w-fit z-110 " />
 
       <div className="hidden md:flex gap-6 text-white">
         <Link

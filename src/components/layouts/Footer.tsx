@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <div className="max-w-[300px] pr-20">
               <Link href="#">
-                <img src="Arvo_logo_rb.png" className="h-8 mb-3" alt="FlowBite Logo" />
+                <Image height={800} width={800} src="/Arvo_logo_rb.png" className="h-8 w-fit mb-3" alt="Arvo Logo" />
               </Link>
               <p>Smart Development. Clear Delivery. Business Growth.</p>
             </div>
