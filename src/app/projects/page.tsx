@@ -13,6 +13,22 @@ export default function projects() {
       design: true,
       icons: ["react", "tailwindcss", "html5"]
     },
+    // {
+    //   title: "Project 1",
+    //   description: "Powered by modern tech, built to outperform. From Laravel to React, every line of code we write is designed for speed, scalability, and seamless user experience — the way the web should be.",
+    //   image: "fluxo.png",
+    //   url: "https://fluxo-alpha.vercel.app/",
+    //   design: false,
+    //   icons: ["react", "tailwindcss", "html5"]
+    // },
+    // {
+    //   title: "Project 2",
+    //   description: "One codebase, endless possibilities. Whether it’s a store on Shopify, a blog on WordPress, or an app in Kotlin, our team makes every platform feel custom-built just for you.",
+    //   image: "fluxo.png",
+    //   url: "https://fluxo-alpha.vercel.app/",
+    //   design: false,
+    //   icons: ["react", "tailwindcss", "html5"]
+    // },
   ];
   return (
     <section id="projects" className="relative bg-black-primary overflow-hidden">
@@ -26,7 +42,7 @@ export default function projects() {
           viewport={{ once: true }}
           className="mb-4 text-4xl leading-tight font-extrabold text-white"
         >
-          Our <span className="text-green-primary">Projects</span>
+          Recent <span className="text-green-primary">Projects</span>
         </motion.h2>
 
         <motion.p

@@ -6,14 +6,14 @@ import Image from "next/image";
 export default function team() {
   const team = [
     {
-      name: 'Anonymous',
-      position: 'Senior Back-End Developer',
-      description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
+      name: 'Jerry T.',
+      position: 'CEO',
+      description: "Jerry leads Arvo’s overall vision and strategy, driving innovation, growth, and team alignment to ensure the company’s long-term success.",
       image: '/default.png',
     },
     {
       name: 'Romel C.',
-      position: 'Senior Back-End Developer',
+      position: 'Lead Developer',
       description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
       image: '/team/romel.png',
     },
@@ -45,6 +45,12 @@ export default function team() {
       name: 'Harlene L.',
       position: 'Cloud Developer, Senior Back-End Developer',
       description: "Harlene manages Arvo's backend systems and cloud infrastructure, ensuring secure, scalable, and reliable performance across projects.",
+      image: '/default.png',
+    },
+    {
+      name: 'Anonymous',
+      position: 'Senior Back-End Developer',
+      description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
       image: '/default.png',
     },
   ]

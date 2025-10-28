@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export default function Team() {
   const team = [
-     {
-      name: 'Anonymous',
-      position: 'Senior Back-End Developer',
-      description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
+    {
+      name: 'Jerry T.',
+      position: 'CEO',
+      description: "Jerry leads Arvo’s overall vision and strategy, driving innovation, growth, and team alignment to ensure the company’s long-term success.",
       image: '/default.png',
     },
     {
       name: 'Romel C.',
-      position: 'Senior Back-End Developer',
+      position: 'Lead Developer',
       description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
       image: '/team/romel.png',
     },
@@ -48,13 +48,9 @@ export default function Team() {
           {team.map((member, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.10,
-                ease: "easeOut",
-              }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700 
                                             transition-all duration-500 ease-out hover:-translate-y-2

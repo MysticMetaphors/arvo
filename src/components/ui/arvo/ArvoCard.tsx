@@ -6,8 +6,8 @@ import Image from "next/image";
 type ArvoCardProps = {
   title?: string;
   description?: string;
-  design?:boolean;
-  url?:string;
+  design?: boolean;
+  url?: string;
   image?: string;
   icons?: string[];
   index?: number;
@@ -15,15 +15,15 @@ type ArvoCardProps = {
 };
 
 export default function ArvoCard({
-   title = '', 
-   description = '', 
-   design,
-   url,
-   image = '', 
-   icons = [], 
-   index = 0, 
-   onView }
-   : ArvoCardProps) {
+  title = '',
+  description = '',
+  design,
+  url,
+  image = '',
+  icons = [],
+  index = 0,
+  onView }
+  : ArvoCardProps) {
   const animationProps = onView
     ? {
       whileInView: { opacity: 1, y: 0 },
@@ -45,7 +45,7 @@ export default function ArvoCard({
     >
       {design ?
         <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
-          Design
+          Only Design
         </span> : ''
       }
 
@@ -72,13 +72,19 @@ export default function ArvoCard({
                   : ''}
 
               </div>
-              <a href={url} className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
-                Visit
-              </a>
+              {url ?
+                <a href={url} className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                  Visit
+                </a>
+                : ''}
             </div>
           </div>
         </div>
       </div>
+
+      <a href={url} className="block sm:hidden absolute bottom-3 right-3 px-6 py-1 font-bold shadow-[0_0_5px_#00FF99] bg-green-primary rounded-lg border border-green-400 text-green-900 hover:bg-green-400 hover:text-black transition-all duration-300">
+        Visit
+      </a>
     </motion.div>
   );
 }
