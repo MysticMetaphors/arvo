@@ -30,7 +30,7 @@ export default function team() {
       image: '/default.png',
     },
     {
-      name: 'Anonymous',
+      name: 'Sam',
       position: 'Shopify, WordPress & CRM Specialist',
       description: "manages Arvo's Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
       image: '/default.png',
@@ -39,7 +39,7 @@ export default function team() {
       name: 'Chris A.',
       position: 'Shopify, Senior Front-End Developer, WordPress & CRM Specialist',
       description: "Chris ensures seamless performance across Shopify, WordPress, and CRM platforms at Arvo.",
-      image: '/default.png',
+      image: '/team/chris.png',
     },
     {
       name: 'Harlene L.',
@@ -48,7 +48,7 @@ export default function team() {
       image: '/default.png',
     },
     {
-      name: 'Anonymous',
+      name: 'Josh',
       position: 'Senior Back-End Developer',
       description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
       image: '/default.png',
@@ -87,7 +87,7 @@ export default function team() {
           viewport={{ once: true }}
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
-        <div className="relative z-10 grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:px-0 lg:pt-12 pt-8 sm:p-6">
+        <div className="relative z-10 grid lg:grid-cols-2 md:grid-cols-1 gap-8 lg:px-0 lg:pt-12 pt-8 sm:p-6">
           {team.map((member, i) => (
             <motion.div
               key={i}
@@ -108,7 +108,7 @@ export default function team() {
                 width={800} height={800}
                 src={member.image}
                 alt="Team member"
-                className="w-full h-full sm:w-30 sm:h-30 rounded-lg object-cover mb-4 sm:mb-0"
+                className="w-full h-full sm:w-30 sm:h-30 rounded-lg object-cover mb-4 sm:mb-0 lg:mr-6 mr-2"
               />
 
               <div className="space-y-2">

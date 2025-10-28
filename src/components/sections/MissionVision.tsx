@@ -7,16 +7,19 @@ import { motion } from "framer-motion";
 
 export default function MissionVision() {
   const [cols, setCols] = useState(9);
+  const [rows, setRows] = useState(7);
   const [cellSize, setCellSize] = useState(83);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {        // mobile (sm)
-        setCols(5);
+        setCols(7);
         setCellSize(83);
+        setRows(5)
       } else if (window.innerWidth < 1024) { // tablet (md)
-        setCols(6);
+        setCols(9);
         setCellSize(83);
+        setRows(5)
       } else {                              // desktop (lg+)
         setCols(9);
         setCellSize(83);
@@ -40,11 +43,13 @@ export default function MissionVision() {
             transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
-            <BackgroundRippleEffect cols={cols} cellSize={cellSize} />
-            <h2 className="text-xl text-green-400 mb-4 font-bold">Mission</h2>
-            <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
-              businesses to launch, grow, and adapt faster in today’s digital-first economy
-            </p>
+            <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
+            <div className="relative z-10">
+              <h2 className="text-xl text-green-400 mb-4 font-bold">Mission</h2>
+              <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
+                businesses to launch, grow, and adapt faster in today’s digital-first economy
+              </p>
+            </div>
             <div className="flex relative items-center p-8 px-16">
               <div className="absolute z-1 top-30 h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></div>
               <div className="absolute top-10 md:top-20 z-10 -right-15 md:-right-0 shadow-[0_0_20px_#00FF99] rounded-3xl">
@@ -115,8 +120,8 @@ export default function MissionVision() {
             transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
-            <BackgroundRippleEffect cols={cols} cellSize={cellSize} />
-            <div className="z-10">
+            <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
+            <div className="relative z-10">
               <h2 className="text-xl z-10 text-green-400 mb-4 font-bold">Vision</h2>
               <p className="text-lg z-10 text-justify">A future where every business, no matter the size, has access to smart,
                 scalable, and affordable technology that drives long-term growth and community impact.

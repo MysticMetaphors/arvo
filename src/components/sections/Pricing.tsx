@@ -216,7 +216,7 @@ export default function Pricing() {
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
-            className="my-6 w-full lg:col-span-3 flex flex-col justify-center items-center mx-auto">
+            className="my-6 items-center mx-auto max-w-sm sm:max-w-full">
             <button onClick={() => setShowComparison(!showComparison)} className={`cursor-pointer px-8 py-3 w-full rounded-lg ${!showComparison ? 'border border-green-400 bg-green-400/80 hover:bg-green-400/60 text-black' : 'border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700'} transition-all duration-300`}>
               {!showComparison ? 'Show' : 'Close'} Detailed Plan Comparison
             </button>
