@@ -12,7 +12,7 @@ export default function DetailedPricingComparison({ setMinWidth }: DetailedPrici
       name: "Basic",
       price: "₱69,999 - ₱174,999",
       pages: "3 Main Page, 2 Inner pages (Custom Design)",
-      social: "none",
+      social: "1 Social Network",
       maintenance: "1 Month Free Maintenance (Minor Revisions and Data Uploading)",
       features: [
         "Responsive Design",
