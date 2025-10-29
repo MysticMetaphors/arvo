@@ -38,7 +38,7 @@ export default function CustomPackage() {
           viewport={{ once: true }}
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
-        <div className="grid md:grid-cols-4 gap-6 lg:pt-12 pt-8">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 lg:pt-12 pt-8">
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}

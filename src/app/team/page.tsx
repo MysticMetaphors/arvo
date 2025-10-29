@@ -23,17 +23,23 @@ export default function team() {
       description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
       image: '/team/bryan.png',
     },
-     {
+    {
       name: 'Nick A.',
       position: 'Lead Researcher',
       description: "Nick leads Arvo's research direction, uncovering insights that drive innovation and strategic growth.",
-      image: '/default.png',
+      image: '/team/nick.png',
     },
     {
-      name: 'Sam',
-      position: 'Shopify, WordPress & CRM Specialist',
-      description: "manages Arvo's Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
-      image: '/default.png',
+      name: 'Matthew F.',
+      position: 'Senior Back-End Developer',
+      description: "Matthew builds and maintains Arvo's server-side systems, ensuring efficient, secure, and scalable performance across all applications.",
+      image: '/team/matt.png',
+    },
+    {
+      name: 'Johnry Q.',
+      position: 'Full-Stack Developer',
+      description: "Johnry bridges front-end experiences with back-end functionality, delivering seamless, high-performing solutions that power Arvo's digital products.",
+      image: '/team/johnry.png',
     },
     {
       name: 'Chris A.',
@@ -45,12 +51,18 @@ export default function team() {
       name: 'Harlene L.',
       position: 'Cloud Developer, Senior Back-End Developer',
       description: "Harlene manages Arvo's backend systems and cloud infrastructure, ensuring secure, scalable, and reliable performance across projects.",
-      image: '/default.png',
+      image: '/team/harlene.png',
     },
     {
       name: 'Josh',
       position: 'Senior Back-End Developer',
       description: "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
+      image: '/default.png',
+    },
+    {
+      name: 'Sam',
+      position: 'Shopify, WordPress & CRM Specialist',
+      description: "manages Arvo's Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
       image: '/default.png',
     },
   ]
