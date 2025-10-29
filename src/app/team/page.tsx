@@ -9,7 +9,7 @@ export default function team() {
       name: 'Jerry T.',
       position: 'CEO',
       description: "Jerry leads Arvo’s overall vision and strategy, driving innovation, growth, and team alignment to ensure the company’s long-term success.",
-      image: '/default.png',
+      image: '/team/jerry.png',
     },
     {
       name: 'Romel C.',

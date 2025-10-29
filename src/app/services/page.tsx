@@ -68,7 +68,7 @@ export default function services() {
           viewport={{ once: true }}
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:pt-12 pt-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:pt-12 pt-8 relative z-10">
           {services.map((service, i) => (
             <motion.div
               key={i}
