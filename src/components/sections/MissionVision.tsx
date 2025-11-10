@@ -35,7 +35,7 @@ export default function MissionVision() {
     <section className="relative bg-black-primary">
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full lg:w-2xl bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
       <div className="mx-auto px-6 lg:px-20 py-10 z-10">
-        <div className="text-center flex flex-col md:flex-row gap-8 mb-8 2xl:mb-16">
+        <div className="text-center flex justify-center flex-col md:flex-row gap-8 mb-8 2xl:mb-16">
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}

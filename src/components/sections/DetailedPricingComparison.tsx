@@ -10,6 +10,7 @@ export default function DetailedPricingComparison({ setMinWidth }: DetailedPrici
   const plans = [
     {
       name: "Basic",
+      info: "Landing page, responsive design",
       price: "₱69,999 - ₱174,999",
       pages: "3 Main Page, 2 Inner pages (Custom Design)",
       social: "1 Social Network",
@@ -23,6 +24,7 @@ export default function DetailedPricingComparison({ setMinWidth }: DetailedPrici
     },
     {
       name: "Growth",
+      info: "E-commerce site, payment integration",
       price: "₱174,999 - ₱499,999",
       pages: "7 Main Page, 4-5 Inner pages (Custom Design)",
       social: "2 Social Network",
@@ -39,6 +41,7 @@ export default function DetailedPricingComparison({ setMinWidth }: DetailedPrici
     },
     {
       name: "Advance",
+      info: "Full custom web solution, advanced features",
       price: "₱599,999 - ₱999,999",
       pages: "Unlimited Pages (Custom Design)",
       social: "3 Social Network",
@@ -70,6 +73,7 @@ export default function DetailedPricingComparison({ setMinWidth }: DetailedPrici
                 {plans.map((plan) => (
                   <th key={plan.name} className="py-4 px-6 text-center">
                     <div className="text-lg font-bold text-green-primary">{plan.name}</div>
+                    <span className="text-md font-semibold text-gray-300">{plan.info}</span>
                     <div className="text-md font-normal text-gray-400 mt-1">
                       {plan.price}
                     </div>

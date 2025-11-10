@@ -149,7 +149,7 @@ export default function Pricing() {
             >
               <h3 className="mb-4 text-3xl text-white font-bold">Advance</h3>
               <p className="text-gray-400 sm:text-md">
-                Best for large scale uses and extended redistribution rights.
+                Best for large scale uses and Full custom web solution.
               </p>
               <div className="flex flex-col text-center justify-center my-2">
                 <span className="block text-md font-semibold text-gray-200">Starting at </span>

@@ -1,19 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 import { appendToast } from "@/lib/global";
+// import { sub } from "framer-motion/client";
 
 type ContactProp = {
   onView?: boolean,
 }
 
 export default function Contact({ onView }: ContactProp) {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
+
+    const submitButton = e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement;
+    submitButton.disabled = true;
+    submitButton.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
 
     const form = e.target as HTMLFormElement;
 
@@ -23,8 +28,11 @@ export default function Contact({ onView }: ContactProp) {
     const number = (form.elements.namedItem("number") as HTMLInputElement).value.trim();
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
 
+
     if (!firstname || !lastname || !email || !number || !message) {
       appendToast('append-toast', 'error', 'Please complete the form before submitting.')
+      submitButton.disabled = false;
+      submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
       return;
     }
 
@@ -52,7 +60,8 @@ export default function Contact({ onView }: ContactProp) {
     });
 
     const result = await response.json();
-    setLoading(false);
+    submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
+    // setLoading(false);
 
     if (result.success) {
       appendToast('append-toast', 'success', 'Thanks for reaching out at Arvo!')

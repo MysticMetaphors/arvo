@@ -8,6 +8,7 @@ const TechStack = dynamic(() => import("@/components/sections/TechStack"), { ssr
 const Team = dynamic(() => import("@/components/sections/Team"), { ssr: true });
 const MissionVision = dynamic(() => import("@/components/sections/MissionVision"), { ssr: true });
 import WhatWeDo from "@/components/sections/WhatWeDo";
+import Testimonials from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <TechStack />
       <Team />
       <MissionVision />
+      {/* <Testimonials /> */}
       <Contact onView={true}/>
     </div>
   );
