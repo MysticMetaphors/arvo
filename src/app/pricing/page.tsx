@@ -255,7 +255,7 @@ export default function pricing() {
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
 
         <div className="lg:py-12 py-8">
-          <DetailedPricingComparison setMinWidth="1423px" />
+          <DetailedPricingComparison />
         </div>
       </div>
 

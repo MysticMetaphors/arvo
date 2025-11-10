@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 
-type DetailedPricingProps = {
-  setMinWidth?: string;
-};
-
-export default function DetailedPricingComparison({ setMinWidth }: DetailedPricingProps) {
+export default function DetailedPricingComparison() {
   const plans = [
     {
       name: "Basic",

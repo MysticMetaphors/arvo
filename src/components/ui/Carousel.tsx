@@ -2,14 +2,12 @@
 
 import Image from 'next/image';
 import '../ui/css/Carousel.css'
-import { useEffect, useState } from "react";
 
 type CarouselItem = {
   name: string;
   feedback: string;
   image: string;
 };
-
 
 type CarouselProp = {
   items: CarouselItem[];
@@ -47,7 +45,7 @@ export default function Carousel({ items, reverse = false, className }: Carousel
                 <Image src={item.image} alt={item.name} width={100} height={100} className="w-12 h-12 border border-gray-700 bg-black rounded-full overflow-hidden" loading="lazy" />
                 <span className='font-semibold text-xl text-green-primary'>{item.name}</span>
               </div>
-              <span className='italic text-lg'>"{item.feedback}"</span>
+              <span className='italic text-lg'>&quot;{item.feedback}&quot;</span>
             </div>
           ))}
           {items.map((item, i) => (
@@ -56,7 +54,7 @@ export default function Carousel({ items, reverse = false, className }: Carousel
                 <Image src={item.image} alt={item.name} width={100} height={100} className="w-12 h-12 border border-gray-700 bg-black rounded-full overflow-hidden" loading="lazy" />
                 <span className='font-semibold text-xl text-green-primary'>{item.name}</span>
               </div>
-              <span className='italic text-lg'>"{item.feedback}"</span>
+              <span className='italic text-lg'>&quot;{item.feedback}&quot;</span>
             </div>
           ))}
         </div>
