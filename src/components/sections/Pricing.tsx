@@ -92,7 +92,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 hover:from-gray-700 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
@@ -138,7 +138,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 hover:from-gray-700 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
@@ -192,7 +192,7 @@ export default function Pricing() {
                 className="mt-auto text-white bg-green-600 shadow-[0_0_5px_#00FF99] hover:shadow-[0_0_20px_#00FF99] transition-all duration-200 
                focus:ring-4 focus:ring-green-400 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
           </div>
@@ -246,7 +246,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 hover:from-gray-700 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
@@ -348,7 +348,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 hover:from-gray-700 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div> */}
           </div>

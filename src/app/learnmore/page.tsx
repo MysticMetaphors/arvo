@@ -26,9 +26,7 @@ export default function CustomPackage() {
           viewport={{ once: true }}
           className="text-gray-400 mx-auto mb-6"
         >
-          Tailored solutions to match your brands goals and creative vision.
-          Choose the features you need, and we&apos;ll craft a unique website package
-          that fits your scope and budget.
+          For fully tailored systems: SaaS apps, web apps, mobile apps, custom AI tools, and enterprise-grade builds.
         </motion.p>
 
         <motion.div
@@ -53,11 +51,11 @@ export default function CustomPackage() {
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-green-primary transition-colors">
               Design & Branding
             </h3>
-            <ul className="space-y-2 text-gray-300 list-disc ml-4">
-              <li>Responsive website design (mobile, tablet, desktop)</li>
-              <li>Branding integration (logo, fonts, color scheme)</li>
-              <li>Custom graphics & visuals</li>
-            </ul>
+            <span className="space-y-2 text-gray-400">
+              Responsive website design (mobile, tablet, desktop),
+              Branding integration (logo, fonts, color scheme),
+              Custom graphics & visuals,
+            </span>
           </motion.div>
 
           <motion.div
@@ -73,13 +71,13 @@ export default function CustomPackage() {
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-green-primary transition-colors">
               Website Features
             </h3>
-            <ul className="space-y-2 text-gray-300 list-disc ml-4">
-              <li>Static pages (About, Services, Contact, etc.)</li>
-              <li>Blog, portfolio, or gallery sections</li>
-              <li>E-commerce functionality</li>
-              <li>Booking or scheduling systems</li>
-              <li>Membership or user login portals</li>
-            </ul>
+            <span className="space-y-2 text-gray-400">
+              Static pages (About, Services, Contact, etc.).
+              Blog, portfolio, or gallery sections,
+              E-commerce functionality,
+              Booking or scheduling systems,
+              Membership or user login portals,
+            </span>
           </motion.div>
 
 
@@ -96,11 +94,11 @@ export default function CustomPackage() {
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-green-primary transition-colors">
               Technical Setup
             </h3>
-            <ul className="space-y-2 text-gray-300 list-disc ml-4">
-              <li>Domain & hosting setup</li>
-              <li>CMS installation (WordPress, Shopify, or custom)</li>
-              <li>Security (SSL certificate, backups)</li>
-            </ul>
+            <span className="space-y-2 text-gray-400">
+              Domain & hosting setup,
+              CMS installation (WordPress, Shopify, or custom),
+              Security (SSL certificate, backups),
+            </span>
           </motion.div>
 
 
@@ -117,10 +115,10 @@ export default function CustomPackage() {
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-green-primary transition-colors">
               Marketing & Performance
             </h3>
-            <ul className="space-y-2 text-gray-300 list-disc ml-4">
-              <li>SEO setup (basic optimization)</li>
-              <li>Social media links & sharing features</li>
-            </ul>
+            <span className="space-y-2 text-gray-400">
+              SEO setup (basic optimization),
+              Social media links & sharing features,
+            </span>
           </motion.div>
         </div>
 

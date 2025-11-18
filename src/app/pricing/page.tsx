@@ -60,7 +60,7 @@ export default function pricing() {
           viewport={{ once: true }}
           className="text-gray-400 mx-auto mb-6"
         >
-          A collection of projects that reflect our passion for clean design and smart development.
+          Choose a plan that fits your needs — from getting started to full-scale growth.
         </motion.p>
 
         <motion.div
@@ -73,12 +73,11 @@ export default function pricing() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 gap-10 mt-12">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg bg-gradient-to-b from-blue-800/30 via-gray-900 to-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
               <h3 className="text-2xl text-white font-bold">Starter</h3>
               <div className="flex flex-col justify-center my-2">
@@ -113,18 +112,17 @@ export default function pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg bg-gradient-to-b from-blue-800/30 via-gray-900 to-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow">
               <h3 className="text-2xl text-white font-bold">Growth</h3>
               <div className="flex flex-col justify-center my-2">
@@ -159,18 +157,17 @@ export default function pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-sm lg:max-w-lg bg-gradient-to-b from-green-500/20 via-gray-900 to-gray-900 text-gray-900 rounded-lg border-2 border-green-400/70 shadow-xl ring-2 ring-green-500/30">
               <span className="absolute top-3 right-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Most Popular
@@ -213,7 +210,7 @@ export default function pricing() {
                 className="mt-auto text-white bg-green-500/70 hover:bg-green-600 transition-all duration-200 
                focus:ring-4 focus:ring-green-400 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
           </div>
@@ -221,12 +218,11 @@ export default function pricing() {
           <div className="w-full grid md:grid-cols-2 gap-6 mt-6">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative flex flex-col p-5 lg:p-10 mx-auto lg:max-w-full max-w-sm bg-gradient-to-b from-blue-800/30 via-gray-900 to-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow h-full"
             >
               <h3 className="text-2xl text-white font-bold">Advance</h3>
@@ -267,18 +263,17 @@ export default function pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative z-10 w-full max-w-sm lg:max-w-full mx-auto flex flex-col justify-center items-center mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-green-500/30 rounded-lg shadow-lg text-center p-10 text-white">
               <h3 className="text-3xl font-bold mb-4 text-green-primary">Need a Custom Plan?</h3>
               <p className="text-gray-300 mb-6">
@@ -297,12 +292,11 @@ export default function pricing() {
 
             {/* <motion.div
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
               className="relative flex flex-col p-5 lg:p-10 bg-gradient-to-b from-blue-800/30 via-gray-900 to-gray-900 text-gray-900 rounded-lg border border-gray-700 shadow h-full"
             >
               <h3 className="text-2xl text-white font-bold">Custom Plan</h3>
@@ -369,7 +363,7 @@ export default function pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-800 text-white bg-gradient-to-r from-gray-900 to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Get started
+                Choose Plan
               </Link>
             </motion.div> */}
           </div>
