@@ -42,10 +42,13 @@ export default function Footer() {
               <h2 className="mb-6 text-lg font-bold text-green-primary/70 uppercase">Packages</h2>
               <ul className="text-gray-200">
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">Basic</Link>
+                  <Link href="/pricing" className="hover:underline ">Starter</Link>
                 </li>
                 <li className="mb-3">
                   <Link href="/pricing" className="hover:underline ">Growth</Link>
+                </li>
+                <li className="mb-3">
+                  <Link href="/pricing" className="hover:underline ">Professional</Link>
                 </li>
                 <li className="mb-3">
                   <Link href="/pricing" className="hover:underline ">Advance</Link>

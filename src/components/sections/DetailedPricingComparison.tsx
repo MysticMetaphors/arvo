@@ -35,6 +35,26 @@ export default function DetailedPricingComparison() {
         "Payment Integration",
       ],
     },
+     {
+      name: "Advance",
+      info: "Full custom web solution, advanced features",
+      price: "₱599,999 - ₱999,999",
+      pages: "Unlimited Pages (Custom Design)",
+      social: "3 Social Network",
+      maintenance: "1 Month Free Maintenance (Minor Revisions and Data Uploading)",
+      features: [
+        "Responsive Design",
+        "SEO Setup",
+        "Contact form",
+        "SSL",
+        "Business Email",
+        "User Dashboard",
+        "Payment Integration",
+        "Role-based admin panels",
+        "Workflow automation",
+        "Reporting",
+      ],
+    },
     {
       name: "Advance",
       info: "Full custom web solution, advanced features",
@@ -66,8 +86,8 @@ export default function DetailedPricingComparison() {
             <thead className="bg-gray-900 text-gray-300">
               <tr>
                 <th className="py-4 px-6 text-left">Features</th>
-                {plans.map((plan) => (
-                  <th key={plan.name} className="py-4 px-6 text-center">
+                {plans.map((plan, i) => (
+                  <th key={i} className="py-4 px-6 text-center">
                     <div className="text-lg font-bold text-green-primary">{plan.name}</div>
                     <span className="text-md font-semibold text-gray-300">{plan.info}</span>
                     <div className="text-md font-normal text-gray-400 mt-1">
@@ -108,8 +128,8 @@ export default function DetailedPricingComparison() {
 
               <tr className="border-t border-gray-800 divide-x divide-gray-800 hover:bg-gray-800/70 transition">
                 <td className="py-4 px-6 text-left text-gray-300">Maintenance</td>
-                {plans.map((plan) => (
-                  <td key={plan.name} className="py-4 px-6 text-center">
+                {plans.map((plan, i) => (
+                  <td key={i} className="py-4 px-6 text-center">
                     {plan.maintenance}
                   </td>
                 ))}
@@ -122,8 +142,8 @@ export default function DetailedPricingComparison() {
                   className="border-t border-gray-800 divide-x divide-gray-800 hover:bg-gray-800/70 transition"
                 >
                   <td className="py-4 px-6 text-left text-gray-300">{feature}</td>
-                  {plans.map((plan) => (
-                    <td key={plan.name} className="py-4 px-6 text-center">
+                  {plans.map((plan, i) => (
+                    <td key={i} className="py-4 px-6 text-center">
                       <div className="flex justify-center">
                         {plan.features.includes(feature) ? (
                           <div className="w-5 h-5 rounded-full flex items-center justify-center bg-green-400/60">
