@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AuroraBackground from "../ui/background/AuroraBackground";
 
 export default function HomePage() {
+
   return (
     <section className="relative flex flex-col inset-shadow- items-center justify-center min-h-screen text-center overflow-hidden px-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] pointer-events-none"></div>
