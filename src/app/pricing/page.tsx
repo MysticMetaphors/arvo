@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function pricing() {
+export default function Pricing() {
   const [geoLocation, setGeoLocation] = useState('')
 
   useEffect(() => {
