@@ -23,7 +23,7 @@ export default function CurrencySelector({ value, onChange }: Props) {
           <div className="p-2 flex items-center justify-between cursor-pointer">
             <div className="flex items-center gap-2">
               <img
-                src={currencySymbols[value]?.flag || 'https://flagcdn.com/ph.svg'}
+                src={currencySymbols[value]?.flag}
                 className="w-5 h-5 rounded-full object-center"
               />
               <span className="font-bold text-gray-300">{value.toUpperCase()}</span>
