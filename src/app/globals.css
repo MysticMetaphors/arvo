@@ -2,14 +2,15 @@
 @import "tw-animate-css";
 
 html, body {
-  background-color: #0a0a0a; /* Deep black */
-  color: #d1d5db; /* Subtle gray text */
   scroll-behavior: smooth;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-green-primary: #00FF99;
   --color-black-primary: #0a0a0a;
+  --color-darkgreen-primary: #22C55E;
   --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
   var(--delay, 0ms);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -67,8 +68,8 @@ html, body {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* --background: oklch(1 0 0); */
+  /* --foreground: oklch(0.145 0 0); */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -101,8 +102,8 @@ html, body {
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  /* --background: oklch(0.145 0 0); */
+  /* --foreground: oklch(0.985 0 0); */
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);

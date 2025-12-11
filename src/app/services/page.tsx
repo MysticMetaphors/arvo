@@ -37,8 +37,8 @@ export default function services() {
   ];
 
   return (
-    <section className="relative bg-black-primary overflow-hidden">
-      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
+    <section className="relative bg-white dark:bg-black-primary overflow-hidden">
+      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">
         <motion.h2
@@ -46,9 +46,9 @@ export default function services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-4 text-4xl leading-tight font-extrabold text-white"
+          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
         >
-          What we <span className="text-green-primary">can do</span> for you
+          What we <span className="text-darkgreen-primary dark:text-green-primary">can do</span> for you
         </motion.h2>
 
         <motion.p
@@ -56,7 +56,7 @@ export default function services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-400 mx-auto mb-6"
+          className="text-gray-600 dark:text-gray-400 mx-auto mb-6"
         >
           A collection of projects that reflect our passion for clean design and smart development.
         </motion.p>
@@ -73,18 +73,17 @@ export default function services() {
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="group border border-gray-700 rounded-lg bg-gray-900 hover:bg-gray-800
-                         p-8 text-left transition-all duration-500 ease-out hover:-translate-y-2
-                         hover:shadow-lg hover:shadow-green-primary/20"
-            >
-              <i className={`fa-solid fa-${service.icon} text-2xl p-3 rounded-sm bg-green-primary/70 mb-3`}></i>
-              <h3 className="text-2xl font-semibold mb-2 group-hover:text-green-primary transition-colors">
+              className="shadow-lg group p-8 text-left rounded-lg border transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-lg border-gray-200 hover:shadow-gray-400/60 bg-white dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 dark:hover:shadow-green-primary/20">
+              <i className={`fa-solid fa-${service.icon} text-2xl p-3 rounded-sm mb-3 bg-darkgreen-primary/70 text-white dark:bg-green-primary/70`}></i>
+
+              <h3 className="text-2xl font-semibold mb-2 dark:group-hover:text-green-600 dark:group-hover:text-green-primary transition-colors">
                 {service.service}
               </h3>
-              <p className="text-gray-400 text-md">
+
+              <p className="text-gray-600 dark:text-gray-400 text-md">
                 {service.description}
               </p>
             </motion.div>

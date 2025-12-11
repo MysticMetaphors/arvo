@@ -90,7 +90,7 @@ export default function Contact({ onView }: ContactProp) {
     };
 
   return (
-    <section id="contact" className="relative bg-black-primary">
+    <section id="contact" className="relative bg-white dark:bg-black-primary">
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 max-w-7xl">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2 gap-7">
 
@@ -100,14 +100,14 @@ export default function Contact({ onView }: ContactProp) {
                 initial={{ opacity: 0, y: 40 }}
                 {...animationY}
                 transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-                className="mb-4 text-4xl leading-tight font-extrabold text-white">
-                Contact <span className="text-green-primary">Us</span>
+                className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white">
+                Contact <span className="text-darkgreen-primary dark:text-green-primary">Us</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 40 }}
                 {...animationY}
                 transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-                className="text-gray-400 text-lg text-justify mb-8">
+                className="text-gray-600 dark:text-gray-400 text-lg text-justify mb-8">
                 Have a question or a project in mind? Arvo is here to help you turn your vision into reality.
                 Reach out to us today — let’s collaborate and create something exceptional together.
               </motion.p>
@@ -118,7 +118,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-green-primary/60"></li>
+                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:text-black dark:bg-green-primary/60"></li>
                   <p className="text-md">j3rry.tagle@gmail.com</p>
                 </motion.div>
                 <motion.div
@@ -126,7 +126,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-green-primary/60"></li>
+                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:text-black dark:bg-green-primary/60"></li>
                   <p className="text-md">+63 917 115 3726</p>
                 </motion.div>
                 <motion.a
@@ -135,7 +135,7 @@ export default function Contact({ onView }: ContactProp) {
                   transition={{ duration: 0.5, delay: 2 * 0.1, ease: "easeOut" }}
                   href="https://www.linkedin.com/in/jerrytagle/"
                   className="flex gap-4 items-center">
-                  <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                  <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded text-white"></li>
                   <p className="text-md underline underline-offset-5">Jerry Tagle</p>
                 </motion.a>
                 <motion.a
@@ -161,82 +161,69 @@ export default function Contact({ onView }: ContactProp) {
             </div>
           </div>
 
-          <div className="col-span-3 z-10 pl-0 lg:pl-20">{/* bg-radial-[at_100%_100%] from-green-primary from-5% to-gray-900 to-40%  */}
+          <div className="col-span-3 z-10 pl-0 lg:pl-20">
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, y: 40 }}
               {...animationY}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-              action="" className="bg-gradient-to-t from-green-primary/20 via-gray-900 to-gray-900 border border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
+              action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/20 dark:via-gray-900 dark:to-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="firstname" className="block text-white mb-2">Firstname</label>
+                  <label htmlFor="firstname" className="block text-black dark:text-white mb-2">Firstname</label>
                   <input
                     type="text"
                     id="firstname"
                     name="firstname"
                     placeholder="Enter your firstname"
-                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="lastname" className="block text-white mb-2">Lastname</label>
+                  <label htmlFor="lastname" className="block text-black dark:text-white mb-2">Lastname</label>
                   <input
                     type="text"
                     id="lastname"
                     name="lastname"
                     placeholder="Enter your lastname"
-                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="email" className="block text-white mb-2">Email</label>
+                  <label htmlFor="email" className="block text-black dark:text-white mb-2">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="number" className="block text-white mb-2">Number</label>
+                  <label htmlFor="number" className="block text-black dark:text-white mb-2">Number</label>
                   <input
                     type="tel"
                     id="number"
                     name="number"
                     placeholder="Enter your phone number"
-                    className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
               </div>
 
-              {/* <div>
-                <label htmlFor="plan" className="block text-white mb-2">Choosen plan</label>
-                <select name="plan" id="plan" className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary">
-                  <option value="" defaultValue={''} hidden>
-                    Select a plan...
-                  </option>
-                  <option value="basic">Basic</option>
-                  <option value="growth">Growth</option>
-                  <option value="advance">Advance</option>
-                  <option value="custom">Custom</option>
-                </select>
-              </div> */}
-
               <div>
-                <label htmlFor="message" className="block text-white mb-2">Message</label>
+                <label htmlFor="message" className="block text-black dark:text-white mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Write your message here..."
                   rows={5}
-                  className="w-full p-3 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 ></textarea>
               </div>
 
@@ -250,12 +237,11 @@ export default function Contact({ onView }: ContactProp) {
           </div>
         </div>
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)] pointer-events-none"></div>
-        <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100\\' height=\\'100\\' fill=\\'none\\' stroke=\\'%2300FF99\\' stroke-width=\\'0.5\\'/></svg>')]"></div>
-      </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.15)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,#f8f8f8_100%)] dark:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-20 dark:opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100\\' height=\\'100\\' fill=\\'none\\' stroke=\\'%2300cc88\\' stroke-width=\\'0.5\\'/></svg>')]"></div>
 
-      {/* toast append */}
+      </div>
       <div id="append-toast" className="w-fit space-y-3 fixed top-5 left-10 md:left-15 z-100 flex flex-col">
 
       </div>
