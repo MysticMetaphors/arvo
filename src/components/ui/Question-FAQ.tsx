@@ -16,11 +16,11 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="bg-gray-900 border border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-green-primary/20 transition-all duration-500"
+      className="border-gray-200 dark:bg-gray-900 shadow-sm border dark:border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-lg dark:hover:shadow-green-primary/20 transition-all duration-500"
     >
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAnswer}>
-        <h3 className="text-md font-semibold text-gray-300">{item.question}</h3>
-        <i className={`fa-solid fa-chevron-down text-green-primary transition-all duration-500 ${isToggled ? '-rotate-180' : ''}`}></i>
+        <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">{item.question}</h3>
+        <i className={`fa-solid fa-chevron-down text-darkgreen-primary dark:text-green-primary transition-all duration-500 ${isToggled ? '-rotate-180' : ''}`}></i>
       </div>
 
       <AnimatePresence>
@@ -31,7 +31,7 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="text-gray-400 mt-4 overflow-hidden"
+            className="text-gray-700 dark:text-gray-400 mt-4 overflow-hidden"
           >
             {item.answer}
           </motion.p>

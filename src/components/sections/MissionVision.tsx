@@ -32,7 +32,7 @@ export default function MissionVision() {
   }, []);
 
   return (
-    <section className="relative bg-black-primary">
+    <section className="relative bg-white dark:bg-black-primary">
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full lg:w-2xl bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
       <div className="mx-auto px-6 lg:px-20 py-10 z-10">
         <div className="text-center flex justify-center flex-col md:flex-row gap-8 mb-8 2xl:mb-16">
@@ -42,10 +42,10 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
+            className="relative overflow-hidden w-full lg:w-2xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 p-10 rounded-lg">
             <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
             <div className="relative z-10">
-              <h2 className="text-xl text-green-400 mb-4 font-bold">Mission</h2>
+              <h2 className="text-xl text-darkgreen-primary dark:text-green-primary mb-4 font-bold">Mission</h2>
               <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
                 businesses to launch, grow, and adapt faster in today’s digital-first economy
               </p>
@@ -114,28 +114,29 @@ export default function MissionVision() {
               </div>
             </div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative overflow-hidden w-full lg:w-2xl bg-gray-900 border border-gray-700 p-10 rounded-lg">
+            className="relative overflow-hidden w-full lg:w-2xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 p-10 rounded-lg">
             <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
             <div className="relative z-10">
-              <h2 className="text-xl z-10 text-green-400 mb-4 font-bold">Vision</h2>
+              <h2 className="text-xl z-10 text-darkgreen-primary dark:text-green-primary mb-4 font-bold">Vision</h2>
               <p className="text-lg z-10 text-justify">A future where every business, no matter the size, has access to smart,
                 scalable, and affordable technology that drives long-term growth and community impact.
               </p>
             </div>
             <div className="flex relative items-center p-4 px-0 lg:px-16">
               <div className="relative flex justify-between mx-auto my-6 w-full max-w-lg">
-                <div className="z-10 text-2xl p-3 px-4.5 rounded-sm bg-green-400 text-gray-900 shadow-[0_0_20px_#00FF99]">
+                <div className="z-10 text-2xl p-3 px-4.5 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
                   <i className="fa-solid fa-lightbulb"></i>
                 </div>
-                <div className="z-10 text-2xl p-3 rounded-sm bg-green-400 text-gray-900 shadow-[0_0_20px_#00FF99]">
+                <div className="z-10 text-2xl p-3 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
                   <i className="fa-solid fa-gears"></i>
                 </div>
-                <div className="z-10 text-2xl p-3 rounded-sm bg-green-400 text-gray-900 shadow-[0_0_20px_#00FF99]">
+                <div className="z-10 text-2xl p-3 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
                   <i className="fa-solid fa-hand-holding-heart"></i>
                 </div>
                 <div className="absolute z-1 top-1/2 h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></div>

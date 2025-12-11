@@ -78,39 +78,69 @@ export default function FAQ() {
   }
 
   return (
-    <section id="techStack" className="py-20 bg-black-primary text-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="mb-4 text-4xl leading-tight font-extrabold text-white"
-        >
-          Frequently Asked <span className="text-green-primary">Questions</span>
-        </motion.h2>
+<section
+  id="FAQ"
+  className="
+    py-20
+    bg-white text-black
+    dark:bg-black-primary dark:text-white
+  "
+>
+  <div className="max-w-6xl mx-auto px-6 text-center">
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-gray-400 max-w-2xl mx-auto mb-12"
-        >
-          Here are some of the most common questions we receive from our clients.
-        </motion.p>
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      className="
+        mb-4 text-4xl leading-tight font-extrabold
+        text-black dark:text-white
+      "
+    >
+      Frequently Asked <span className="text-darkgreen-primary dark:text-green-primary">Questions</span>
+    </motion.h2>
 
-        <div className="max-w-5xl mx-auto text-left space-y-6">
-          {loadedFAQ.map((item, i) => (
-            <Questions_FAQ item={item} i={i} key={i} />
-          ))}
-          {loadedFAQ.length < questions.length && (
-            <button className="px-4 py-2 bg-green-400/5 rounded-md border border-green-400 hover:text-black hover:bg-green-400 text-green-400 transition-all duration-300 mx-auto block" onClick={loadMoreFAQs}>
-              Load More FAQs
-            </button>
-          )}
-        </div>
-      </div>
-    </section>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      className="
+        max-w-2xl mx-auto mb-12
+        text-gray-600 dark:text-gray-400
+      "
+    >
+      Here are some of the most common questions we receive from our clients.
+    </motion.p>
+
+    {/* FAQ List */}
+    <div className="max-w-5xl mx-auto text-left space-y-6">
+      {loadedFAQ.map((item, i) => (
+        <Questions_FAQ item={item} i={i} key={i} />
+      ))}
+
+      {/* Load More Button */}
+      {loadedFAQ.length < questions.length && (
+        <button
+          onClick={loadMoreFAQs}
+          className="
+            px-4 py-2 rounded-md mx-auto block transition-all duration-300
+            border text-sm font-medium
+
+            border-green-500 text-green-600 bg-green-100/30
+            hover:bg-green-500 hover:text-black
+
+            dark:border-green-400 dark:text-green-400 dark:bg-green-400/5
+            dark:hover:bg-green-400 dark:hover:text-black
+          "
+        >
+          Load More FAQs
+        </button>
+      )}
+    </div>
+  </div>
+</section>
+
   )
 }

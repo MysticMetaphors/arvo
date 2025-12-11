@@ -68,8 +68,8 @@ export default function team() {
   ]
 
   return (
-    <section id="projects" className="relative bg-black-primary overflow-hidden">
-      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
+    <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden">
+      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">
         <motion.h2
@@ -77,9 +77,9 @@ export default function team() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-4 text-4xl leading-tight font-extrabold text-white"
+          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
         >
-          Our <span className="text-green-primary">Team</span>
+          Our <span className="text-darkgreen-primary dark:text-green-primary">Team</span>
         </motion.h2>
 
         <motion.p
@@ -87,7 +87,7 @@ export default function team() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-400 mx-auto mb-6"
+          className="text-gray-600 dark:text-gray-400 mx-auto mb-6"
         >
           At Arvo, we focus on markets where technology, innovation, and design unlock long-term value.
         </motion.p>
@@ -103,30 +103,25 @@ export default function team() {
           {team.map((member, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.10,
-                ease: "easeOut",
-              }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 bg-gray-800 rounded-lg p-3 border border-gray-700 
-                                  transition-all duration-500 ease-out hover:-translate-y-2
-                                  hover:shadow-lg hover:shadow-green-primary/20"
+              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 p-3 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-gray-400/50"
             >
               <Image
-                loading="lazy"
-                width={800} height={800}
+                loading='lazy'
+                width={300}
+                height={300}
                 src={member.image}
-                alt="Team member"
-                className="w-full h-full sm:w-30 sm:h-30 rounded-lg object-cover mb-4 sm:mb-0 lg:mr-6 mr-2"
+                alt={member.name}
+                className="w-full h-full sm:w-30 sm:h-30 md:w-30 md:h-30 rounded-lg object-cover mb-4 sm:mb-0"
               />
 
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-gray-400 text-sm">{member.position}</p>
-                <p className="text-gray-400 text-sm mt-1">
+                <h3 className="text-xl font-semibold text-black dark:text-white">{member.name}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{member.position}</p>
+                <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">
                   {member.description}
                 </p>
               </div>

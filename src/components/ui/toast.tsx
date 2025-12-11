@@ -18,8 +18,8 @@ export default function Toast({ theme, text }: ToastProps) {
     <motion.div
       initial={{ opacity: 1, x: -40 }}
       animate={{ opacity: 0, x: 0}}
-      transition={{ delay: 4, duration: 1, ease: "easeOut" }} // fade out at 4s
-      className="max-w-md border text-sm rounded-lg bg-gray-900 border-white/20 text-white"
+      transition={{ delay: 4, duration: 1, ease: "easeOut" }}
+      className="max-w-md border text-sm rounded-lg bg-white dark:bg-gray-900 border-gray-300 dark:border-white/20 text-black dark:text-white shadow-lg"
       role="alert"
     >
       <div id="hs-toast-soft-color-dark-label" className="flex p-4">
