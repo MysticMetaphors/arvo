@@ -265,7 +265,7 @@ export default function Pricing() {
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
-            className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-white dark:bg-gradient-to-b dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-lg h-full"
+            className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md h-full"
           >
             <h3 className="text-2xl text-black dark:text-white font-bold">Advance</h3>
             <div className="flex flex-col justify-center my-2">
