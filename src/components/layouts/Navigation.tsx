@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav className="z-100 absolute z-10 top-5 left-1/2 transform -translate-x-1/2 max-w-7xl w-full px-6 py-4 bg-transparent flex items-center justify-between rounded-full">
-      <Image height={800} width={800} src="/Arvo_logo_rb.png" alt="Arvo Logo" className="h-8 w-fit z-110 brightness-0 dark:brightness-100 dark:contrast-100" />
+      <Image height={800} width={800} src="/Arvo_logo_rb.png" alt="Arvo Logo" className="h-8 w-fit z-110" />
 
       <div className="hidden md:flex items-center gap-6 text-gray-900 dark:text-white">
         <Link
@@ -47,7 +47,7 @@ export default function Navigation() {
       </div>
 
       <div className="md:hidden flex gap-6 items-center">
-        <ToggleTheme className="py-2 px-2 rounded-md bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out" isScrollAppear={false} />
+        <ToggleTheme className="py-2 px-2 rounded-md bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 z-110" animationType="fade-in-out" isScrollAppear={false} />
 
         <button
           className="z-110 text-white focus:outline-none"
@@ -58,7 +58,7 @@ export default function Navigation() {
       </div>
 
       {isOpen && (
-        <div className="absolute border border-green-primary/50 pt-20 -top-10 left-0 w-full bg-gray-900/90 backdrop-blur-md mt-3 py-5 rounded-lg flex flex-col items-center gap-4 text-white md:hidden">
+        <div className="absolute border border-darkgreen-primary dark:border-green-primary/50 pt-20 -top-10 left-0 w-full bg-gray-50/70 dark:bg-gray-900/90 backdrop-blur-md mt-3 py-5 rounded-lg flex flex-col items-center gap-4 text-black dark:text-white md:hidden">
           <Link
             href="/"
             className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"

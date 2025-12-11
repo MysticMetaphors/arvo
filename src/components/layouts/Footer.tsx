@@ -13,7 +13,7 @@ export default function Footer() {
                   height={800}
                   width={800}
                   src="/Arvo_logo_rb.png"
-                  className="h-8 w-fit mb-3 brightness-0 dark:brightness-100"
+                  className="h-8 w-fit mb-3"
                   alt="Arvo Logo"
                 />
               </Link>

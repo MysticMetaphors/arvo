@@ -14,7 +14,6 @@ export default function Pricing() {
       try {
         const geo = await fetch(`https://ip-intelligence.abstractapi.com/v1/?api_key=${process.env.NEXT_PUBLIC_GEO}`);
         const geoRes = await geo.json();
-        console.log(geoRes)
         setGeoLocation(geoRes?.currency?.code?.toLowerCase() || 'usd');
       } catch (error) {
         console.log('Unexpected Error Occured!')
@@ -23,7 +22,6 @@ export default function Pricing() {
     }
 
     fetchData()
-    console.log('initial fetch')
   }, [])
 
   const basic = [
