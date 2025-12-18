@@ -5,6 +5,7 @@ import ArvoCard from "../ui/arvo/ArvoCard";
 import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ExternalLink, Lock, Info, ImageOff } from "lucide-react";
+import Image from "next/image";
 
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 
@@ -180,7 +181,7 @@ export default function Projects() {
             >
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 md:top-4 md:left-4 z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
+                className="absolute top-4 right-4 md:top-4 md:left-4 w-fit z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
               >
                 <X size={28} />
               </button>
@@ -264,11 +265,9 @@ export default function Projects() {
 
                   <div className="mt-auto pt-6 border-t border-gray-200 dark:border-zinc-800">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Technologies</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-4 mb-6">
                       {selectedProject.icons.map((icon) => (
-                        <span key={icon} className="px-2 py-1 text-xs bg-gray-100 dark:bg-zinc-800 rounded text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-zinc-700">
-                          {icon}
-                        </span>
+                        <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
                       ))}
                     </div>
 
