@@ -88,7 +88,7 @@ export default function Projects() {
       ],
       url: "https://fluxo-alpha.vercel.app/",
       design: "Design Only",
-      icons: ["react", "tailwindcss", "html5"]
+      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "MIS Platform",
@@ -117,7 +117,7 @@ export default function Projects() {
       ],
       url: "",
       design: "Full Stack",
-      icons: ["php", "codeigniter3", "jquery", "html5"]
+      icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     }
   ];
 
@@ -154,7 +154,7 @@ export default function Projects() {
           className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"
         ></motion.div>
 
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 lg:pt-12 pt-8 lg:px-0 sm:p-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:pt-12 pt-8 lg:px-0 sm:p-6">
           {projects.map((project, i) => (
             <div 
               key={i} 

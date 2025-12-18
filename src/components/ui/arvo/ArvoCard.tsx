@@ -42,7 +42,7 @@ export default function ArvoCard({
       viewport={{ once: true }}
       className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden 
               transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
-              hover:shadow-green-primary/20"
+              hover:shadow-green-primary/20 group-hover:opacity-70"
     >
       {design && (
         <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-100 bg-green-600 rounded-md">
@@ -55,20 +55,20 @@ export default function ArvoCard({
         alt={title}
         width={800}
         height={312}
-        className="w-full max-h-[312px] object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-70"
+        className="w-full min-h-[312px] max-h-[312px] object-cover rounded-lg transition-opacity duration-300 "
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-center align-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="p-10 py-2 w-full flex justify-center items-center">
-          <div>
-            <h3 className="text-white lg:text-xl mb:text-md font-semibold tracking-tight mb-2">{title}</h3>
-            <p className="text-gray-400 lg:text-lg md:text-md mb-2 hidden sm:block">{description}</p>
-            <div className="flex justify-between lg:mt-4 items-center">
-              <div className="lg:flex gap-4 hidden">
+          <div className="space-y-4">
+            <h3 className="text-white lg:text-xl mb:text-md font-semibold tracking-tight">{title}</h3>
+            <p className="text-gray-400 lg:text-lg md:text-md hidden sm:block">{description}</p>
+            <div className="flex justify-between items-center">
+              <div className="md:flex gap-4 hidden">
                 {icons ?
                   icons.map((icon, i) => (
-                    <Image key={i} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-original.svg`} className="lg:w-8 md:w-6 " />
+                    <Image key={i} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
                   ))
                   : ''}
               </div>
