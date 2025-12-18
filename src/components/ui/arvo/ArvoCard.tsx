@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Lock } from "lucide-react";
 
 type ArvoCardProps = {
   title?: string;
   description?: string;
-  design?: boolean;
+  design?: string;
   url?: string;
   image?: string;
   icons?: string[];
@@ -40,21 +41,21 @@ export default function ArvoCard({
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
       viewport={{ once: true }}
       className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden 
-             transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
-             hover:shadow-green-primary/20"
+              transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
+              hover:shadow-green-primary/20"
     >
-      {design ?
-        <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-sm font-medium text-gray-100 bg-green-600 rounded-md">
-          Only Design
-        </span> : ''
-      }
+      {design && (
+        <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-100 bg-green-600 rounded-md">
+          {design}
+        </span>
+      )}
 
       <Image
         src={`/${image}`}
         alt={title}
         width={800}
-        height={800}
-        className="w-full object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-70"
+        height={312}
+        className="w-full max-h-[312px] object-cover rounded-lg transition-opacity duration-300 group-hover:opacity-70"
       />
 
       {/* Overlay */}
@@ -63,28 +64,38 @@ export default function ArvoCard({
           <div>
             <h3 className="text-white lg:text-xl mb:text-md font-semibold tracking-tight mb-2">{title}</h3>
             <p className="text-gray-400 lg:text-lg md:text-md mb-2 hidden sm:block">{description}</p>
-            <div className="flex justify-between lg:mt-4">
+            <div className="flex justify-between lg:mt-4 items-center">
               <div className="lg:flex gap-4 hidden">
                 {icons ?
                   icons.map((icon, i) => (
                     <Image key={i} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}/${icon}-original.svg`} className="lg:w-8 md:w-6 " />
                   ))
                   : ''}
-
               </div>
-              {url ?
+              
+              {url ? (
                 <a href={url} className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
                   Visit
                 </a>
-                : ''}
+              ) : (
+                <span className="flex items-center gap-2 px-4 py-1 bg-zinc-800/80 rounded-lg border border-zinc-600 text-zinc-400 cursor-not-allowed">
+                  <Lock size={14} /> Private
+                </span>
+              )}
             </div>
           </div>
         </div>
       </div>
 
-      <a href={url} className="block sm:hidden absolute bottom-3 right-3 px-6 py-1 font-bold shadow-[0_0_5px_#00FF99] bg-green-primary rounded-lg border border-green-400 text-green-900 hover:bg-green-400 hover:text-black transition-all duration-300">
-        Visit
-      </a>
+      {url ? (
+        <a href={url} className="block sm:hidden absolute bottom-3 right-3 px-6 py-1 font-bold shadow-[0_0_5px_#00FF99] bg-green-primary rounded-lg border border-green-400 text-green-900 hover:bg-green-400 hover:text-black transition-all duration-300">
+          Visit
+        </a>
+      ) : (
+        <div className="block sm:hidden absolute bottom-3 right-3 px-4 py-1 font-bold bg-zinc-800 rounded-lg border border-zinc-600 text-zinc-400">
+          <Lock size={16} />
+        </div>
+      )}
     </motion.div>
   );
 }
