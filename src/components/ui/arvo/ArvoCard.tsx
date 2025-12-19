@@ -45,7 +45,7 @@ export default function ArvoCard({
               hover:shadow-green-primary/20 group-hover:opacity-70"
     >
       {design && (
-        <span className="absolute top-3 right-3 z-10 shadow-[0_0_5px_#00FF99] px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-100 bg-green-600 rounded-md">
+        <span className="absolute -top-1 -right-1 inline-flex items-center gap-2 rounded-bl-lg border border-gray-600 bg-green-primary px-4 py-2 text-sm font-medium text-gray-800">
           {design}
         </span>
       )}
