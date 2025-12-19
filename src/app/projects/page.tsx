@@ -338,7 +338,7 @@ export default function Projects() {
             className="fixed inset-0 z-[100] flex bg-black/95 backdrop-blur-sm overflow-hidden"
           >
             <button
-              onClick={() => setSelectedProject(null)}
+              onClick={() => [setSelectedProject(null), setCurrentImageIndex(0)]}
               className="absolute top-4 right-4 md:top-4 md:left-4 w-fit z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
             >
               <X size={28} />
@@ -425,7 +425,7 @@ export default function Projects() {
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Technologies</p>
                   <div className="flex flex-wrap gap-4 mb-6">
                     {selectedProject.icons.map((icon) => (
-                      <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
+                      <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="w-8" />
                     ))}
                   </div>
 

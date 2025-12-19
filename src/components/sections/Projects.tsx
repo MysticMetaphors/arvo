@@ -86,9 +86,9 @@ export default function Projects() {
       title: "Fluxo",
       description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
       images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
+        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." },
       ],
-      url: "https://fluxo-alpha.vercel.app/",
+      url: "https://syro-sandy.vercel.app/",
       design: "Design Only",
       icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
@@ -141,7 +141,7 @@ export default function Projects() {
       images: [
         { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
       ],
-      url: "",
+      url: "https://syro-sandy.vercel.app/",
       design: "Design Only",
       icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     }
@@ -204,7 +204,7 @@ export default function Projects() {
               className="fixed inset-0 z-[100] flex bg-black/95 backdrop-blur-sm overflow-hidden"
             >
               <button
-                onClick={() => setSelectedProject(null)}
+                onClick={() => [setSelectedProject(null), setCurrentImageIndex(0)]}
                 className="absolute top-4 right-4 md:top-4 md:left-4 w-fit z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
               >
                 <X size={28} />
@@ -291,7 +291,7 @@ export default function Projects() {
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Technologies</p>
                     <div className="flex flex-wrap gap-4 mb-6">
                       {selectedProject.icons.map((icon) => (
-                        <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
+                        <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="w-8" />
                       ))}
                     </div>
 
@@ -300,7 +300,7 @@ export default function Projects() {
                         href={selectedProject.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-2 w-full py-3 bg-green-primary hover:bg-green-600 text-white font-medium rounded-md transition-colors"
+                        className="flex items-center justify-center gap-2 w-full py-3 bg-darkgreen-primary text-white shadow-md hover:shadow-[0_0_40px_#33FFB3] dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99] text-white font-medium rounded-md transition-colors"
                       >
                         Visit Project <ExternalLink size={16} />
                       </a>
