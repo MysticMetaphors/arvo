@@ -120,6 +120,30 @@ export default function Projects() {
       url: "",
       design: "Full Stack",
       icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Enro",
+      description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
+      images: [
+        { src: "projects/enro/landing_1.png", caption: "TODO: Add text" },
+        { src: "projects/enro/landing_2.png", caption: "TODO: Add text" },
+        { src: "projects/enro/landing_3.png", caption: "TODO: Add text" },
+        { src: "projects/enro/landing_4.png", caption: "TODO: Add text" },
+        { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
+      ],
+      url: "",
+      design: "Design Only",
+      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Syro",
+      description: "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
+      images: [
+        { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
+      ],
+      url: "",
+      design: "Design Only",
+      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     }
   ];
 
