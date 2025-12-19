@@ -19,7 +19,10 @@ interface Project {
   description: string;
   images: ProjectImage[];
   url: string;
-  design: string;
+  category: string;
+  tooltip: string;
+  tooltip_design: "green" | "blue" | "purple" | "red";
+  isGray: boolean;
   icons: string[];
 }
 
@@ -83,18 +86,22 @@ export default function Projects() {
     // =========================================================================
 
     {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+      title: "Lounge - Social Media",
+      description: "A social media for pets.",
       images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." },
+        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
+        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
       ],
-      url: "https://syro-sandy.vercel.app/",
-      design: "Design Only",
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+      url: "https://metaanimals.tech",
+      category: "Enterprise Solutions",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: false,
+      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend",
+      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
       images: [
         { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
         { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
@@ -118,8 +125,24 @@ export default function Projects() {
         { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
       ],
       url: "",
-      design: "Full Stack",
+      category: "Enterprise Solutions",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: true,
       icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Fluxo",
+      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+      images: [
+        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
+      ],
+      url: "https://fluxo-alpha.vercel.app/",
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "green",
+      isGray: false,
+      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "Enro",
@@ -132,19 +155,12 @@ export default function Projects() {
         { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
       ],
       url: "",
-      design: "Design Only",
-      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "purple",
+      isGray: true,
+      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
-    {
-      title: "Syro",
-      description: "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
-      images: [
-        { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
-      ],
-      url: "https://syro-sandy.vercel.app/",
-      design: "Design Only",
-      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    }
   ];
 
   return (
@@ -182,13 +198,15 @@ export default function Projects() {
               className="cursor-pointer"
             >
               <ArvoCard
-                onView={false}
+                onView={true}
                 index={i}
                 title={project.title}
                 description={project.description}
                 image={project.images?.[0]?.src || PLACEHOLDER_IMAGE}
                 url={project.url}
-                design={project.design}
+                tooltip={project.tooltip}
+                tooltip_design={project.tooltip_design}
+                isGray={project.isGray}
                 icons={project.icons}
               />
             </div>
@@ -269,10 +287,10 @@ export default function Projects() {
                       <h3 className="text-2xl font-bold text-black dark:text-white">
                         {selectedProject.title}
                       </h3>
-                      {selectedProject.design && (
+                      {selectedProject.tooltip && (
                         <span className="flex items-center gap-1 px-2 py-1 text-[10px] uppercase font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded border border-blue-200 dark:border-blue-800/50">
                           <Info size={10} />
-                          {selectedProject.design}
+                          {selectedProject.tooltip}
                         </span>
                       )}
                     </div>
@@ -300,7 +318,7 @@ export default function Projects() {
                         href={selectedProject.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-2 w-full py-3 bg-darkgreen-primary text-white shadow-md hover:shadow-[0_0_40px_#33FFB3] dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99] text-white font-medium rounded-md transition-colors"
+                        className="flex items-center justify-center gap-2 w-full py-3 bg-green-primary/70 hover:bg-green-600 text-white font-medium rounded-md transition-colors"
                       >
                         Visit Project <ExternalLink size={16} />
                       </a>
@@ -325,6 +343,6 @@ export default function Projects() {
           </Link>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

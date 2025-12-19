@@ -102,7 +102,7 @@ export default function Projects() {
       tooltip: "Full Stack",
       tooltip_design: "blue",
       isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "MIS Platform",
@@ -194,7 +194,7 @@ export default function Projects() {
       tooltip: "Full Stack",
       tooltip_design: "blue",
       isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "Mochi - Incremental Rhythm Game",
@@ -207,7 +207,7 @@ export default function Projects() {
       tooltip: "Full Stack",
       tooltip_design: "blue",
       isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     },
   ];
 
