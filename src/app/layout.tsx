@@ -5,6 +5,12 @@ import Navigation from "@/components/layouts/Navigation";
 import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 // import { ThemeProvider } from "next-themes";
 import { ToggleTheme } from "@/components/ui/ToggleTheme";
+import localFont from "next/font/local";
+
+const fontEthnocentric = localFont({
+  src: "../../fonts/Ethnocentric-Regular.otf",
+  variable: "--font-ethnocentric-local",
+});
 
 export const metadata: Metadata = {
   title: "Arvo | Creative Web Solutions & Development Studio",
@@ -67,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300">
+      <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
