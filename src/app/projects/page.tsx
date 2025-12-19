@@ -18,13 +18,19 @@ interface Project {
   description: string;
   images: ProjectImage[];
   url: string;
-  design: string;
+  category: string;
+  tooltip: string;
+  tooltip_design: "green" | "blue" | "purple" | "red";
+  isGray: boolean;
   icons: string[];
 }
+
+const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
     if (selectedProject) {
@@ -37,7 +43,7 @@ export default function Projects() {
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (!selectedProject) return;
-    
+
     if (e.key === "Escape") setSelectedProject(null);
     if (e.key === "ArrowLeft") prevImage();
     if (e.key === "ArrowRight") nextImage();
@@ -60,7 +66,7 @@ export default function Projects() {
   const prevImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedProject && hasImages(selectedProject)) {
-      setCurrentImageIndex((prev) => 
+      setCurrentImageIndex((prev) =>
         prev === 0 ? selectedProject.images.length - 1 : prev - 1
       );
     }
@@ -76,24 +82,31 @@ export default function Projects() {
     //     { src: "projects/folder/img.png", caption: "Caption" }
     //   ],
     //   url: "https://hatsune.miku",
-    //   design: "Design Only",
+    //   category: "Category Name",
+    //   tooltip: "Tooltip Text",
+    //   tooltip_design: "green",
+    //   isGray: false,
     //   icons: ["react", "typescript"]
     // },
     // =========================================================================
 
     {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+      title: "Lounge - Social Media",
+      description: "A social media for pets.",
       images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
+        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
+        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
       ],
-      url: "https://fluxo-alpha.vercel.app/",
-      design: "Design Only",
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+      url: "https://metaanimals.tech",
+      category: "Enterprise Solutions",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: false,
+      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend",
+      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
       images: [
         { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
         { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
@@ -117,8 +130,24 @@ export default function Projects() {
         { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
       ],
       url: "",
-      design: "Full Stack",
+      category: "Enterprise Solutions",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: true,
       icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Fluxo",
+      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+      images: [
+        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
+      ],
+      url: "https://fluxo-alpha.vercel.app/",
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "green",
+      isGray: false,
+      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "Enro",
@@ -131,8 +160,11 @@ export default function Projects() {
         { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
       ],
       url: "",
-      design: "Design Only",
-      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "purple",
+      isGray: true,
+      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
       title: "Syro",
@@ -141,10 +173,50 @@ export default function Projects() {
         { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
       ],
       url: "",
-      design: "Design Only",
-      icons:  ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    }
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "red",
+      isGray: true,
+      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Honeyrush - Tile Matching Game",
+      description: "A cute game about matching objects and bees!",
+      images: [
+        { src: "projects/honeyrush/main_menu.png", caption: "Main menu" },
+        { src: "projects/honeyrush/gameplay.png", caption: "Gameplay" },
+        { src: "projects/honeyrush/prompt_1.png", caption: "Gameplay" },
+        { src: "projects/honeyrush/prompt_2.png", caption: "Gameplay" },
+        { src: "projects/honeyrush/leaderboard.png", caption: "Compete with others for a spot in the leaderboards!" },
+      ],
+      url: "https://honeyrush.tewi.club",
+      category: "Games",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: false,
+      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Mochi - Incremental Rhythm Game",
+      description: "An experimental game about the combination of incremental game mechanics and rhythm game mechanics.",
+      images: [
+        { src: "projects/mochi/gameplay.png", caption: "Gameplay" },
+      ],
+      url: "https://mochi.tewi.club",
+      category: "Games",
+      tooltip: "Full Stack",
+      tooltip_design: "blue",
+      isGray: false,
+      icons: ["php/php-original.svg", "laravel/laravel.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    },
   ];
+
+  // Logic to determine which categories to show
+  // If "All" is selected, we show all categories that are not "All"
+  // If specific category is selected, we show only that one
+  const visibleCategories = activeCategory === "All"
+    ? CATEGORIES.filter(c => c !== "All")
+    : [activeCategory];
 
   return (
     <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden min-h-screen">
@@ -171,33 +243,89 @@ export default function Projects() {
           A collection of projects that reflect our passion for clean design and smart development.
         </motion.p>
 
+        {/* Initial Separator */}
+        <div
+          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)] mb-8"
+          style={{ opacity: 1, transform: "none" }}
+        ></div>
+
+        {/* Filter Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"
-        ></motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-8 lg:pt-12 pt-8 lg:px-0 sm:p-6">
-          {projects.map((project, i) => (
-            <div 
-              key={i} 
-              onClick={() => setSelectedProject(project)}
-              className="cursor-pointer"
+          className="flex flex-wrap gap-2 mb-16"
+        >
+          {CATEGORIES.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
+                ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
+                : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
+                }`}
             >
-              <ArvoCard 
-                onView={false} 
-                index={i} 
-                title={project.title}
-                description={project.description}
-                image={project.images?.[0]?.src || PLACEHOLDER_IMAGE} 
-                url={project.url}
-                design={project.design}
-                icons={project.icons}
-              />
-            </div>
+              {category}
+            </button>
           ))}
+        </motion.div>
+
+        <div className="lg:px-0 sm:p-6">
+          {visibleCategories.map((category, index) => {
+            const categoryProjects = projects.filter((project) => project.category === category);
+
+            if (categoryProjects.length === 0) return null;
+
+            return (
+              <div key={category} className="mb-20 last:mb-0">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="mb-8"
+                >
+                  <h3 className="text-2xl font-bold text-black dark:text-white flex items-center gap-4">
+                    <span className="text-darkgreen-primary dark:text-green-primary">▷</span> {category}
+                  </h3>
+                </motion.div>
+
+                <div className="grid lg:grid-cols-2 gap-x-8 gap-y-12">
+                  <AnimatePresence mode="popLayout">
+                    {categoryProjects.map((project, i) => (
+                      <div
+                        key={project.title}
+                        onClick={() => setSelectedProject(project)}
+                        className="cursor-pointer"
+                      >
+                        <ArvoCard
+                          onView={true}
+                          index={i}
+                          title={project.title}
+                          description={project.description}
+                          image={project.images?.[0]?.src || PLACEHOLDER_IMAGE}
+                          url={project.url}
+                          tooltip={project.tooltip}
+                          tooltip_design={project.tooltip_design}
+                          isGray={project.isGray}
+                          icons={project.icons}
+                        />
+                      </div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+
+                {/* Category Separator - Only shown if it is not the last category */}
+                {index !== visibleCategories.length - 1 && (
+                  <div
+                    className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)] mt-20"
+                    style={{ opacity: 1, transform: "none" }}
+                  ></div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -219,7 +347,7 @@ export default function Projects() {
             <div className="flex w-full h-full flex-col lg:flex-row">
               <div className="relative flex-1 h-full flex items-center justify-center bg-black" onClick={(e) => e.stopPropagation()}>
                 {hasImages(selectedProject) && selectedProject.images.length > 1 && (
-                  <button 
+                  <button
                     onClick={prevImage}
                     className="absolute left-4 z-10 p-2 bg-black/40 hover:bg-white/10 rounded-full text-white transition-colors"
                   >
@@ -227,7 +355,7 @@ export default function Projects() {
                   </button>
                 )}
 
-                <motion.div 
+                <motion.div
                   key={currentImageIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -257,7 +385,7 @@ export default function Projects() {
                 </motion.div>
 
                 {hasImages(selectedProject) && selectedProject.images.length > 1 && (
-                  <button 
+                  <button
                     onClick={nextImage}
                     className="absolute right-4 z-10 p-2 bg-black/40 hover:bg-white/10 rounded-full text-white transition-colors"
                   >
@@ -266,7 +394,7 @@ export default function Projects() {
                 )}
               </div>
 
-              <div 
+              <div
                 className="w-full lg:w-[350px] bg-white dark:bg-zinc-900 border-l border-zinc-200 dark:border-zinc-800 flex flex-col p-6 z-20 overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -275,10 +403,10 @@ export default function Projects() {
                     <h3 className="text-2xl font-bold text-black dark:text-white">
                       {selectedProject.title}
                     </h3>
-                    {selectedProject.design && (
+                    {selectedProject.tooltip && (
                       <span className="flex items-center gap-1 px-2 py-1 text-[10px] uppercase font-bold bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded border border-blue-200 dark:border-blue-800/50">
                         <Info size={10} />
-                        {selectedProject.design}
+                        {selectedProject.tooltip}
                       </span>
                     )}
                   </div>
@@ -300,18 +428,18 @@ export default function Projects() {
                       <Image key={icon} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
                     ))}
                   </div>
-                  
+
                   {selectedProject.url ? (
-                    <a 
-                      href={selectedProject.url} 
-                      target="_blank" 
+                    <a
+                      href={selectedProject.url}
+                      target="_blank"
                       rel="noreferrer"
                       className="flex items-center justify-center gap-2 w-full py-3 bg-green-primary/70 hover:bg-green-600 text-white font-medium rounded-md transition-colors"
                     >
                       Visit Project <ExternalLink size={16} />
                     </a>
                   ) : (
-                    <button 
+                    <button
                       disabled
                       className="flex items-center justify-center gap-2 w-full py-3 bg-gray-100 dark:bg-zinc-800 text-gray-400 cursor-not-allowed font-medium rounded-md border border-gray-200 dark:border-zinc-700"
                     >
