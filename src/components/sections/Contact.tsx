@@ -22,27 +22,25 @@ export default function Contact({ onView }: ContactProp) {
 
     const form = e.target as HTMLFormElement;
 
-    const firstname = (form.elements.namedItem("firstname") as HTMLInputElement).value.trim();
-    const lastname = (form.elements.namedItem("lastname") as HTMLInputElement).value.trim();
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
     const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
     const number = (form.elements.namedItem("number") as HTMLInputElement).value.trim();
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
 
 
-    if (!firstname || !lastname || !email || !number || !message) {
+    if (!name || !email || !number || !message) {
       appendToast('append-toast', 'error', 'Please complete the form before submitting.')
       submitButton.disabled = false;
       submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
       return;
     }
 
-    const subject = `📨 Message from ${firstname} ${lastname} via Arvo Website`;
+    const subject = `📨 Message from ${name} via Arvo Website`;
 
     const formData = {
       access_key: process.env.NEXT_PUBLIC_ACCESS_KEY,
-      from_name: `${firstname} ${lastname}`,
-      firstname,
-      lastname,
+      from_name: `${name}`,
+      name,
       email,
       number,
       message,
@@ -118,7 +116,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:text-black dark:bg-green-primary/60"></li>
+                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:bg-green-primary/60"></li>
                   <p className="text-md">j3rry.tagle@gmail.com</p>
                 </motion.div>
                 <motion.div
@@ -126,7 +124,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:text-black dark:bg-green-primary/60"></li>
+                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:bg-green-primary/60"></li>
                   <p className="text-md">+63 917 115 3726</p>
                 </motion.div>
                 <motion.a
@@ -168,28 +166,16 @@ export default function Contact({ onView }: ContactProp) {
               {...animationY}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
               action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/20 dark:via-gray-900 dark:to-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="firstname" className="block text-black dark:text-white mb-2">Firstname</label>
-                  <input
-                    type="text"
-                    id="firstname"
-                    name="firstname"
-                    placeholder="Enter your firstname"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="lastname" className="block text-black dark:text-white mb-2">Lastname</label>
-                  <input
-                    type="text"
-                    id="lastname"
-                    name="lastname"
-                    placeholder="Enter your lastname"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
-                  />
-                </div>
+              
+              <div>
+                <label htmlFor="name" className="block text-black dark:text-white mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -199,19 +185,19 @@ export default function Contact({ onView }: ContactProp) {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your email"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    placeholder="example@gmail.com"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="number" className="block text-black dark:text-white mb-2">Number</label>
+                  <label htmlFor="number" className="block text-black dark:text-white mb-2">Contact</label>
                   <input
                     type="tel"
                     id="number"
                     name="number"
-                    placeholder="Enter your phone number"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    placeholder="e.g. 09XX-XXX-XXXX"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
               </div>
@@ -223,7 +209,7 @@ export default function Contact({ onView }: ContactProp) {
                   name="message"
                   placeholder="Write your message here..."
                   rows={5}
-                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 ></textarea>
               </div>
 

@@ -61,14 +61,12 @@ export default function ArvoCard({
       viewport={{ once: true }}
       className="flex flex-col gap-2"
     >
-      <h3 className="text-xl font-ethnocentric text-gray-500 pl-1">{title}</h3>
+      {/* <h3 className="text-xl font-et font-bold text-gray-300 pl-1">{title}</h3> */}
 
-      <div className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden 
-              transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg 
-              hover:shadow-green-primary/20 group-hover:opacity-70">
+      <div className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg hover:shadow-green-primary/20 group-hover:opacity-70">
 
         {tooltip && (
-          <span className={`absolute top-3 right-3 z-30 px-3 py-1 text-xs font-bold uppercase tracking-wide rounded-md ${getTooltipStyles(tooltip_design)}`}>
+          <span className={`absolute -top-1 -right-1 z-30 px-4 py-2 rounded-bl-md text-xs font-bold uppercase tracking-wide ${getTooltipStyles(tooltip_design)}`}>
             {tooltip}
           </span>
         )}
@@ -83,7 +81,7 @@ export default function ArvoCard({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={`object-cover blur-2xl scale-110 opacity-50 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
-            quality={20} // Low quality is fine for the blur, saves performance
+            // quality={20} // Low quality is fine for the blur, saves performance
           />
 
           {/* 2. Main Centered Image Layer (The Content) */}
@@ -100,6 +98,7 @@ export default function ArvoCard({
         <div className="absolute inset-0 z-20 flex flex-col justify-center items-center align-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="p-10 py-2 w-full flex justify-center items-center">
             <div className="space-y-4">
+              <h1 className="font-bold font-ethnocentric text-lg text-gray-300">{title}</h1>
               <p className="text-gray-400 lg:text-lg md:text-md hidden sm:block">{description}</p>
               <div className="flex justify-between items-center">
                 <div className="md:flex gap-4 hidden">
