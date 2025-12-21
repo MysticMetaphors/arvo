@@ -106,6 +106,22 @@ export default function Projects() {
       isGray: false,
       icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
+    // {
+    //   title: "Lean",
+    //   description: "Lean is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+    //   images: [
+    //     { src: "projects/leanademy/landing_1.jpeg", caption: "The main landing page showing the hero section." },
+    //     { src: "projects/leanademy/landing_2.jpeg", caption: "The main landing page showing the hero section." },
+    //     { src: "projects/leanademy/landing_3.jpeg", caption: "The main landing page showing the hero section." },
+    //     { src: "projects/leanademy/landing_4.jpeg", caption: "The main landing page showing the hero section." }
+    //   ],
+    //   url: "https://fluxo-alpha.vercel.app/",
+    //   category: "Landing Pages",
+    //   tooltip: "Design Only",
+    //   tooltip_design: "green",
+    //   isGray: false,
+    //   icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    // },
     {
       title: "Enro",
       description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
