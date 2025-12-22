@@ -27,23 +27,23 @@ export default function Pricing() {
   // const geoLocation = 'php'
 
   const basic = [
-    <>Up to 3 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 3)</>,
+    "Up to 3 pages (+$5 per page after 3)",
     "Basic SEO",
-    <>Up to 5 edits (Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} /> per month for unlimited edits)</>,
+    "Up to 5 edits (Addon: +$20 per month for unlimited edits)",
     "Hosting included",
     "24/5 Support"
   ]
   const growth = [
-    <>Up to 7 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 3)</>,
-    <>Up to 2 social integrations (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per social after 2)</>,
+    "Up to 7 pages (+$5 per page after 3)",
+    "Up to 2 social integrations (+$5 per social after 2)",
     "Advanced SEO",
-    <>Up to 10 edits (Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} /> per month for unlimited edits)</>,
+    "Up to 10 edits (Addon: +$20 per month for unlimited edits)",
     "Hosting included",
     "24/7 Support"
   ]
   const professional = [
     "Unlimited pages",
-    <>4 customizable features (+<Exchange base={geoLocation} currencies="usd" amount={500} /> per additional feature)</>,
+    "4 customizable features (+$500 per additional feature)",
     "Hosting included",
     "Custom domain included",
     "24/7 Priority Support",
