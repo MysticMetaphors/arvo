@@ -11,6 +11,7 @@ type ArvoCardProps = {
   tooltip_design?: "green" | "blue" | "purple" | "red";
   url?: string;
   image?: string;
+  type?: "image" | "video";
   icons?: string[];
   index?: number;
   onView?: boolean;
@@ -24,6 +25,7 @@ export default function ArvoCard({
   tooltip_design = "green",
   url,
   image = '',
+  type = 'image',
   icons = [],
   index = 0,
   onView,
@@ -61,8 +63,6 @@ export default function ArvoCard({
       viewport={{ once: true }}
       className="flex flex-col gap-2"
     >
-      {/* <h3 className="text-xl font-et font-bold text-gray-300 pl-1">{title}</h3> */}
-
       <div className="group relative border border-gray-700 rounded-lg bg-black-primary overflow-hidden transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-lg hover:shadow-green-primary/20 group-hover:opacity-70">
 
         {tooltip && (
@@ -71,27 +71,48 @@ export default function ArvoCard({
           </span>
         )}
 
-        {/* Image Container with Backdrop Effect */}
+        {/* Image/Video Container with Backdrop Effect */}
         <div className="relative w-full h-[312px] bg-black overflow-hidden">
-          
-          {/* 1. Blurred Background Layer (The Fill) */}
-          <Image
-            src={`/${image}`}
-            alt={`${title} background`}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className={`object-cover blur-2xl scale-110 opacity-50 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
-            // quality={20} // Low quality is fine for the blur, saves performance
-          />
 
-          {/* 2. Main Centered Image Layer (The Content) */}
-          <Image
-            src={`/${image}`}
-            alt={title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className={`object-contain z-10 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
-          />
+          {/* 1. Blurred Background Layer (The Fill) */}
+          {type === 'video' ? (
+            <video
+              src={`/${image}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={`absolute inset-0 w-full h-full object-cover blur-2xl scale-110 opacity-50 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
+            />
+          ) : (
+            <Image
+              src={`/${image}`}
+              alt={`${title} background`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={`object-cover blur-2xl scale-110 opacity-50 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
+            />
+          )}
+
+          {/* 2. Main Centered Image/Video Layer (The Content) */}
+          {type === 'video' ? (
+            <video
+              src={`/${image}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={`absolute inset-0 w-full h-full object-contain z-10 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
+            />
+          ) : (
+            <Image
+              src={`/${image}`}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={`object-contain z-10 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
+            />
+          )}
         </div>
 
         {/* Overlay Content */}

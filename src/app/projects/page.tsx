@@ -1,9 +1,33 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react";
+// =========================================================================
+// HOW TO ADD A NEW PROJECT
+// =========================================================================
+// 1. Open src/app/projects/projects.json
+// 2. Add a new object to the array using the template below.
+// 3. To add a video, set the "type" property in the image object to "video".
+//
+// TEMPLATE:
+// {
+//   "title": "Project Name",
+//   "description": "Brief description.",
+//   "images": [
+//     { "src": "projects/folder/img.png", "caption": "Caption", "type": "image" }
+//   ],
+//   "url": "https://hatsune.miku",
+//   "category": "Category Name",
+//   "tooltip": "Tooltip Text",
+//   "tooltip_design": "green",
+//   "isGray": false,
+//   "icons": ["react/react-original.svg", "typescript/typescript-original.svg"]
+// }
+// =========================================================================
+
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ArvoCard from "@/components/ui/arvo/ArvoCard";
 import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
+import projectsData from "./projects.json";
 
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
@@ -11,6 +35,7 @@ const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
 interface ProjectImage {
   src: string;
   caption: string;
+  type?: "image" | "video";
 }
 
 interface Project {
@@ -29,160 +54,7 @@ export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const projects: Project[] = [
-    // =========================================================================
-    // TEMPLATE
-    // {
-    //   title: "Project Name",
-    //   description: "Brief description.",
-    //   images: [
-    //     { src: "projects/folder/img.png", caption: "Caption" }
-    //   ],
-    //   url: "https://hatsune.miku",
-    //   category: "Category Name",
-    //   tooltip: "Tooltip Text",
-    //   tooltip_design: "green",
-    //   isGray: false,
-    //   icons: ["react", "typescript"]
-    // },
-    // =========================================================================
-
-    {
-      title: "Lounge - Social Media",
-      description: "A social platform that connects pets with their owners and communities.",
-      images: [
-        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
-        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
-      ],
-      url: "https://metaanimals.tech",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
-      images: [
-        { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_5.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_6.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_7.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/ai.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_department.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: true,
-      icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
-      ],
-      url: "https://fluxo-alpha.vercel.app/",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "green",
-      isGray: false,
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    // {
-    //   title: "Lean",
-    //   description: "Lean is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-    //   images: [
-    //     { src: "projects/leanademy/landing_1.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_2.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_3.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_4.jpeg", caption: "The main landing page showing the hero section." }
-    //   ],
-    //   url: "https://fluxo-alpha.vercel.app/",
-    //   category: "Landing Pages",
-    //   tooltip: "Design Only",
-    //   tooltip_design: "green",
-    //   isGray: false,
-    //   icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    // },
-    {
-      title: "Enro",
-      description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
-      images: [
-        { src: "projects/enro/landing_1.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_2.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_3.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_4.png", caption: "TODO: Add text" },
-        { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "purple",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Syro",
-      description: "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
-      images: [
-        { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "red",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Honeyrush - Tile Matching Game",
-      description: "A cute game about matching objects and bees!",
-      images: [
-        { src: "projects/honeyrush/main_menu.png", caption: "Main menu" },
-        { src: "projects/honeyrush/gameplay.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_1.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_2.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/leaderboard.png", caption: "Compete with others for a spot in the leaderboards!" },
-      ],
-      url: "https://honeyrush.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Mochi - Incremental Rhythm Game",
-      description: "An experimental game about the combination of incremental game mechanics and rhythm game mechanics.",
-      images: [
-        { src: "projects/mochi/gameplay.png", caption: "Gameplay" },
-      ],
-      url: "https://mochi.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-  ];
+  const projects = projectsData as unknown as Project[];
 
   // Logic to determine which categories to show
   // If "All" is selected, we show all categories that are not "All"
@@ -278,6 +150,7 @@ export default function Projects() {
                           title={project.title}
                           description={project.description}
                           image={project.images?.[0]?.src || PLACEHOLDER_IMAGE}
+                          type={project.images?.[0]?.type || "image"}
                           url={project.url}
                           tooltip={project.tooltip}
                           tooltip_design={project.tooltip_design}
@@ -302,7 +175,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <ArvoInspectProject 
+      <ArvoInspectProject
         onSelectedProject={setSelectedProject}
         selectedProject={selectedProject}
       />
