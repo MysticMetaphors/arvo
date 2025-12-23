@@ -46,6 +46,47 @@
     "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
   },
   {
+    "title": "Inventory System",
+    "description": "A complete inventory system for an entire company's products. Includes purchase/sales orders, invoices, report generation, and more.",
+    "images": [
+      { "src": "projects/mk9inventory/dashboard.png", "caption": "Dashboard." },
+      { "src": "projects/mk9inventory/dashboard_backup.png", "caption": "Backs up the entire database for redundancy purposes. Avoids data corruption and data wipe out." },
+      { "src": "projects/mk9inventory/dashboard_security.png", "caption": "Comprehensive tracking of what happens to the app and how each user uses it. Verbose logs." },
+      { "src": "projects/mk9inventory/products.png", "caption": "Products page." },
+      { "src": "projects/mk9inventory/product_releasing.png", "caption": "Releasing of products." },
+      { "src": "projects/mk9inventory/product_restocking.png", "caption": "Restocking of products." },
+      { "src": "projects/mk9inventory/inventory.png", "caption": "Inventory list." },
+      { "src": "projects/mk9inventory/inventory_report.png", "caption": "Generation of report." },
+      { "src": "projects/mk9inventory/purchase_orders.png", "caption": "Purchase orders." },
+      { "src": "projects/mk9inventory/purchase_order_create.png", "caption": "Purchase orders creation." },
+      { "src": "projects/mk9inventory/sales_orders.png", "caption": "Sales orders." },
+      { "src": "projects/mk9inventory/sales_order_create.png", "caption": "Sales orders creation." },
+      { "src": "projects/mk9inventory/product_branding.png", "caption": "Product brandings. Includes variations, sizes, etc." },
+      { "src": "projects/mk9inventory/profile_edit.png", "caption": "Profile edit for the app." }
+    ],
+    "url": "",
+    "category": "Enterprise Solutions",
+    "tooltip": "Full Stack",
+    "tooltip_design": "blue",
+    "isGray": false,
+    "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+  },
+  {
+    "title": "HRIS",
+    "description": "Human resources information system. Made for HRs and employee data.",
+    "images": [
+      { "src": "projects/hris/dashboard.png", "caption": "Dashboard." },
+      { "src": "projects/hris/new_employee.png", "caption": "Encoding and updating employee data." },
+      { "src": "projects/hris/login.png", "caption": "Login page." }
+    ],
+    "url": "",
+    "category": "Enterprise Solutions",
+    "tooltip": "Full Stack",
+    "tooltip_design": "blue",
+    "isGray": false,
+    "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+  },
+  {
     "title": "Fluxo",
     "description": "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
     "images": [
@@ -89,6 +130,33 @@
     "icons": ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
   },
   {
+      "title": "Cerebrate",
+      "description": "Cerebrate is an agentic AI model designed to communicate intelligently with internal systems.\nUpon receiving user inputs from a web app, Cerebrate processes the raw data. Usually, it specifically inspects uploaded images or videos to understand the context before taking action.\nIt acts as a bridge by contacting the relevant backend microsystems and returning the correct system responses.\nSimultaneously, it replies to the user while writing every event to a persistent log for auditing.\n\n[BUTTON:View an Example Use|]",
+      "images": [
+      { "src": "projects/cerebrate/cerebrate.png", "caption": "Cerebrate Agentic AI", "type": "image" },
+      { "src": "https://drive.google.com/file/d/1M_rWC0unfp67QK0muepnpbvJ8u4sc_Oy/view", "caption": "IAGD: Pet analyzer", "type": "video" }
+      ],
+      "url": "",
+      "category": "Dev Ops",
+      "tooltip": "Backend Only",
+      "tooltip_design": "blue",
+      "isGray": false,
+      "icons": ["mysql/mysql-original.svg", "debian/debian-original.svg", "python/python-original.svg", "docker/docker-original.svg"]
+  },
+  {
+      "title": "Nydus",
+      "description": "Nydus is a specialized tool designed for continuous deployment of projects to a Debian 11 server.\nFor every git push or git pull, the tool updates the relevant systems and applications while also doing compatability checks and rollback capabilities.\nThe goal of this tool is to ensure reliability and redundancy for every systems deployed remotely.",
+      "images": [
+      { "src": "projects/nydus/nydus.png", "caption": "Nydus Git Automation", "type": "image" }
+      ],
+      "url": "",
+      "category": "Dev Ops",
+      "tooltip": "Backend Only",
+      "tooltip_design": "blue",
+      "isGray": false,
+      "icons": ["git/git-original.svg", "debian/debian-original.svg", "bash/bash-original.svg", "docker/docker-original.svg"]
+  },
+  {
     "title": "Honeyrush - Tile Matching Game",
     "description": "A cute game about matching objects and bees!",
     "images": [
@@ -117,32 +185,5 @@
     "tooltip_design": "blue",
     "isGray": false,
     "icons": ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-  },
-  {
-      "title": "Cerebrate",
-      "description": "Cerebrate is an agentic AI model designed to communicate intelligently with internal systems.\nUpon receiving user inputs from a web app, Cerebrate processes the raw data. Usually, it specifically inspects uploaded images or videos to understand the context before taking action.\nIt acts as a bridge by contacting the relevant backend microsystems and returning the correct system responses.\nSimultaneously, it replies to the user while writing every event to a persistent log for auditing.\n\n[BUTTON:View an Example Use|]",
-      "images": [
-      { "src": "projects/cerebrate/cerebrate.png", "caption": "Cerebrate Agentic AI", "type": "image" },
-      { "src": "https://drive.google.com/file/d/1M_rWC0unfp67QK0muepnpbvJ8u4sc_Oy/view", "caption": "IAGD: Pet analyzer", "type": "video" }
-      ],
-      "url": "",
-      "category": "Dev Ops",
-      "tooltip": "Backend Only",
-      "tooltip_design": "blue",
-      "isGray": false,
-      "icons": ["mysql/mysql-original.svg", "debian/debian-original.svg", "python/python-original.svg", "docker/docker-original.svg"]
-  },
-  {
-      "title": "Nydus",
-      "description": "Nydus is a specialized tool designed for continuous deployment of projects to a Debian 11 server.\nFor every git push or git pull, the tool updates the relevant systems and applications while also doing compatability checks and rollback capabilities.\nThe goal of this tool is to ensure reliability and redundancy for every systems deployed remotely.",
-      "images": [
-      { "src": "projects/nydus/nydus.png", "caption": "Nydus Git Automation", "type": "image" }
-      ],
-      "url": "",
-      "category": "Dev Ops",
-      "tooltip": "Backend Only",
-      "tooltip_design": "blue",
-      "isGray": false,
-      "icons": ["git/git-original.svg", "debian/debian-original.svg", "bash/bash-original.svg", "docker/docker-original.svg"]
   }
 ]
