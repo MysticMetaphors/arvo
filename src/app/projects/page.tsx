@@ -1,5 +1,12 @@
 "use client"
 
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ArvoCard from "@/components/ui/arvo/ArvoCard";
+import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
+import projectsData from "./projects.json";
+import { Project } from "@/types";
+
 // =========================================================================
 // HOW TO ADD A NEW PROJECT
 // =========================================================================
@@ -23,38 +30,13 @@
 // }
 // =========================================================================
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import ArvoCard from "@/components/ui/arvo/ArvoCard";
-import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
-import projectsData from "./projects.json";
-
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
-const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
-
-interface ProjectImage {
-  src: string;
-  caption: string;
-  type?: "image" | "video";
-}
-
-interface Project {
-  title: string;
-  description: string;
-  images: ProjectImage[];
-  url: string;
-  category: string;
-  tooltip: string;
-  tooltip_design: "green" | "blue" | "purple" | "red";
-  isGray: boolean;
-  icons: string[];
-}
+const projects = projectsData as unknown as Project[];
+const CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-
-  const projects = projectsData as unknown as Project[];
 
   // Logic to determine which categories to show
   // If "All" is selected, we show all categories that are not "All"

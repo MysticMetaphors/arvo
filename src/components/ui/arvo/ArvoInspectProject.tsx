@@ -4,34 +4,15 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ExternalLink, Lock, Info, ImageOff } from "lucide-react";
 import Image from "next/image";
-
-const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
-
-interface ProjectImage {
-  src: string;
-  caption: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  images: ProjectImage[];
-  url: string;
-  category: string;
-  tooltip: string;
-  tooltip_design: "green" | "blue" | "purple" | "red";
-  isGray: boolean;
-  icons: string[];
-}
+import { Project, ProjectImage } from "@/types";
+import RichTextParser from "../RichTextParser";
 
 type InspectProjectProps = {
   onSelectedProject: (project: Project | null) => void;
   selectedProject: Project | null;
 };
 
-
-
-export default function ArvoInspectProject({ selectedProject ,onSelectedProject }: InspectProjectProps) {
+export default function ArvoInspectProject({ selectedProject, onSelectedProject }: InspectProjectProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -47,7 +28,6 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
     if (!selectedProject) return;
 
     if (e.key === "Escape") onSelectedProject(null);
-    if (e.key === "Escape") setCurrentImageIndex(0);
     if (e.key === "ArrowLeft") prevImage();
     if (e.key === "ArrowRight") nextImage();
   }, [selectedProject, currentImageIndex]);
@@ -75,144 +55,75 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
     }
   };
 
-  const projects: Project[] = [
-    // =========================================================================
-    // TEMPLATE
-    // {
-    //   title: "Project Name",
-    //   description: "Brief description.",
-    //   images: [
-    //     { src: "projects/folder/img.png", caption: "Caption" }
-    //   ],
-    //   url: "https://hatsune.miku",
-    //   category: "Category Name",
-    //   tooltip: "Tooltip Text",
-    //   tooltip_design: "green",
-    //   isGray: false,
-    //   icons: ["react", "typescript"]
-    // },
-    // =========================================================================
+  // Helper: Ensures external links don't get a double slash, but local files get the root slash
+  const getSrc = (src: string) => {
+    if (src.startsWith("http") || src.startsWith("//")) return src;
+    return `/${src}`;
+  };
 
-    {
-      title: "Lounge - Social Media",
-      description: "A social media for pets.",
-      images: [
-        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
-        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
-      ],
-      url: "https://metaanimals.tech",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
-      images: [
-        { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_5.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_6.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_7.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/ai.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_department.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: true,
-      icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
-      ],
-      url: "https://fluxo-alpha.vercel.app/",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "green",
-      isGray: false,
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Enro",
-      description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
-      images: [
-        { src: "projects/enro/landing_1.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_2.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_3.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_4.png", caption: "TODO: Add text" },
-        { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "purple",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Syro",
-      description: "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
-      images: [
-        { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "red",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Honeyrush - Tile Matching Game",
-      description: "A cute game about matching objects and bees!",
-      images: [
-        { src: "projects/honeyrush/main_menu.png", caption: "Main menu" },
-        { src: "projects/honeyrush/gameplay.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_1.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_2.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/leaderboard.png", caption: "Compete with others for a spot in the leaderboards!" },
-      ],
-      url: "https://honeyrush.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Mochi - Incremental Rhythm Game",
-      description: "An experimental game about the combination of incremental game mechanics and rhythm game mechanics.",
-      images: [
-        { src: "projects/mochi/gameplay.png", caption: "Gameplay" },
-      ],
-      url: "https://mochi.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-  ];
+  // Helper: Renders the correct media player based on URL or Type
+  const renderMedia = (media: ProjectImage) => {
+    const src = getSrc(media.src);
+
+    if (media.type === 'video') {
+      // 1. YouTube Handling
+      if (src.includes("youtube.com") || src.includes("youtu.be")) {
+        let embedSrc = src;
+        // Convert "watch?v=" or short URLs to "embed/"
+        if (src.includes("watch?v=")) {
+          embedSrc = src.replace("watch?v=", "embed/");
+          // Strip any extra query params if simple replacement is used
+          const ampersandIndex = embedSrc.indexOf("&");
+          if (ampersandIndex !== -1) embedSrc = embedSrc.substring(0, ampersandIndex);
+        } else if (src.includes("youtu.be/")) {
+          embedSrc = src.replace("youtu.be/", "www.youtube.com/embed/");
+        }
+
+        return (
+          <iframe
+            src={embedSrc}
+            className="w-full aspect-video max-h-full shadow-2xl"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        );
+      }
+
+      // 2. Google Drive Handling
+      if (src.includes("drive.google.com")) {
+        // Ensure we use the 'preview' URL instead of 'view' for embedding
+        const embedSrc = src.replace("/view", "/preview");
+        return (
+          <iframe
+            src={embedSrc}
+            className="w-full aspect-video max-h-full shadow-2xl bg-black"
+            title="Google Drive video player"
+            allowFullScreen
+          />
+        );
+      }
+
+      // 3. Local Video Handling
+      return (
+        <video
+          src={src}
+          controls
+          autoPlay
+          className="max-h-full max-w-full shadow-2xl"
+        />
+      );
+    }
+
+    // 4. Standard Image Handling
+    return (
+      <img
+        src={src}
+        alt={media.caption}
+        className="max-h-full max-w-full object-contain shadow-2xl"
+      />
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -223,14 +134,16 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[100] flex bg-black/95 backdrop-blur-sm overflow-hidden"
         >
+          {/* Close Button */}
           <button
-            onClick={() => [onSelectedProject(null), setCurrentImageIndex(0)]}
+            onClick={() => { onSelectedProject(null); setCurrentImageIndex(0); }}
             className="absolute top-4 right-4 md:top-4 md:left-4 w-fit z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
           >
             <X size={28} />
           </button>
 
           <div className="flex w-full h-full flex-col lg:flex-row">
+            {/* IMAGE / MEDIA AREA */}
             <div className="relative flex-1 h-full flex items-center justify-center bg-black" onClick={(e) => e.stopPropagation()}>
               {hasImages(selectedProject) && selectedProject.images.length > 1 && (
                 <button
@@ -247,16 +160,13 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="relative w-full h-full flex items-center justify-center p-4"
+                className="relative w-full h-full flex items-center justify-center p-4 lg:p-12"
               >
                 {hasImages(selectedProject) ? (
                   <>
-                    <img
-                      src={selectedProject.images[currentImageIndex].src}
-                      alt={selectedProject.title}
-                      className="max-h-full max-w-full object-contain shadow-2xl"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-4 text-center">
+                    {renderMedia(selectedProject.images[currentImageIndex])}
+
+                    <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-4 text-center pointer-events-none">
                       <p className="text-white text-sm md:text-base font-medium">
                         {selectedProject.images[currentImageIndex].caption}
                       </p>
@@ -280,8 +190,9 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
               )}
             </div>
 
+            {/* SIDEBAR DETAILS */}
             <div
-              className="w-full lg:w-[350px] bg-white dark:bg-zinc-900 border-l border-zinc-200 dark:border-zinc-800 flex flex-col p-6 z-20 overflow-y-auto"
+              className="w-full lg:w-[450px] bg-white dark:bg-zinc-900 border-l border-zinc-200 dark:border-zinc-800 flex flex-col p-6 z-20 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mb-6">
@@ -302,9 +213,11 @@ export default function ArvoInspectProject({ selectedProject ,onSelectedProject 
                     <span>{currentImageIndex + 1} / {selectedProject.images.length}</span>
                   </div>
                 )}
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-                  {selectedProject.description}
-                </p>
+
+                {/* RICH TEXT DESCRIPTION */}
+                <div className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                  <RichTextParser content={selectedProject.description} />
+                </div>
               </div>
 
               <div className="mt-auto pt-6 border-t border-gray-200 dark:border-zinc-800">

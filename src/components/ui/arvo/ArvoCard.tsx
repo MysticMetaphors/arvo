@@ -118,10 +118,34 @@ export default function ArvoCard({
         {/* Overlay Content */}
         <div className="absolute inset-0 z-20 flex flex-col justify-center items-center align-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="p-10 py-2 w-full flex justify-center items-center">
-            <div className="space-y-4">
-              <h1 className="font-bold font-ethnocentric text-lg text-gray-300">{title}</h1>
-              <p className="text-gray-400 lg:text-lg md:text-md hidden sm:block">{description}</p>
-              <div className="flex justify-between items-center">
+            <div className="space-y-4 w-full flex flex-col items-start">
+              <h1 className="font-bold font-ethnocentric text-lg text-gray-300 text-left">{title}</h1>
+
+              <p className="text-gray-400 text-sm sm:text-base hidden sm:block text-left leading-snug">
+                {(() => {
+                  // Check for any parser syntax
+                  const tagIndex = description.search(/\[(?:BUTTON|COLOR|LINK):/);
+                  let textToShow = description;
+                  let wasTruncated = false;
+
+                  if (tagIndex !== -1) {
+                    textToShow = description.substring(0, tagIndex);
+                    wasTruncated = true;
+                  }
+
+                  textToShow = textToShow.trim();
+
+                  const maxLength = 180;
+                  if (textToShow.length > maxLength) {
+                    textToShow = textToShow.substring(0, maxLength);
+                    wasTruncated = true;
+                  }
+
+                  return textToShow;
+                })()}
+              </p>
+
+              <div className="flex justify-between items-center w-full">
                 <div className="md:flex gap-4 hidden">
                   {icons ?
                     icons.map((icon, i) => (
