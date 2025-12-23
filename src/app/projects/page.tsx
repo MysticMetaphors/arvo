@@ -1,188 +1,43 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ArvoCard from "@/components/ui/arvo/ArvoCard";
 import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
+import projectsData from "./projects.json";
+import { Project } from "@/types";
+
+// =========================================================================
+// HOW TO ADD A NEW PROJECT
+// =========================================================================
+// 1. Open src/app/projects/projects.json
+// 2. Add a new object to the array using the template below.
+// 3. To add a video, set the "type" property in the image object to "video".
+//
+// TEMPLATE:
+// {
+//   "title": "Project Name",
+//   "description": "Brief description.",
+//   "images": [
+//     { "src": "projects/folder/img.png", "caption": "Caption", "type": "image" }
+//   ],
+//   "url": "https://hatsune.miku",
+//   "category": "Category Name",
+//   "tooltip": "Tooltip Text",
+//   "tooltip_design": "green",
+//   "isGray": false,
+//   "icons": ["react/react-original.svg", "typescript/typescript-original.svg"]
+// }
+// =========================================================================
 
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
-const CATEGORIES = ["All", "Enterprise Solutions", "Landing Pages", "Games"];
-
-interface ProjectImage {
-  src: string;
-  caption: string;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  images: ProjectImage[];
-  url: string;
-  category: string;
-  tooltip: string;
-  tooltip_design: "green" | "blue" | "purple" | "red";
-  isGray: boolean;
-  icons: string[];
-}
+const projects = projectsData as unknown as Project[];
+const CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-
-  const projects: Project[] = [
-    // =========================================================================
-    // TEMPLATE
-    // {
-    //   title: "Project Name",
-    //   description: "Brief description.",
-    //   images: [
-    //     { src: "projects/folder/img.png", caption: "Caption" }
-    //   ],
-    //   url: "https://hatsune.miku",
-    //   category: "Category Name",
-    //   tooltip: "Tooltip Text",
-    //   tooltip_design: "green",
-    //   isGray: false,
-    //   icons: ["react", "typescript"]
-    // },
-    // =========================================================================
-
-    {
-      title: "Lounge - Social Media",
-      description: "A social platform that connects pets with their owners and communities.",
-      images: [
-        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
-        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
-      ],
-      url: "https://metaanimals.tech",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
-      images: [
-        { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_5.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_6.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_7.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/ai.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_department.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: true,
-      icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
-      ],
-      url: "https://fluxo-alpha.vercel.app/",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "green",
-      isGray: false,
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    // {
-    //   title: "Lean",
-    //   description: "Lean is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-    //   images: [
-    //     { src: "projects/leanademy/landing_1.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_2.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_3.jpeg", caption: "The main landing page showing the hero section." },
-    //     { src: "projects/leanademy/landing_4.jpeg", caption: "The main landing page showing the hero section." }
-    //   ],
-    //   url: "https://fluxo-alpha.vercel.app/",
-    //   category: "Landing Pages",
-    //   tooltip: "Design Only",
-    //   tooltip_design: "green",
-    //   isGray: false,
-    //   icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    // },
-    {
-      title: "Enro",
-      description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
-      images: [
-        { src: "projects/enro/landing_1.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_2.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_3.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_4.png", caption: "TODO: Add text" },
-        { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "purple",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Syro",
-      description: "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
-      images: [
-        { src: "projects/syro/landing_1.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "red",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Honeyrush - Tile Matching Game",
-      description: "A cute game about matching objects and bees!",
-      images: [
-        { src: "projects/honeyrush/main_menu.png", caption: "Main menu" },
-        { src: "projects/honeyrush/gameplay.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_1.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/prompt_2.png", caption: "Gameplay" },
-        { src: "projects/honeyrush/leaderboard.png", caption: "Compete with others for a spot in the leaderboards!" },
-      ],
-      url: "https://honeyrush.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Mochi - Incremental Rhythm Game",
-      description: "An experimental game about the combination of incremental game mechanics and rhythm game mechanics.",
-      images: [
-        { src: "projects/mochi/gameplay.png", caption: "Gameplay" },
-      ],
-      url: "https://mochi.tewi.club",
-      category: "Games",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-  ];
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Logic to determine which categories to show
   // If "All" is selected, we show all categories that are not "All"
@@ -222,31 +77,63 @@ export default function Projects() {
           style={{ opacity: 1, transform: "none" }}
         ></div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="flex flex-wrap gap-2 mb-16"
-        >
-          {CATEGORIES.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
-                ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
-                : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
+        {/* CONTROLS ROW: Filters (Left) and Search (Right) */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-16">
+          
+          {/* Filter Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="flex flex-wrap gap-2"
+          >
+            {CATEGORIES.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
+                  ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
+                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
+          </motion.div>
+
+          {/* Search Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative w-full md:w-64"
+          >
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
+            </div>
+            <input
+              type="text"
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-colors"
+              placeholder="Search projects..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </motion.div>
+        </div>
 
         <div className="lg:px-0 sm:p-6">
           {visibleCategories.map((category, index) => {
-            const categoryProjects = projects.filter((project) => project.category === category);
+            // Filter by category AND search query
+            const categoryProjects = projects.filter((project) => {
+               const matchesCategory = project.category === category;
+               const matchesSearch = 
+                 project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                 project.description.toLowerCase().includes(searchQuery.toLowerCase());
+               
+               return matchesCategory && matchesSearch;
+            });
 
             if (categoryProjects.length === 0) return null;
 
@@ -278,6 +165,7 @@ export default function Projects() {
                           title={project.title}
                           description={project.description}
                           image={project.images?.[0]?.src || PLACEHOLDER_IMAGE}
+                          type={project.images?.[0]?.type || "image"}
                           url={project.url}
                           tooltip={project.tooltip}
                           tooltip_design={project.tooltip_design}
@@ -302,7 +190,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <ArvoInspectProject 
+      <ArvoInspectProject
         onSelectedProject={setSelectedProject}
         selectedProject={selectedProject}
       />
