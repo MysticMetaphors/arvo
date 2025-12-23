@@ -16,17 +16,17 @@ import { Project } from "@/types";
 //
 // TEMPLATE:
 // {
-//   "title": "Project Name",
-//   "description": "Brief description.",
-//   "images": [
-//     { "src": "projects/folder/img.png", "caption": "Caption", "type": "image" }
-//   ],
-//   "url": "https://hatsune.miku",
-//   "category": "Category Name",
-//   "tooltip": "Tooltip Text",
-//   "tooltip_design": "green",
-//   "isGray": false,
-//   "icons": ["react/react-original.svg", "typescript/typescript-original.svg"]
+//   "title": "Project Name",
+//   "description": "Brief description.",
+//   "images": [
+//     { "src": "projects/folder/img.png", "caption": "Caption", "type": "image" }
+//   ],
+//   "url": "https://hatsune.miku",
+//   "category": "Category Name",
+//   "tooltip": "Tooltip Text",
+//   "tooltip_design": "green",
+//   "isGray": false,
+//   "icons": ["react/react-original.svg", "typescript/typescript-original.svg"]
 // }
 // =========================================================================
 
@@ -36,7 +36,8 @@ const CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Logic to determine which categories to show
   // If "All" is selected, we show all categories that are not "All"
@@ -76,31 +77,63 @@ export default function Projects() {
           style={{ opacity: 1, transform: "none" }}
         ></div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="flex flex-wrap gap-2 mb-16"
-        >
-          {CATEGORIES.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
-                ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
-                : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
+        {/* CONTROLS ROW: Filters (Left) and Search (Right) */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-16">
+          
+          {/* Filter Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="flex flex-wrap gap-2"
+          >
+            {CATEGORIES.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
+                  ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
+                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
+          </motion.div>
+
+          {/* Search Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative w-full md:w-64"
+          >
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
+            </div>
+            <input
+              type="text"
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-colors"
+              placeholder="Search projects..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </motion.div>
+        </div>
 
         <div className="lg:px-0 sm:p-6">
           {visibleCategories.map((category, index) => {
-            const categoryProjects = projects.filter((project) => project.category === category);
+            // Filter by category AND search query
+            const categoryProjects = projects.filter((project) => {
+               const matchesCategory = project.category === category;
+               const matchesSearch = 
+                 project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                 project.description.toLowerCase().includes(searchQuery.toLowerCase());
+               
+               return matchesCategory && matchesSearch;
+            });
 
             if (categoryProjects.length === 0) return null;
 
