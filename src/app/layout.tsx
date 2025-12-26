@@ -72,16 +72,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<<<<<<< HEAD
     <html lang="en" className="dark">
       <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
-=======
-    <html lang="en">
-      <body
-        className="antialiased"
-      >
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme'); if(t==='dark'){document.documentElement.classList.add('dark')} else if(t==='light'){document.documentElement.classList.remove('dark')} }catch(e){} })();` }} />
->>>>>>> b40876b9e83d0d66b753148ee6cf348fe3be60be
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
