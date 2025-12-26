@@ -78,15 +78,14 @@ export default function Projects() {
         ></div>
 
         {/* CONTROLS ROW: Filters (Left) and Search (Right) */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-16">
-          
+        <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-4 mb-16">
           {/* Filter Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2"
+            className="flex flex-wrap gap-2 order-2 md:order-1"
           >
             {CATEGORIES.map((category) => (
               <button
@@ -108,10 +107,10 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative w-full md:w-64"
+            className="relative w-full mb-4 md:mb-0 md:w-64 order-1 md:order-2"
           >
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
+              <i className="fa-solid fa-magnifying-glass text-gray-500"></i>
             </div>
             <input
               type="text"
