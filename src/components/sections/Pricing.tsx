@@ -27,7 +27,7 @@ export default function Pricing() {
   // const geoLocation = 'php'
 
   const basic = [
-    <>Up to 3 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 3)</>,
+    "Up to 3 pages (+$5 per page after 3)",
     "Basic SEO",
     "Up to 5 edits",
     "Hosting included",
@@ -45,7 +45,7 @@ export default function Pricing() {
   ]
   const professional = [
     "Unlimited pages",
-    <>4 customizable features (+<Exchange base={geoLocation} currencies="usd" amount={500} /> per additional feature)</>,
+    "4 customizable features (+$500 per additional feature)",
     "Hosting included",
     "Custom domain included",
     "24/7 Priority Support",
