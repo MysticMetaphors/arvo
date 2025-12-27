@@ -31,7 +31,7 @@ export default function Pricing() {
     "Basic SEO",
     "Up to 5 edits",
     "Hosting included",
-    // "24/5 Support",
+    "24/7 Support",
     <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const growth = [
@@ -40,7 +40,7 @@ export default function Pricing() {
     "Advanced SEO",
     "Up to 10 edits",
     "Hosting included",
-    // "24/7 Support",
+    "24/7 Support",
     <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const professional = [
@@ -48,12 +48,12 @@ export default function Pricing() {
     "4 customizable features (+$500 per additional feature)",
     "Hosting included",
     "Custom domain included",
-    // "24/7 Priority Support",
+    "24/7 Priority Support",
     "Installment options"
   ]
   const advance = [
     "Custom-built Shopify store",
-    // "Dedicated 24/7 Support",
+    "Dedicated 24/7 Support",
     <>Unlimited Pages +<Exchange base={geoLocation} currencies="usd" amount={50} /> /month for unlimited edits</>,
     "Advanced app configuration",
     "Integrated shipping",
