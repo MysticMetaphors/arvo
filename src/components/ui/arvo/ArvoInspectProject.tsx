@@ -10,19 +10,20 @@ import RichTextParser from "../RichTextParser";
 type InspectProjectProps = {
   onSelectedProject: (project: Project | null) => void;
   selectedProject: Project | null;
+  initialImageIndex?: number;
 };
 
-export default function ArvoInspectProject({ selectedProject, onSelectedProject }: InspectProjectProps) {
+export default function ArvoInspectProject({ selectedProject, onSelectedProject, initialImageIndex = 0 }: InspectProjectProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     if (selectedProject) {
-      setCurrentImageIndex(0);
+      setCurrentImageIndex(initialImageIndex);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [selectedProject]);
+  }, [selectedProject, initialImageIndex]);
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (!selectedProject) return;

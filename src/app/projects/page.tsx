@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ArvoCard from "@/components/ui/arvo/ArvoCard";
 import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
+import ProjectSpotlight from "@/components/ui/arvo/ProjectSpotlight";
 import projectsData from "./projects.json";
 import { Project } from "@/types";
 
@@ -30,57 +30,85 @@ import { Project } from "@/types";
 // }
 // =========================================================================
 
-const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 const projects = projectsData as unknown as Project[];
-const CATEGORIES = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
+const CATEGORIES = ["All Projects", ...Array.from(new Set(projects.map((p) => p.category)))];
+
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  "Enterprise Solutions": "Robust, scalable applications designed to streamline complex business operations, manage large datasets, and optimize organizational workflows.",
+  "Landing Pages": "High-impact, visually stunning web pages crafted to convert visitors, showcase brand identity, and tell compelling stories.",
+  "Dev Ops": "Infrastructure automation, CI/CD pipelines, and intelligent system agents that ensure reliability, uptime, and seamless deployment.",
+  "Games": "Interactive experiences blending creative mechanics with engaging visuals for pure entertainment and challenge."
+};
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("All Projects");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Logic to determine which categories to show
-  // If "All" is selected, we show all categories that are not "All"
-  // If specific category is selected, we show only that one
-  const visibleCategories = activeCategory === "All"
-    ? CATEGORIES.filter(c => c !== "All")
+  const visibleCategories = activeCategory === "All Projects"
+    ? CATEGORIES.filter(c => c !== "All Projects")
     : [activeCategory];
+
+  const handleProjectSelect = (project: Project, index: number) => {
+    setSelectedProject(project);
+    setSelectedImageIndex(index);
+  };
 
   return (
     <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden min-h-screen">
       <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10 relative">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
-        >
-          Recent <span className="text-darkgreen-primary dark:text-green-primary">Projects</span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-gray-600 dark:text-gray-400 mx-auto mb-6"
-        >
-          A collection of projects that reflect our passion for clean design and smart development.
-        </motion.p>
-
-        {/* Initial Separator */}
-        <div
-          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)] mb-8"
-          style={{ opacity: 1, transform: "none" }}
-        ></div>
-
-        {/* CONTROLS ROW: Filters (Left) and Search (Right) */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-16">
+        
+        {/* ================= HEADER GROUP ================= */}
+        <div className="mb-16 space-y-8">
           
-          {/* Filter Buttons */}
+          {/* Top Row: Title + Search */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-4xl leading-tight font-extrabold text-black dark:text-white"
+              >
+                Recent <span className="text-darkgreen-primary dark:text-green-primary">Projects</span>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-gray-600 dark:text-gray-400 mt-2 max-w-lg"
+              >
+                A collection of projects that reflect our passion for clean design and smart development.
+              </motion.p>
+            </div>
+
+            {/* Search Bar */}
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative w-full md:w-72"
+            >
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
+              </div>
+              <input
+                type="text"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900/50 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-all shadow-sm"
+                placeholder="Search projects..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </motion.div>
+          </div>
+
+          {/* Filter Chips */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,9 +120,9 @@ export default function Projects() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === category
-                  ? "bg-green-primary text-black border-green-primary shadow-[0_0_10px_rgba(0,255,153,0.3)]"
-                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50"
+                className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${activeCategory === category
+                  ? "bg-transparent text-green-primary border-green-primary"
+                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
                   }`}
               >
                 {category}
@@ -102,88 +130,67 @@ export default function Projects() {
             ))}
           </motion.div>
 
-          {/* Search Bar */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative w-full md:w-64"
-          >
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
-            </div>
-            <input
-              type="text"
-              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-colors"
-              placeholder="Search projects..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </motion.div>
+          {/* Divider */}
+          <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
         </div>
 
-        <div className="lg:px-0 sm:p-6">
+        {/* ================= PROJECTS GRID ================= */}
+        <div className="lg:px-0 sm:p-0">
           {visibleCategories.map((category, index) => {
-            // Filter by category AND search query
             const categoryProjects = projects.filter((project) => {
                const matchesCategory = project.category === category;
                const matchesSearch = 
                  project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                  project.description.toLowerCase().includes(searchQuery.toLowerCase());
-               
                return matchesCategory && matchesSearch;
             });
 
             if (categoryProjects.length === 0) return null;
 
             return (
-              <div key={category} className="mb-20 last:mb-0">
+              <div key={category} className="mb-24 last:mb-0">
+                {/* Category Header */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="mb-8"
+                  className="mb-8 pl-2"
                 >
-                  <h3 className="text-2xl font-bold text-black dark:text-white flex items-center gap-4">
-                    <i className="fa-solid fa-play text-darkgreen-primary dark:text-green-primary"></i> {category}
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2 relative">
+                    <i className="absolute -left-3 text-[124px] opacity-[0.08] fa-solid fa-play text-green-primary text-sm mt-12"></i>
+                    <h3 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide ml-25">
+                      {category}
+                    </h3>
+                    <i className="absolute -right-3 text-[124px] opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-green-primary text-sm mt-12"></i>
+                    <i className="absolute -right-18 text-[124px] opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-green-primary text-sm mt-12"></i>
+                  </div>
+                  {CATEGORY_DESCRIPTIONS[category] && (
+                    <p className="text-gray-500 dark:text-gray-400 max-w-3xl ml-25 text-sm md:text-base leading-relaxed">
+                      {CATEGORY_DESCRIPTIONS[category]}
+                    </p>
+                  )}
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-x-8 gap-y-12">
+                {/* Projects List */}
+                <div className="flex flex-col">
                   <AnimatePresence mode="popLayout">
                     {categoryProjects.map((project, i) => (
-                      <div
+                      <motion.div
                         key={project.title}
-                        onClick={() => setSelectedProject(project)}
-                        className="cursor-pointer"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
                       >
-                        <ArvoCard
-                          onView={true}
-                          index={i}
-                          title={project.title}
-                          description={project.description}
-                          image={project.images?.[0]?.src || PLACEHOLDER_IMAGE}
-                          type={project.images?.[0]?.type || "image"}
-                          url={project.url}
-                          tooltip={project.tooltip}
-                          tooltip_design={project.tooltip_design}
-                          isGray={project.isGray}
-                          icons={project.icons}
+                        <ProjectSpotlight 
+                          project={project} 
+                          onProjectSelect={handleProjectSelect} 
                         />
-                      </div>
+                      </motion.div>
                     ))}
                   </AnimatePresence>
                 </div>
-
-                {/* Category Separator - Only shown if it is not the last category */}
-                {index !== visibleCategories.length - 1 && (
-                  <div
-                    className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)] mt-20"
-                    style={{ opacity: 1, transform: "none" }}
-                  ></div>
-                )}
               </div>
             );
           })}
@@ -191,8 +198,9 @@ export default function Projects() {
       </div>
 
       <ArvoInspectProject
-        onSelectedProject={setSelectedProject}
+        onSelectedProject={(p) => setSelectedProject(p)}
         selectedProject={selectedProject}
+        initialImageIndex={selectedImageIndex}
       />
     </section>
   )
