@@ -114,7 +114,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2"
+            className="flex flex-wrap gap-2 order-2 md:order-1"
           >
             {CATEGORIES.map((category) => (
               <button
