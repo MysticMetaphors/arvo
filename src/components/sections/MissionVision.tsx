@@ -31,6 +31,12 @@ export default function MissionVision() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const steps = [
+    { icon: "lightbulb", label: "Strategy" },
+    { icon: "gears", label: "Development" },
+    { icon: "hand-holding-heart", label: "Impact" }
+  ];
+
   return (
     <section className="relative bg-white dark:bg-black-primary">
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full lg:w-2xl bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
@@ -136,18 +142,70 @@ export default function MissionVision() {
                 scalable, and affordable technology that drives long-term growth and community impact.
               </p>
             </div>
-            <div className="flex relative items-center p-4 px-0 lg:px-16">
-              <div className="relative flex justify-between mx-auto my-6 w-full max-w-lg">
-                <div className="z-10 text-2xl p-3 px-4.5 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
-                  <i className="fa-solid fa-lightbulb"></i>
+            <div className="flex relative items-center justify-center p-4 px-0 lg:px-16 py-12">
+              <div className="relative flex justify-between mx-auto w-full max-w-lg">
+
+                {/* --- CONNECTING LINES --- */}
+                <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 z-0">
+                  {/* Background Track (Dashed) */}
+                  <div className="h-[2px] w-full bg-gray-200 dark:bg-gray-800"
+                    style={{ backgroundImage: 'linear-gradient(to right, currentColor 50%, transparent 50%)', backgroundSize: '16px 1px' }}
+                  />
+
+                  {/* Animated Progress Beam */}
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.1, ease: "easeInOut", delay: 0.1 }}
+                    className="absolute top-0 left-0 h-[2px] bg-darkgreen-primary dark:bg-green-primary brightness-80 shadow-[0_0_10px_currentColor]"
+                  />
                 </div>
-                <div className="z-10 text-2xl p-3 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
-                  <i className="fa-solid fa-gears"></i>
-                </div>
-                <div className="z-10 text-2xl p-3 rounded-sm bg-darkgreen-primary dark:bg-green-primary text-white dark:text-gray-900 shadow-[0_0_20px_#00FF99]">
-                  <i className="fa-solid fa-hand-holding-heart"></i>
-                </div>
-                <div className="absolute z-1 top-1/2 h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></div>
+
+                {/* --- STEPS --- */}
+                {steps.map((step, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    // Stagger the appearance based on the line progress
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                      delay: 0.2 + (i * 0.6) // 0.2s, 0.8s, 1.4s
+                    }}
+                    className="relative z-10 group"
+                  >
+                    {/* Pulse Ring Animation */}
+                    <div className="absolute inset-0 rounded-xl bg-darkgreen-primary/60 dark:bg-green-primary/60 animate-ping blur-sm opacity-75 duration-1000" style={{ animationDelay: `${i * 1}s` }} />
+
+                    {/* Icon Container */}
+                    <div className="
+                relative flex items-center justify-center w-14 h-14 rounded-md 
+                bg-white dark:bg-green-primary 
+                border-2 border-gray-100 dark:border-white/10
+                text-gray-400 dark:text-gray-900
+                shadow-lg transition-all duration-300
+                
+                group-hover:-translate-y-2 
+                group-hover:text-darkgreen-primary dark:group-hover:text-green-primary
+                group-hover:shadow-[0_10px_20px_-5px_rgba(34,197,94,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(0,255,153,0.4)]
+                    ">
+                      <i className={`fa-solid fa-${step.icon} text-2xl transition-transform duration-300 group-hover:scale-110`}></i>
+                    </div>
+
+                    {/* Label (Tooltip style) */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                      <span className="text-xs font-bold uppercase tracking-wider text-darkgreen-primary dark:text-green-primary">
+                        {step.label}
+                      </span>
+                    </div>
+
+                  </motion.div>
+                ))}
+
               </div>
             </div>
           </motion.div>

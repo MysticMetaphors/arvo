@@ -55,7 +55,7 @@ export default function Team() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 p-3 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-gray-400/50"
+              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 p-3 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border border-gray-300 dark:bg-gray-800/80 dark:border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 loading='lazy'
@@ -68,7 +68,7 @@ export default function Team() {
 
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold text-black dark:text-white">{member.name}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{member.position}</p>
+                <p className="rounded-sm text-sm text-gray-600 dark:text-green-primary">{member.position}</p>
                 <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">
                   {member.description}
                 </p>
@@ -78,6 +78,5 @@ export default function Team() {
         </div>
       </div>
     </section>
-
   )
 }

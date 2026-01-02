@@ -82,7 +82,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Starter</h3>
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
@@ -122,7 +122,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-300 dark:border-gray-800 text-black dark:text-white bg-gradient-to-r from-gray-300 hover:from-gray-200 to-gray-200 dark:from-gray-900 dark:hover:from-gray-700 dark:to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Choose Plan
+                Choose Starter
               </Link>
             </motion.div>
 
@@ -134,7 +134,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Growth</h3>
 
               <div className="flex flex-col justify-center my-2">
@@ -175,7 +175,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto border border-gray-300 dark:border-gray-800 text-black dark:text-white bg-gradient-to-r from-gray-300 hover:from-gray-200 to-gray-200 dark:from-gray-900 dark:hover:from-gray-700 dark:to-gray-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Choose Plan
+                Choose Growth
               </Link>
             </motion.div>
 
@@ -238,7 +238,7 @@ export default function Pricing() {
                 href="/contact"
                 className="mt-auto text-white transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99]00FF99] transition-all duration-200 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                Choose Plan
+                Choose Professional
               </Link>
             </motion.div>
 
@@ -250,7 +250,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
               <h3 className="text-2xl font-bold text-black dark:text-white">
                 Ecommerce
               </h3>

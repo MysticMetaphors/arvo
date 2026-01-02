@@ -117,7 +117,7 @@ export default function ServicesBento() {
       icon: "mobile",
       service: "Mobile Apps",
       description: "Create cross-platform mobile apps with smooth performance, engaging design, and seamless user experience.",
-      colSpan: "lg:col-span-2 md:col-span-3",
+      colSpan: "lg:col-span-1 md:col-span-3",
       visual: PhoneMockup,
     },
     {
@@ -125,7 +125,7 @@ export default function ServicesBento() {
       icon: "pen-nib",
       service: "Custom Web Apps",
       description: "Develop tailored web applications built to meet your specific business needs — from concept to deployment.",
-      colSpan: "lg:col-span-1 md:col-span-3",
+      colSpan: "lg:col-span-2 md:col-span-3",
       visual: <AppInterfaceMockup />,
     },
   ];
@@ -141,7 +141,7 @@ export default function ServicesBento() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl text-black dark:text-white font-extrabold mb-4"
           >
-            What we <span className="text-darkgreen-primary dark:text-green-primary">build</span>
+            What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
           </motion.h2>
           <p className="text-gray-400 max-w-xl">
             We transform ideas into digital reality with clean code and
@@ -183,7 +183,9 @@ export default function ServicesBento() {
                 </p>
               </div>
               <div className="relative w-full h-48 mt-auto transition-opacity duration-500">
-                {service.visual}
+                <div className="absolute left-0 top-0 w-full h-full">
+                  {service.visual}
+                </div>
               </div>
             </motion.div>
           ))}
