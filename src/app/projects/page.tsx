@@ -57,7 +57,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden min-h-screen">
-      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
+      <div className="hidden dark:block absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10 relative">
         
@@ -121,8 +121,8 @@ export default function Projects() {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${activeCategory === category
-                  ? "bg-transparent text-green-primary border-green-primary"
-                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
+                  ? "bg-transparent text-darkgreen-primary border-darkgreen-primary dark:text-green-primary dark:border-green-primary"
+                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-darkgreen-primary dark:hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
                   }`}
               >
                 {category}
@@ -158,12 +158,12 @@ export default function Projects() {
                   className="mb-8 pl-2"
                 >
                   <div className="flex items-center gap-3 mb-2 relative">
-                    <i className="absolute -left-3 text-[124px] opacity-[0.08] fa-solid fa-play text-green-primary text-sm mt-12"></i>
+                    <i className="absolute -left-3 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-play text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
                     <h3 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide ml-25">
                       {category}
                     </h3>
-                    <i className="absolute -right-3 text-[124px] opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-green-primary text-sm mt-12"></i>
-                    <i className="absolute -right-18 text-[124px] opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-green-primary text-sm mt-12"></i>
+                    <i className="absolute -right-3 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
+                    <i className="absolute -right-18 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
                   </div>
                   {CATEGORY_DESCRIPTIONS[category] && (
                     <p className="text-gray-500 dark:text-gray-400 max-w-3xl ml-25 text-sm md:text-base leading-relaxed">

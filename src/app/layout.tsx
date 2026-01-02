@@ -4,7 +4,7 @@ import Footer from "@/components/layouts/Footer";
 import Navigation from "@/components/layouts/Navigation";
 import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 // import { ThemeProvider } from "next-themes";
-import { ToggleTheme } from "@/components/ui/ToggleTheme";
+// import { ToggleTheme } from "@/components/ui/ToggleTheme";
 import localFont from "next/font/local";
 
 const fontEthnocentric = localFont({
@@ -81,7 +81,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ArvoScrollToTopButton />
-          <ToggleTheme className="fixed bottom-20 right-6 z-100 py-2 px-2 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out"/>
+          {/* <ToggleTheme className="fixed bottom-20 right-6 z-100 py-2 px-2 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out"/> */}
         {/* </ThemeProvider> */}
       </body>
     </html>

@@ -136,7 +136,7 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
                 href={project.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-transparent hover:bg-green-900 text-green-primary border border-green-primary font-bold rounded-lg transition-all"
+                className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-transparent hover:bg-green-50 dark:hover:bg-green-900 text-darkgreen-primary dark:text-green-primary border border-darkgreen-primary dark:border-green-primary font-bold rounded-lg transition-all"
                 >
                 {project.url} <ExternalLink size={18} />
                 </a>

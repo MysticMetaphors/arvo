@@ -1,8 +1,8 @@
 "use client";
 
-import React, { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { BackgroundRippleEffect } from "@/components/ui/background/background-ripple-effect";
-import Phone from "../ui/mockup/Phone";
+import Phone from "../mockups/Phone";
 import { motion } from "framer-motion";
 
 export default function MissionVision() {
@@ -52,63 +52,71 @@ export default function MissionVision() {
             </div>
             <div className="flex relative items-center p-8 px-16">
               <div className="absolute z-1 top-30 h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></div>
-              <div className="absolute top-10 md:top-20 z-10 -right-15 md:-right-0 shadow-[0_0_20px_#00FF99] rounded-3xl">
+              <div className="absolute top-10 md:top-20 z-10 -right-15 md:-right-0 dark:shadow-[0_0_20px_#00FF99] rounded-3xl">
                 <Suspense fallback={''}>
                   <Phone>
-                    <header className="h-14 bg-gray-900 border-b border-gray-700 flex items-center justify-between px-4">
-                      <h1 className="text-white font-semibold text-sm">Deployments</h1>
-                      <div className="flex items-center gap-2">
-                        <input disabled type="text" placeholder="Search..." className="bg-gray-800 text-xs px-2 py-1 rounded-lg text-slate-300 focus:outline-none w-24" />
-                        <div className="w-6 h-6 rounded-full bg-gray-700"></div>
-                      </div>
-                    </header>
+                    <div className="h-full flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
+                      <header className="h-14 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between p-4 transition-colors duration-300">
+                        <h1 className="text-gray-900 dark:text-white font-semibold text-sm">Deployments</h1>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+                        </div>
+                      </header>
 
-                    <nav className="bg-gray-900 border-b border-gray-700 p-4 flex justify-between">
-                      <div className="flex flex-col items-center text-slate-300 text-xs">
-                        <i className="fa-solid text-green-primary fa-layer-group"></i>
-                      </div>
-                      <div className="flex flex-col items-center text-slate-300 text-xs">
-                        <i className="fa-solid text-green-primary fa-code-merge"></i>
-                      </div>
-                      <div className="flex flex-col items-center text-slate-300 text-xs">
-                        <i className="fa-solid text-green-primary fa-chart-simple"></i>
-                      </div>
-                      <div className="flex flex-col items-center text-slate-300 text-xs">
-                        <i className="fa-solid text-green-primary fa-user"></i>
-                      </div>
-                      <div className="flex flex-col items-center text-slate-300 text-xs">
-                        <i className="fa-solid text-green-primary fa-gear"></i>
-                      </div>
-                    </nav>
+                      <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-4 flex justify-between transition-colors duration-300">
+                        <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
+                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-layer-group"></i>
+                        </div>
+                        <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
+                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-code-merge"></i>
+                        </div>
+                        <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
+                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-chart-simple"></i>
+                        </div>
+                        <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
+                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-user"></i>
+                        </div>
+                        <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
+                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-gear"></i>
+                        </div>
+                      </nav>
 
-                    <section className="p-2 flex flex-col gap-2">
-                      <input
-                        type="text"
-                        className="bg-gray-900 border border-gray-700 text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 placeholder-gray-500 w-full"
-                        placeholder="Select Date Range"
-                        disabled
-                      />
-                      <select
-                        className="bg-gray-900 border border-gray-700 text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 w-full"
-                        disabled
-                      >
-                        <option>Select status</option>
-                      </select>
-                    </section>
+                      <section className="p-2 flex flex-col gap-2 bg-white dark:bg-gray-900 transition-colors duration-300">
+                        <input
+                          type="text"
+                          className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 placeholder-gray-400 dark:placeholder-gray-500 w-full transition-colors"
+                          placeholder="Select Date Range"
+                          disabled
+                        />
+                        <select
+                          className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 w-full transition-colors"
+                          disabled
+                        >
+                          <option>Select status</option>
+                        </select>
+                      </section>
 
-                    <section className="p-2 flex-1 overflow-hidden">
-                      <div className="flex flex-col gap-2">
-                        {Array.from({ length: 10 }, (_, i) => (
-                          <div key={i} className="bg-gray-700 rounded-lg p-3 flex flex-col gap-1">
-                            <div className="flex justify-between items-center">
-                              <span className="text-white font-medium text-sm">B3kd9L2F1</span>
-                              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-green-900 text-green-300">Production</span>
+                      <section className="p-2 flex-1 overflow-y-auto bg-white dark:bg-gray-900 transition-colors duration-300">
+                        <div className="flex flex-col gap-2 pb-4">
+                          {Array.from({ length: 10 }, (_, i) => (
+                            <div
+                              key={i}
+                              className="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-transparent rounded-lg p-3 flex flex-col gap-1 transition-colors duration-300 hover:shadow-sm"
+                            >
+                              <div className="flex justify-between items-center">
+                                <span className="text-gray-900 dark:text-white font-medium text-sm">B3kd9L2F1</span>
+
+                                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 transition-colors">
+                                  Production
+                                </span>
+                              </div>
+                              <div className="text-gray-500 dark:text-gray-400 text-xs">Last Deployed: September 19, 2025</div>
                             </div>
-                            <div className="text-gray-400 text-xs">Last Deployed: September 19, 2025</div>
-                          </div>
-                        ))}
-                      </div>
-                    </section>
+                          ))}
+                        </div>
+                      </section>
+
+                    </div>
                   </Phone>
                 </Suspense>
               </div>

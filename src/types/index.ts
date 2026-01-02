@@ -15,3 +15,10 @@ export interface Project {
   isGray: boolean;
   icons: string[];
 }
+
+export interface TeamMember {
+  name: string;
+  position: string;
+  description: string;
+  image: string;
+}

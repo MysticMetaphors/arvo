@@ -69,7 +69,7 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
+          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white "
         >
           Choose the <span className="text-darkgreen-primary dark:text-green-primary">Perfect Plan</span> for Your Needs
         </motion.h2>
@@ -79,17 +79,13 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-600 dark:text-gray-400 mx-auto mb-6"
+          className="text-gray-600 dark:text-gray-400 mb-6 max-w-lg"
         >
           Choose a plan that fits your needs — from getting started to full-scale growth.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="h-[1px] w-full bg-[repeating-linear-gradient(to_right,#065f46_0_12px,transparent_12px_24px)]"></motion.div>
+        {/* Divider */}
+        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
 
         <div className="w-full flex justify-end my-6">
           <CurrencySelector value={geoLocation} onChange={setGeoLocation} />
@@ -335,12 +331,12 @@ export default function Pricing() {
                 Contact
               </Link>
 
-              <Link
+              {/* <Link
                 href="/learnmore"
                 className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full transition-all duration-300 border font-semibold bg-gray-50 text-green-600 border-green-500/40 hover:bg-green-200 hover:text-black dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400  dark:hover:bg-green-400 dark:hover:text-black"
               >
                 Learn More
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>

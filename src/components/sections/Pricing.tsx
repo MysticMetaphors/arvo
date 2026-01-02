@@ -312,12 +312,12 @@ export default function Pricing() {
                   Contact
                 </Link>
 
-                <Link
+                {/* <Link
                   href="/learnmore"
                   className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full transition-all duration-300 border font-semibold bg-gray-50 text-green-600 border-green-500/40 hover:bg-green-200 hover:text-black dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400  dark:hover:bg-green-400 dark:hover:text-black"
                 >
                   Learn More
-                </Link>
+                </Link> */}
               </div>
             </motion.div>
           </div>
