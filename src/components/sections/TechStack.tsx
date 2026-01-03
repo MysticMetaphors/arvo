@@ -15,6 +15,18 @@ export default function TechStack() {
     { name: "Java", icon: "devicon-java-plain colored" },
   ];
 
+  // =========================================================================
+  // HOW TO ADD TECH STACK
+  // =========================================================================
+  // 1. Find the icon class name from Devicon (https://devicon.dev/)
+  // 2. Add a new object to the 'stacks' array with 'name' and 'icon' properties
+  //    Example: { name: "Technology Name", icon: "devicon-icon-name colored" }
+  // 3. Save the file and the new tech stack will appear in the grid
+  //
+  // TEMPLATE:
+  // { name: "Technology Name", icon: "devicon-icon-name colored" },
+  // =========================================================================
+
 
   return (
     <section
@@ -67,8 +79,8 @@ export default function TechStack() {
               flex flex-col items-center justify-center shadow-md
               p-6 w-32 h-32 rounded-xl transition-all duration-500
 
-              bg-gray-50 border border-gray-300 text-black
-              dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300
+              bg-gray-50 border border-gray-200 text-black
+              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
 
               hover:-translate-y-2 hover:shadow-lg
               hover:shadow-lg
@@ -88,8 +100,8 @@ export default function TechStack() {
             flex flex-col items-center justify-center shadow-md
               p-6 w-32 h-32 rounded-xl transition-all duration-500
 
-              bg-gray-50 border border-gray-300 text-black
-              dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300
+              bg-gray-50 border border-gray-200 text-black
+              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
 
               hover:-translate-y-2 hover:shadow-lg
               hover:shadow-lg
@@ -113,8 +125,8 @@ export default function TechStack() {
             flex flex-col items-center justify-center shadow-md
               p-6 w-32 h-32 rounded-xl transition-all duration-500
 
-              bg-gray-50 border border-gray-300 text-black
-              dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300
+              bg-gray-50 border border-gray-200 text-black
+              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
 
               hover:-translate-y-2 hover:shadow-lg
               hover:shadow-lg
@@ -138,8 +150,8 @@ export default function TechStack() {
             flex flex-col items-center justify-center shadow-md
               p-6 w-32 h-32 rounded-xl transition-all duration-500
 
-              bg-gray-50 border border-gray-300 text-black
-              dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300
+              bg-gray-50 border border-gray-200 text-black
+              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
 
               hover:-translate-y-2 hover:shadow-lg
               hover:shadow-lg
@@ -163,8 +175,8 @@ export default function TechStack() {
             flex flex-col items-center justify-center shadow-md
               p-6 w-32 h-32 rounded-xl transition-all duration-500
 
-              bg-gray-50 border border-gray-300 text-black
-              dark:bg-gray-900 dark:border-gray-800 dark:text-gray-300
+              bg-gray-50 border border-gray-200 text-black
+              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
 
               hover:-translate-y-2 hover:shadow-lg
               hover:shadow-lg

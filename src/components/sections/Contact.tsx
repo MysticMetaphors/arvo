@@ -165,68 +165,75 @@ export default function Contact({ onView }: ContactProp) {
               initial={{ opacity: 0, y: 40 }}
               {...animationY}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-              action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/20 dark:via-gray-900 dark:to-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
-              
+              action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/10 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] border border-gray-200 dark:border-gray-700/60 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
+
               <div>
-                <label htmlFor="name" className="block text-black dark:text-white mb-2">Name</label>
+                <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
+                  <i className="fa-solid fa-user text-darkgreen-primary dark:text-green-primary"></i>
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Enter your name"
-                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                  placeholder="John Doe"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="email" className="block text-black dark:text-white mb-2">Email</label>
+                  <label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
+                    <i className="fa-solid fa-envelope text-darkgreen-primary dark:text-green-primary"></i>
+                    Email
+                  </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="example@gmail.com"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    placeholder="you@company.com"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="number" className="block text-black dark:text-white mb-2">Contact</label>
+                  <label htmlFor="number" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
+                    <i className="fa-solid fa-phone text-darkgreen-primary dark:text-green-primary"></i>
+                    Number
+                  </label>
                   <input
                     type="tel"
                     id="number"
                     name="number"
-                    placeholder="e.g. 09XX-XXX-XXXX"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    placeholder="+1 (555) 000-0000"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-black dark:text-white mb-2">Message</label>
+                <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
+                  <i className="fa-solid fa-envelope-open-text text-darkgreen-primary dark:text-green-primary"></i>
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Write your message here..."
+                  placeholder="Tell us about your project..."
                   rows={5}
-                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="mt-5 bg-green-400/80 font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300 shadow-[0_0_5px_#00FF99] hover:bg-green-600 text-black py-3 px-6 rounded-md"
+                className="mt-5 bg-green-400/80 font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300 shadow-[0_0_5px_#00FF99] hover:bg-green-primary text-black py-3 px-6 rounded-md"
               >
                 Submit
               </button>
             </motion.form>
           </div>
         </div>
-
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.15)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,#f8f8f8_100%)] dark:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)] pointer-events-none"></div>
-        <div className="absolute inset-0 opacity-20 dark:opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100\\' height=\\'100\\' fill=\\'none\\' stroke=\\'%2300cc88\\' stroke-width=\\'0.5\\'/></svg>')]"></div>
-
       </div>
       <div id="append-toast" className="w-fit space-y-3 fixed top-5 left-10 md:left-15 z-100 flex flex-col">
 

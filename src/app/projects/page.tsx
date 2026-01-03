@@ -60,10 +60,10 @@ export default function Projects() {
       <div className="hidden dark:block absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
 
       <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10 relative">
-        
+
         {/* ================= HEADER GROUP ================= */}
         <div className="mb-16 space-y-8">
-          
+
           {/* Top Row: Title + Search */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
@@ -86,49 +86,51 @@ export default function Projects() {
                 A collection of projects that reflect our passion for clean design and smart development.
               </motion.p>
             </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8 justify-between items-center">
+            {/* Filter Chips */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex flex-wrap gap-2 order-2 md:order-1"
+            >
+              {CATEGORIES.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === category
+                    ? "bg-transparent text-darkgreen-primary border-darkgreen-primary dark:text-green-primary dark:border-green-primary"
+                    : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-darkgreen-primary dark:hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
+                    }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </motion.div>
 
             {/* Search Bar */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative w-full md:w-72"
+              className="relative w-full md:w-72 order-1 md:order-2"
             >
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
               </div>
               <input
                 type="text"
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900/50 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-all shadow-sm"
+                className="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900/50 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-all shadow-sm"
                 placeholder="Search projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </motion.div>
           </div>
-
-          {/* Filter Chips */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex flex-wrap gap-2 order-2 md:order-1"
-          >
-            {CATEGORIES.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${activeCategory === category
-                  ? "bg-transparent text-darkgreen-primary border-darkgreen-primary dark:text-green-primary dark:border-green-primary"
-                  : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-darkgreen-primary dark:hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
-                  }`}
-              >
-                {category}
-              </button>
-            ))}
-          </motion.div>
 
           {/* Divider */}
           <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
@@ -138,11 +140,11 @@ export default function Projects() {
         <div className="lg:px-0 sm:p-0">
           {visibleCategories.map((category, index) => {
             const categoryProjects = projects.filter((project) => {
-               const matchesCategory = project.category === category;
-               const matchesSearch = 
-                 project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                 project.description.toLowerCase().includes(searchQuery.toLowerCase());
-               return matchesCategory && matchesSearch;
+              const matchesCategory = project.category === category;
+              const matchesSearch =
+                project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                project.description.toLowerCase().includes(searchQuery.toLowerCase());
+              return matchesCategory && matchesSearch;
             });
 
             if (categoryProjects.length === 0) return null;
@@ -183,9 +185,9 @@ export default function Projects() {
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.5, delay: i * 0.1 }}
                       >
-                        <ProjectSpotlight 
-                          project={project} 
-                          onProjectSelect={handleProjectSelect} 
+                        <ProjectSpotlight
+                          project={project}
+                          onProjectSelect={handleProjectSelect}
                         />
                       </motion.div>
                     ))}

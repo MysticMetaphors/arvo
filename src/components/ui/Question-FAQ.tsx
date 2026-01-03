@@ -16,7 +16,7 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="border-gray-200 dark:bg-gray-900 shadow-sm border dark:border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-lg dark:hover:shadow-green-primary/20 transition-all duration-500"
+      className="border-gray-200 dark:bg-gray-800/[0.50] shadow-sm border dark:border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-lg dark:hover:shadow-green-primary/20 transition-all duration-500"
     >
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAnswer}>
         <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">{item.question}</h3>

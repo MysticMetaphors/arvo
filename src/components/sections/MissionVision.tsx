@@ -158,7 +158,7 @@ export default function MissionVision() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.1, ease: "easeInOut", delay: 0.1 }}
-                    className="absolute top-0 left-0 h-[2px] bg-darkgreen-primary dark:bg-green-primary brightness-80 shadow-[0_0_10px_currentColor]"
+                    className="absolute top-0 left-0 h-[3px] bg-green-primary dark:bg-green-primary dark:brightness-90 dark:shadow-[0_0_10px_currentColor]"
                   />
                 </div>
 
@@ -179,18 +179,17 @@ export default function MissionVision() {
                     className="relative z-10 group"
                   >
                     {/* Pulse Ring Animation */}
-                    <div className="absolute inset-0 rounded-xl bg-darkgreen-primary/60 dark:bg-green-primary/60 animate-ping blur-sm opacity-75 duration-1000" style={{ animationDelay: `${i * 1}s` }} />
+                    <div className="absolute inset-0 rounded-xl bg-darkgreen-primary/60 dark:bg-green-primary/60 animate-ping blur-sm opacity-75 duration-1000" style={{ animationDelay: `${i * 0.1}s` }} />
 
                     {/* Icon Container */}
                     <div className="
                 relative flex items-center justify-center w-14 h-14 rounded-md 
-                bg-white dark:bg-green-primary 
-                border-2 border-gray-100 dark:border-white/10
-                text-gray-400 dark:text-gray-900
+                bg-green-primary dark:bg-green-primary 
+                text-white dark:text-gray-900
                 shadow-lg transition-all duration-300
                 
                 group-hover:-translate-y-2 
-                group-hover:text-darkgreen-primary dark:group-hover:text-green-primary
+                group-hover:text-gray-900 dark:group-hover:text-green-primary
                 group-hover:shadow-[0_10px_20px_-5px_rgba(34,197,94,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(0,255,153,0.4)]
                     ">
                       <i className={`fa-solid fa-${step.icon} text-2xl transition-transform duration-300 group-hover:scale-110`}></i>

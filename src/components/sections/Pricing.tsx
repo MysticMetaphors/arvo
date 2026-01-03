@@ -82,7 +82,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Starter</h3>
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
@@ -134,7 +134,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Growth</h3>
 
               <div className="flex flex-col justify-center my-2">
@@ -184,7 +184,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
+              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
               <span className="absolute top-3 right-3 bg-green-600 dark:bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Most Popular
               </span>
@@ -250,7 +250,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+              className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl font-bold text-black dark:text-white">
                 Ecommerce
               </h3>

@@ -150,7 +150,7 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:pt-12 pt-8 max-w-7xl mx-auto sm:p-6">
+        <div className="grid lg:grid-cols-2 gap-6 lg:pt-12 pt-8 max-w-7xl mx-auto sm:p-6">
           {projects.map((project, i) => (
             <div
               key={i}

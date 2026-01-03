@@ -2,7 +2,7 @@ export default function AppInterfaceMockup() {
   return (
     <div className="absolute left-8 bottom-0 w-full h-[90%] bg-gray-50 dark:bg-[#1a1a1a] rounded-tl-lg border-l border-t border-gray-200 dark:border-white/10 flex overflow-hidden shadow-2xl transition-colors duration-300">
       <div className="w-12 border-r border-gray-200 dark:border-white/5 flex flex-col items-center py-4 gap-4 bg-gray-100 dark:bg-[#111]">
-        <div className="w-6 h-6 rounded bg-[#00FF99] shadow-[0_0_10px_rgba(0,255,153,0.4)]" />
+        <div className="w-6 h-50 rounded bg-[#00FF99] shadow-[0_0_10px_rgba(0,255,153,0.4)]" />
         <div className="w-6 h-6 rounded bg-gray-300 dark:bg-white/10" />
         <div className="w-6 h-6 rounded bg-gray-300 dark:bg-white/10 group-hover:bg-[#00FF99] transition-colors duration-300 relative">
              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-gray-100 dark:border-[#111]" />
