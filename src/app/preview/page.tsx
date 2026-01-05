@@ -5,7 +5,7 @@ import ControlPanel from "@/components/preview/ControlPanel";
 import WebsiteFrame from "@/components/preview/WebsiteFrame";
 
 export type Tier = "starter" | "growth" | "professional" | "ecommerce";
-export type PageType = "" | "about" | "contact" | "services" | "portfolio" | "blog" | "shop" | "custom1" | "custom2";
+export type PageType = "home" | "about" | "contact" | "services" | "portfolio" | "blog" | "shop" | "custom1" | "custom2";
 export type FeatureType = "booking" | "chat" | "analytics" | "membership" | "shipping";
 
 export interface SiteConfig {
