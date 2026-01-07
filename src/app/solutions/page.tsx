@@ -74,7 +74,7 @@ export default function Projects() {
                 viewport={{ once: true }}
                 className="text-4xl leading-tight font-extrabold text-black dark:text-white"
               >
-                Recent <span className="text-darkgreen-primary dark:text-green-primary">Projects</span>
+                Live <span className="text-darkgreen-primary dark:text-green-primary">Solutions</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export default function Projects() {
                 viewport={{ once: true }}
                 className="text-gray-600 dark:text-gray-400 mt-2 max-w-lg"
               >
-                A collection of projects that reflect our passion for clean design and smart development.
+                A collection of completed projects that already made real world impacts.
               </motion.p>
             </div>
           </div>
