@@ -131,21 +131,28 @@ export default function ServicesBento() {
   ];
 
   return (
-    <section className="relative bg-white dark:bg-black-primary text-white overflow-hidden py-24">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section className="relative bg-white dark:bg-black-primary text-white overflow-hidden py-20">
+      <div className="max-w-7xl mx-auto px-7 relative z-10 pt-10">
         {/* Header */}
         <div className="mb-16 text-left">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl text-black dark:text-white font-extrabold mb-4"
+            className="text-4xl text-black dark:text-white font-extrabold mb-4"
           >
             What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
           </motion.h2>
-          <p className="text-gray-400 max-w-xl">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-gray-400 max-w-xl"
+          >
             We transform your ideas into reality with full control and customizability.
-          </p>
+          </motion.p>
 
           {/* Divider */}
           <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent mt-8"></div>

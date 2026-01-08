@@ -60,10 +60,10 @@ export default function Pricing() {
   ]
 
   return (
-    <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden">
+    <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden py-20">
       <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div>
 
-      <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">
+      <div className="px-7 pt-10 pb-8 max-w-7xl mx-auto z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

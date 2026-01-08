@@ -57,9 +57,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden min-h-screen">
-      <div className="hidden dark:block absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
-
-      <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10 relative">
+      <div className="px-7 pt-30 pb-8 max-w-7xl mx-auto z-10 relative">
 
         {/* ================= HEADER GROUP ================= */}
         <div className="mb-16 space-y-8">
@@ -101,7 +99,7 @@ export default function Projects() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === category
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === category
                     ? "bg-transparent text-darkgreen-primary border-darkgreen-primary dark:text-green-primary dark:border-green-primary"
                     : "bg-white dark:bg-zinc-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-zinc-800 hover:border-darkgreen-primary dark:hover:border-green-primary/50 hover:text-black dark:hover:text-white cursor-pointer"
                     }`}
@@ -120,20 +118,17 @@ export default function Projects() {
               className="relative w-full md:w-72 order-1 md:order-2"
             >
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <i className="fa-solid fa-magnifying-glass text-gray-400"></i>
+                <i className="fa-solid fa-magnifying-glass text-zinc-500"></i>
               </div>
               <input
                 type="text"
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900/50 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-all shadow-sm"
+                className="placeholder-zinc-500 w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900/50 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-green-primary focus:ring-1 focus:ring-green-primary transition-all shadow-sm"
                 placeholder="Search projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </motion.div>
           </div>
-
-          {/* Divider */}
-          <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
         </div>
 
         {/* ================= PROJECTS GRID ================= */}
@@ -151,6 +146,7 @@ export default function Projects() {
 
             return (
               <div key={category} className="mb-24 last:mb-0">
+                <div className="md:mb-20 mb-10 h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-700 to-transparent"></div>
                 {/* Category Header */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -160,19 +156,19 @@ export default function Projects() {
                   className="mb-8 pl-2"
                 >
                   <div className="flex items-center gap-3 mb-2 relative">
-                    <i className="absolute -left-3 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-play text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
-                    <h3 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide ml-25">
+                    <i className="absolute -left-3 text-[100px] opacity-0 md:opacity-[0.20] md:dark:opacity-[0.08] fa-solid fa-play text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
+                    <h3 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide md:ml-25">
                       {category}
                     </h3>
-                    <i className="absolute -right-3 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
-                    <i className="absolute -right-18 text-[124px] opacity-[0.20] dark:opacity-[0.08] fa-solid fa-slash scale-x-[-1] text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
                   </div>
                   {CATEGORY_DESCRIPTIONS[category] && (
-                    <p className="text-gray-500 dark:text-gray-400 max-w-3xl ml-25 text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-500 dark:text-gray-400 max-w-3xl md:ml-25 text-sm md:text-base leading-relaxed">
                       {CATEGORY_DESCRIPTIONS[category]}
                     </p>
                   )}
                 </motion.div>
+
+                <div className="md:mt-20 mt-10 h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-700 to-transparent"></div>
 
                 {/* Projects List */}
                 <div className="flex flex-col">

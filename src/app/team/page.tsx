@@ -25,10 +25,10 @@ const teamMembers = teamData as unknown as TeamMember[];
 export default function team() {
 
   return (
-    <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden">
+    <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden py-20">
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div> */}
 
-      <div className="px-6 md:px-6 pt-20 pb-8 lg:pt-30 lg:px-12 z-10">
+      <div className="px-7 pt-10 pb-8 max-w-7xl mx-auto z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function team() {
 
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {teamMembers.map((member, i) => (
             <motion.div
               key={i}
@@ -62,7 +62,7 @@ export default function team() {
               className="group relative flex flex-col h-full"
             >
               {/* Card Container */}
-              <div className="relative flex flex-col h-full p-6 rounded-lg border backdrop-blur-sm transition-all duration-300 ease-out bg-gray-100 dark:bg-gray-800/[0.50] border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:group-hover:bg-gray-800/[0.70] group-hover:border-darkgreen-primary/40 dark:group-hover:border-green-primary/40">
+              <div className="relative shadow flex flex-col h-full p-6 rounded-lg border backdrop-blur-sm transition-all duration-300 ease-out bg-gray-100 dark:bg-gray-800/[0.50] border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:group-hover:bg-gray-800/[0.70] group-hover:border-darkgreen-primary/40 dark:group-hover:border-green-primary/40">
                 <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900">
                   <Image
                     src={member.image}
