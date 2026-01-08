@@ -19,14 +19,14 @@ export default function Navigation() {
           Home
         </Link>
         <Link
-          href="/projects"
+          href="/solutions"
           className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
-          Projects
+          Solutions
         </Link>
         <Link
-          href="/team"
+          href="/services"
           className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
-          Team
+          Services
         </Link>
         <Link
           href="/pricing"
@@ -34,9 +34,9 @@ export default function Navigation() {
           Pricing
         </Link>
         <Link
-          href="/services"
+          href="/team"
           className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
-          Services
+          Team
         </Link>
         <Link
           href="/contact"
@@ -67,18 +67,18 @@ export default function Navigation() {
             Home
           </Link>
           <Link
-            href="/projects"
+            href="/solutions"
             className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
-            Projects
+            Solutions
           </Link>
           <Link
-            href="/team"
+            href="/services"
             className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
-            Team
+            Services
           </Link>
           <Link
             href="/pricing"
@@ -88,11 +88,11 @@ export default function Navigation() {
             Pricing
           </Link>
           <Link
-            href="/services"
+            href="/team"
             className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
-            Services
+            Team
           </Link>
           <Link
             href="/contact"

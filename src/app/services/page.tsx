@@ -144,8 +144,7 @@ export default function ServicesBento() {
             What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
           </motion.h2>
           <p className="text-gray-400 max-w-xl">
-            We transform ideas into digital reality with clean code and
-            futuristic design.
+            We transform your ideas into reality with full control and customizability.
           </p>
 
           {/* Divider */}
