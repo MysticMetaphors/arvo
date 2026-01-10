@@ -44,7 +44,32 @@ export default function Projects() {
     //   icons: ["react", "typescript"]
     // },
     // =========================================================================
-
+    {
+      title: "Seinna Brews",
+      description: "A cozy café made for slowing down, unwinding, and resetting—where comfort comes first and every visit feels like a warm pause from the world.",
+      images: [
+        { src: "projects/seinna-brews/image.png", caption: "The main landing page showing the hero section." }
+      ],
+      url: "https://sienna-brews.vercel.app/",
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "green",
+      isGray: false,
+      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    },
+    {
+      title: "Solara Grand",
+      description: "A luxury resort where every moment feels truly premium, blending refined comfort with unforgettable adventures and immersive experiences designed to excite, inspire, and indulge.",
+      images: [
+        { src: "projects/solara-grand/image.png", caption: "" },
+      ],
+      url: "https://solara-grand.vercel.app/",
+      category: "Landing Pages",
+      tooltip: "Design Only",
+      tooltip_design: "purple",
+      isGray: false,
+      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    },
     {
       title: "Lounge - Social Media",
       description: "A social platform that connects pets with their owners and communities.",
@@ -90,36 +115,6 @@ export default function Projects() {
       tooltip_design: "blue",
       isGray: true,
       icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Fluxo",
-      description: "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
-      images: [
-        { src: "projects/fluxo/fluxo.png", caption: "The main landing page showing the hero section." }
-      ],
-      url: "https://fluxo-alpha.vercel.app/",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "green",
-      isGray: false,
-      icons: ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
-    {
-      title: "Enro",
-      description: "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
-      images: [
-        { src: "projects/enro/landing_1.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_2.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_3.png", caption: "TODO: Add text" },
-        { src: "projects/enro/landing_4.png", caption: "TODO: Add text" },
-        { src: "projects/enro/dashboard.png", caption: "TODO: Add text" },
-      ],
-      url: "",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "purple",
-      isGray: true,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
   ];
 

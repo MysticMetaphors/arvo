@@ -3,187 +3,479 @@
     "title": "Lounge - Social Media",
     "description": "A social platform that connects pets with their owners and communities.",
     "images": [
-      { "src": "projects/lounge/feed.png", "caption": "The feed from other users." },
-      { "src": "projects/lounge/landing_page.png", "caption": "Landing page." }
+      {
+        "src": "projects/lounge/feed.png",
+        "caption": "The feed from other users."
+      },
+      {
+        "src": "projects/lounge/landing_page.png",
+        "caption": "Landing page."
+      }
     ],
     "url": "https://metaanimals.tech",
     "category": "Enterprise Solutions",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "laravel/laravel-original.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "MIS Platform",
     "description": "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
     "images": [
-      { "src": "projects/attendance/inquiries_1.png", "caption": "Inquiry charts and graph (Demo data)" },
-      { "src": "projects/attendance/inquiries_2.png", "caption": "Inquiry charts and graph (Demo data)" },
-      { "src": "projects/attendance/inquiries_3.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/inquiries_4.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/inquiries_5.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/inquiries_6.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/inquiries_7.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/email_service_1.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/email_service_2.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/email_service_3.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/employees_1.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/employees_2.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/claims_1.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/claims_2.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/claims_3.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/claims_4.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/ai.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/attendance_department.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/attendance_1.png", "caption": "TODO: Add text" },
-      { "src": "projects/attendance/attendance_2.png", "caption": "TODO: Add text" }
+      {
+        "src": "projects/attendance/inquiries_1.png",
+        "caption": "Inquiry charts and graph (Demo data)"
+      },
+      {
+        "src": "projects/attendance/inquiries_2.png",
+        "caption": "Inquiry charts and graph (Demo data)"
+      },
+      {
+        "src": "projects/attendance/inquiries_3.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/inquiries_4.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/inquiries_5.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/inquiries_6.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/inquiries_7.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/email_service_1.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/email_service_2.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/email_service_3.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/employees_1.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/employees_2.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/claims_1.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/claims_2.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/claims_3.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/claims_4.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/ai.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/attendance_department.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/attendance_1.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/attendance/attendance_2.png",
+        "caption": "TODO: Add text"
+      }
     ],
     "url": "",
     "category": "Enterprise Solutions",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "codeigniter/codeigniter-plain.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "Inventory System",
     "description": "A complete inventory system for an entire company's products. Includes purchase/sales orders, invoices, report generation, and more.",
     "images": [
-      { "src": "projects/mk9inventory/dashboard.png", "caption": "Dashboard." },
-      { "src": "projects/mk9inventory/dashboard_backup.png", "caption": "Backs up the entire database for redundancy purposes. Avoids data corruption and data wipe out." },
-      { "src": "projects/mk9inventory/dashboard_security.png", "caption": "Comprehensive tracking of what happens to the app and how each user uses it. Verbose logs." },
-      { "src": "projects/mk9inventory/products.png", "caption": "Products page." },
-      { "src": "projects/mk9inventory/product_releasing.png", "caption": "Releasing of products." },
-      { "src": "projects/mk9inventory/product_restocking.png", "caption": "Restocking of products." },
-      { "src": "projects/mk9inventory/inventory.png", "caption": "Inventory list." },
-      { "src": "projects/mk9inventory/inventory_report.png", "caption": "Generation of report." },
-      { "src": "projects/mk9inventory/purchase_orders.png", "caption": "Purchase orders." },
-      { "src": "projects/mk9inventory/purchase_order_create.png", "caption": "Purchase orders creation." },
-      { "src": "projects/mk9inventory/sales_orders.png", "caption": "Sales orders." },
-      { "src": "projects/mk9inventory/sales_order_create.png", "caption": "Sales orders creation." },
-      { "src": "projects/mk9inventory/product_branding.png", "caption": "Product brandings. Includes variations, sizes, etc." },
-      { "src": "projects/mk9inventory/profile_edit.png", "caption": "Profile edit for the app." }
+      {
+        "src": "projects/mk9inventory/dashboard.png",
+        "caption": "Dashboard."
+      },
+      {
+        "src": "projects/mk9inventory/dashboard_backup.png",
+        "caption": "Backs up the entire database for redundancy purposes. Avoids data corruption and data wipe out."
+      },
+      {
+        "src": "projects/mk9inventory/dashboard_security.png",
+        "caption": "Comprehensive tracking of what happens to the app and how each user uses it. Verbose logs."
+      },
+      {
+        "src": "projects/mk9inventory/products.png",
+        "caption": "Products page."
+      },
+      {
+        "src": "projects/mk9inventory/product_releasing.png",
+        "caption": "Releasing of products."
+      },
+      {
+        "src": "projects/mk9inventory/product_restocking.png",
+        "caption": "Restocking of products."
+      },
+      {
+        "src": "projects/mk9inventory/inventory.png",
+        "caption": "Inventory list."
+      },
+      {
+        "src": "projects/mk9inventory/inventory_report.png",
+        "caption": "Generation of report."
+      },
+      {
+        "src": "projects/mk9inventory/purchase_orders.png",
+        "caption": "Purchase orders."
+      },
+      {
+        "src": "projects/mk9inventory/purchase_order_create.png",
+        "caption": "Purchase orders creation."
+      },
+      {
+        "src": "projects/mk9inventory/sales_orders.png",
+        "caption": "Sales orders."
+      },
+      {
+        "src": "projects/mk9inventory/sales_order_create.png",
+        "caption": "Sales orders creation."
+      },
+      {
+        "src": "projects/mk9inventory/product_branding.png",
+        "caption": "Product brandings. Includes variations, sizes, etc."
+      },
+      {
+        "src": "projects/mk9inventory/profile_edit.png",
+        "caption": "Profile edit for the app."
+      }
     ],
     "url": "",
     "category": "Enterprise Solutions",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "codeigniter/codeigniter-plain.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "HRIS",
     "description": "Human resources information system. Made for HRs and employee data.",
     "images": [
-      { "src": "projects/hris/dashboard.png", "caption": "Dashboard." },
-      { "src": "projects/hris/new_employee.png", "caption": "Encoding and updating employee data." },
-      { "src": "projects/hris/login.png", "caption": "Login page." }
+      {
+        "src": "projects/hris/dashboard.png",
+        "caption": "Dashboard."
+      },
+      {
+        "src": "projects/hris/new_employee.png",
+        "caption": "Encoding and updating employee data."
+      },
+      {
+        "src": "projects/hris/login.png",
+        "caption": "Login page."
+      }
     ],
     "url": "",
     "category": "Enterprise Solutions",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "codeigniter/codeigniter-plain.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
-    "title": "Fluxo",
-    "description": "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+    "title": "Seinna Brews",
+    "description": "A cozy café made for slowing down, unwinding, and resetting—where comfort comes first and every visit feels like a warm pause from the world.",
     "images": [
-      { "src": "projects/fluxo/fluxo.png", "caption": "The main landing page showing the hero section." }
+      {
+        "src": "projects/seinna-brews/image.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/seinna-brews/image2.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/seinna-brews/image3.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/seinna-brews/image4.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/seinna-brews/image5.png",
+        "caption": ""
+      }
     ],
     "url": "https://fluxo-alpha.vercel.app/",
     "category": "Landing Pages",
     "tooltip": "Design Only",
     "tooltip_design": "green",
     "isGray": false,
-    "icons": ["react/react-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "nextjs/nextjs-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg"
+    ]
+  },
+  {
+    "title": "Solara Grand",
+    "description": "A luxury resort where every moment feels truly premium, blending refined comfort with unforgettable adventures and immersive experiences designed to excite, inspire, and indulge.",
+    "images": [
+      {
+        "src": "projects/solara-grand/image.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/solara-grand/image2.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/solara-grand/image3.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/solara-grand/image4.png",
+        "caption": ""
+      },
+      {
+        "src": "projects/solara-grand/image5.png",
+        "caption": ""
+      }
+    ],
+    "url": "https://fluxo-alpha.vercel.app/",
+    "category": "Landing Pages",
+    "tooltip": "Design Only",
+    "tooltip_design": "green",
+    "isGray": false,
+    "icons": [
+      "nextjs/nextjs-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg"
+    ]
+  },
+  {
+    "title": "Fluxo",
+    "description": "Fluxo is a showcase of clean and modern web design, featuring responsive layouts, elegant UI components.",
+    "images": [
+      {
+        "src": "projects/fluxo/fluxo.png",
+        "caption": "The main landing page showing the hero section."
+      }
+    ],
+    "url": "https://fluxo-alpha.vercel.app/",
+    "category": "Landing Pages",
+    "tooltip": "Design Only",
+    "tooltip_design": "green",
+    "isGray": false,
+    "icons": [
+      "react/react-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "Enro",
     "description": "This site is a showcase of sleek and modern web design, highlighting a polished landing page and intuitive dashboard layout.",
     "images": [
-      { "src": "projects/enro/landing_1.png", "caption": "TODO: Add text" },
-      { "src": "projects/enro/landing_2.png", "caption": "TODO: Add text" },
-      { "src": "projects/enro/landing_3.png", "caption": "TODO: Add text" },
-      { "src": "projects/enro/landing_4.png", "caption": "TODO: Add text" },
-      { "src": "projects/enro/dashboard.png", "caption": "TODO: Add text" }
+      {
+        "src": "projects/enro/landing_1.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/enro/landing_2.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/enro/landing_3.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/enro/landing_4.png",
+        "caption": "TODO: Add text"
+      },
+      {
+        "src": "projects/enro/dashboard.png",
+        "caption": "TODO: Add text"
+      }
     ],
     "url": "",
     "category": "Landing Pages",
     "tooltip": "Design Only",
     "tooltip_design": "purple",
     "isGray": true,
-    "icons": ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "nextjs/nextjs-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "Syro",
     "description": "This site showcases sleek and modern web design, featuring a polished landing, enriched with beautiful visual assets and subtle, elegant animations.",
     "images": [
-      { "src": "projects/syro/landing_1.png", "caption": "TODO: Add text" }
+      {
+        "src": "projects/syro/landing_1.png",
+        "caption": "TODO: Add text"
+      }
     ],
     "url": "",
     "category": "Landing Pages",
     "tooltip": "Design Only",
     "tooltip_design": "red",
     "isGray": true,
-    "icons": ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "nextjs/nextjs-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
-      "title": "Cerebrate",
-      "description": "Cerebrate is an agentic AI model designed to communicate intelligently with internal systems.\nUpon receiving user inputs from a web app, Cerebrate processes the raw data. Usually, it specifically inspects uploaded images or videos to understand the context before taking action.\nIt acts as a bridge by contacting the relevant backend microsystems and returning the correct system responses.\nSimultaneously, it replies to the user while writing every event to a persistent log for auditing.\n\n[BUTTON:View an Example Use|]",
-      "images": [
-      { "src": "projects/cerebrate/cerebrate.png", "caption": "Cerebrate Agentic AI", "type": "image" },
-      { "src": "https://drive.google.com/file/d/1M_rWC0unfp67QK0muepnpbvJ8u4sc_Oy/view", "caption": "IAGD: Pet analyzer", "type": "video" }
-      ],
-      "url": "",
-      "category": "Dev Ops",
-      "tooltip": "Backend Only",
-      "tooltip_design": "blue",
-      "isGray": false,
-      "icons": ["mysql/mysql-original.svg", "debian/debian-original.svg", "python/python-original.svg", "docker/docker-original.svg"]
+    "title": "Cerebrate",
+    "description": "Cerebrate is an agentic AI model designed to communicate intelligently with internal systems.\nUpon receiving user inputs from a web app, Cerebrate processes the raw data. Usually, it specifically inspects uploaded images or videos to understand the context before taking action.\nIt acts as a bridge by contacting the relevant backend microsystems and returning the correct system responses.\nSimultaneously, it replies to the user while writing every event to a persistent log for auditing.\n\n[BUTTON:View an Example Use|]",
+    "images": [
+      {
+        "src": "projects/cerebrate/cerebrate.png",
+        "caption": "Cerebrate Agentic AI",
+        "type": "image"
+      },
+      {
+        "src": "https://drive.google.com/file/d/1M_rWC0unfp67QK0muepnpbvJ8u4sc_Oy/view",
+        "caption": "IAGD: Pet analyzer",
+        "type": "video"
+      }
+    ],
+    "url": "",
+    "category": "Dev Ops",
+    "tooltip": "Backend Only",
+    "tooltip_design": "blue",
+    "isGray": false,
+    "icons": [
+      "mysql/mysql-original.svg",
+      "debian/debian-original.svg",
+      "python/python-original.svg",
+      "docker/docker-original.svg"
+    ]
   },
   {
-      "title": "Nydus",
-      "description": "Nydus is a specialized tool designed for continuous deployment of projects to a Debian 11 server.\nFor every git push or git pull, the tool updates the relevant systems and applications while also doing compatability checks and rollback capabilities.\nThe goal of this tool is to ensure reliability and redundancy for every systems deployed remotely.",
-      "images": [
-      { "src": "projects/nydus/nydus.png", "caption": "Nydus Git Automation", "type": "image" }
-      ],
-      "url": "",
-      "category": "Dev Ops",
-      "tooltip": "Backend Only",
-      "tooltip_design": "blue",
-      "isGray": false,
-      "icons": ["git/git-original.svg", "debian/debian-original.svg", "bash/bash-original.svg", "docker/docker-original.svg"]
+    "title": "Nydus",
+    "description": "Nydus is a specialized tool designed for continuous deployment of projects to a Debian 11 server.\nFor every git push or git pull, the tool updates the relevant systems and applications while also doing compatability checks and rollback capabilities.\nThe goal of this tool is to ensure reliability and redundancy for every systems deployed remotely.",
+    "images": [
+      {
+        "src": "projects/nydus/nydus.png",
+        "caption": "Nydus Git Automation",
+        "type": "image"
+      }
+    ],
+    "url": "",
+    "category": "Dev Ops",
+    "tooltip": "Backend Only",
+    "tooltip_design": "blue",
+    "isGray": false,
+    "icons": [
+      "git/git-original.svg",
+      "debian/debian-original.svg",
+      "bash/bash-original.svg",
+      "docker/docker-original.svg"
+    ]
   },
   {
     "title": "Honeyrush - Tile Matching Game",
     "description": "A cute game about matching objects and bees!",
     "images": [
-      { "src": "projects/honeyrush/main_menu.png", "caption": "Main menu" },
-      { "src": "projects/honeyrush/gameplay.png", "caption": "Gameplay" },
-      { "src": "projects/honeyrush/prompt_1.png", "caption": "Gameplay" },
-      { "src": "projects/honeyrush/prompt_2.png", "caption": "Gameplay" },
-      { "src": "projects/honeyrush/leaderboard.png", "caption": "Compete with others for a spot in the leaderboards!" }
+      {
+        "src": "projects/honeyrush/main_menu.png",
+        "caption": "Main menu"
+      },
+      {
+        "src": "projects/honeyrush/gameplay.png",
+        "caption": "Gameplay"
+      },
+      {
+        "src": "projects/honeyrush/prompt_1.png",
+        "caption": "Gameplay"
+      },
+      {
+        "src": "projects/honeyrush/prompt_2.png",
+        "caption": "Gameplay"
+      },
+      {
+        "src": "projects/honeyrush/leaderboard.png",
+        "caption": "Compete with others for a spot in the leaderboards!"
+      }
     ],
     "url": "https://honeyrush.tewi.club",
     "category": "Games",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "laravel/laravel-original.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   },
   {
     "title": "Mochi - Incremental Rhythm Game",
     "description": "An experimental game about the combination of incremental game mechanics and rhythm game mechanics.",
     "images": [
-      { "src": "projects/mochi/gameplay.png", "caption": "Gameplay" }
+      {
+        "src": "projects/mochi/gameplay.png",
+        "caption": "Gameplay"
+      }
     ],
     "url": "https://mochi.tewi.club",
     "category": "Games",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
     "isGray": false,
-    "icons": ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+    "icons": [
+      "php/php-original.svg",
+      "laravel/laravel-original.svg",
+      "jquery/jquery-original.svg",
+      "html5/html5-original.svg"
+    ]
   }
 ]
