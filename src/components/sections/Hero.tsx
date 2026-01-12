@@ -27,11 +27,11 @@ export default function HomePage() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" className="px-8 py-3 rounded-full font-semibold transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:shadow-[0_0_40px_#33FFB3] dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99]" >
+          <a href="#contact" className="px-8 py-3 rounded-full border transition-all duration-300 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black" >
             Let’s Talk
           </a>
 
-          <a href="#projects" className="px-8 py-3 rounded-full border transition-all duration-300 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
+          <a href="#projects" className="px-8 py-3 rounded-full border transition-all duration-300 bg-gray-primary/5 text-black-primary border-black-primary hover:bg-gray-400 dark:hover:bg-gray-800 hover:text-black dark:bg-gray-primary/5 dark:hover:border-white dark:text-gray-400 dark:border-gray-400 dark:hover:text-white">
             Our Work
           </a>
         </div>
