@@ -15,32 +15,32 @@ export default function Navigation() {
       <div className="hidden md:flex items-center gap-6 text-gray-900 dark:text-white">
         <Link
           href="/"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Home
         </Link>
         <Link
           href="/solutions"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Solutions
         </Link>
         <Link
           href="/services"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Services
         </Link>
         <Link
           href="/pricing"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Pricing
         </Link>
         <Link
           href="/team"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Team
         </Link>
         <Link
           href="/contact"
-          className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
+          className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Contact
         </Link>
         <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out" isScrollAppear={false} />
@@ -61,42 +61,42 @@ export default function Navigation() {
         <div className="absolute border border-darkgreen-primary dark:border-green-primary/50 pt-20 -top-10 left-0 w-full bg-gray-50/70 dark:bg-gray-900/90 backdrop-blur-md mt-3 py-5 rounded-lg flex flex-col items-center gap-4 text-black dark:text-white md:hidden">
           <Link
             href="/"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/solutions"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Solutions
           </Link>
           <Link
             href="/services"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
           <Link
             href="/pricing"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Pricing
           </Link>
           <Link
             href="/team"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Team
           </Link>
           <Link
             href="/contact"
-            className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary transition-all"
+            className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >
             Contact
