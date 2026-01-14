@@ -142,7 +142,7 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
                 </a>
             ) : (
                 <div className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-gray-100 dark:bg-zinc-800 text-gray-400 border border-gray-200 dark:border-zinc-700 rounded-lg cursor-not-allowed">
-                <Lock size={18} /> Private
+                <Lock size={18} /> Contact us for a demo
                 </div>
             )}
             <span className="text-gray-600"> — </span> 

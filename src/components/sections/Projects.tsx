@@ -71,50 +71,146 @@ export default function Projects() {
       icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
-      title: "Lounge - Social Media",
-      description: "A social platform that connects pets with their owners and communities.",
-      images: [
-        { src: "projects/lounge/feed.png", caption: "The feed from other users." },
-        { src: "projects/lounge/landing_page.png", caption: "Landing page." },
+      "title": "Inventory System",
+      "description": "A complete inventory system for an entire company's products. Includes purchase/sales orders, invoices, report generation, and more.",
+      "images": [
+        {
+          "src": "projects/inventory/inventory.png",
+          "caption": "The list of products and its inventory count."
+        },
+        {
+          "src": "projects/inventory/products_01.png",
+          "caption": "The list of products and its details (how much it costs, which branch it is attached to, the supplier, etc)."
+        },
+        {
+          "src": "projects/inventory/products_02.png",
+          "caption": "New product entry."
+        },
+        {
+          "src": "projects/inventory/releasing_01.png",
+          "caption": "Releasing of products."
+        },
+        {
+          "src": "projects/inventory/releasing_02.png",
+          "caption": "Releasing of products."
+        },
+        {
+          "src": "projects/inventory/dashboard_01.png",
+          "caption": "The dashboard overlooking data analytics for growth purposes."
+        },
+        {
+          "src": "projects/inventory/dashboard_02.png",
+          "caption": "Includes the list of admins logged in, with backup and security options for data integrity."
+        },
+        {
+          "src": "projects/inventory/login.png",
+          "caption": "The login page."
+        }
       ],
-      url: "https://metaanimals.tech",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: false,
-      icons: ["php/php-original.svg", "laravel/laravel-original.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+      "url": "",
+      "category": "Enterprise Solutions",
+      "tooltip": "Full Stack",
+      "tooltip_design": "blue",
+      "isGray": false,
+      "icons": [
+        "php/php-original.svg",
+        "codeigniter/codeigniter-plain.svg",
+        "jquery/jquery-original.svg",
+        "html5/html5-original.svg"
+      ]
     },
     {
-      title: "MIS Platform",
-      description: "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
-      images: [
-        { src: "projects/attendance/inquiries_1.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_2.png", caption: "Inquiry charts and graph (Demo data)" },
-        { src: "projects/attendance/inquiries_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_5.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_6.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/inquiries_7.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/email_service_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/employees_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_2.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_3.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/claims_4.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/ai.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_department.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_1.png", caption: "TODO: Add text" },
-        { src: "projects/attendance/attendance_2.png", caption: "TODO: Add text" },
+      "title": "Arvo Atlas MIS Platform",
+      "description": "An all-in-one management platform for admins and employees. Features extensive management capabilities, overlooking analytics, and tons of data inputs for the entire company.",
+      "images": [
+        {
+          "src": "projects/atlas/inquiries_01.png",
+          "caption": "The dashboard for company inquiries."
+        },
+        {
+          "src": "projects/atlas/inquiries_02.png",
+          "caption": "The dashboard for company inquiries."
+        },
+        {
+          "src": "projects/atlas/inquiries_03.png",
+          "caption": "The dashboard for company inquiries."
+        },
+        {
+          "src": "projects/atlas/inquiries_04.png",
+          "caption": "Creating new inquiry."
+        },
+        {
+          "src": "projects/atlas/claims_01.png",
+          "caption": "The dashboard for company claims from customers."
+        },
+        {
+          "src": "projects/atlas/claims_02.png",
+          "caption": "A single claim request clicked..."
+        },
+        {
+          "src": "projects/atlas/claims_03.png",
+          "caption": "... and approved!"
+        },
+        {
+          "src": "projects/atlas/hris_01.png",
+          "caption": "The dashboard for employees and applicants."
+        },
+        {
+          "src": "projects/atlas/hris_02.png",
+          "caption": "Extensive record keeping."
+        },
+        {
+          "src": "projects/atlas/hris_03.png",
+          "caption": "Extensive record keeping."
+        },
+        {
+          "src": "projects/atlas/hris_04.png",
+          "caption": "Extensive record keeping."
+        },
+        {
+          "src": "projects/atlas/attendance_01.png",
+          "caption": "The online attendance system for the employees."
+        },
+        {
+          "src": "projects/atlas/attendance_02.png",
+          "caption": "The history for the employee's attendance (calendar format)."
+        },
+        {
+          "src": "projects/atlas/attendance_03.png",
+          "caption": "The history for the employee's attendance (table format)."
+        },
+        {
+          "src": "projects/atlas/attendance_04.png",
+          "caption": "The detailed list of the exact time-in and time-outs. Includes an export to Excel functionality."
+        },
+        {
+          "src": "projects/atlas/attendance_05.png",
+          "caption": "Supervisor Only: The list of the employees' attendance on a department."
+        },
+        {
+          "src": "projects/atlas/pigeon_01.png",
+          "caption": "Email service dashboard for marketing and campaign purposes."
+        },
+        {
+          "src": "projects/atlas/pigeon_02.png",
+          "caption": "Example of a campaign email to be sent to more than 5K+ recipients."
+        },
+        {
+          "src": "projects/atlas/login.png",
+          "caption": "The login page. You will need to enter a 6-character code."
+        }
       ],
-      url: "",
-      category: "Enterprise Solutions",
-      tooltip: "Full Stack",
-      tooltip_design: "blue",
-      isGray: true,
-      icons: ["php/php-original.svg", "codeigniter/codeigniter-plain.svg", "jquery/jquery-original.svg", "html5/html5-original.svg"]
+      "url": "",
+      "category": "Enterprise Solutions",
+      "tooltip": "Full Stack",
+      "tooltip_design": "blue",
+      "isGray": false,
+      "icons": [
+        "php/php-original.svg",
+        "codeigniter/codeigniter-plain.svg",
+        "jquery/jquery-original.svg",
+        "html5/html5-original.svg"
+      ]
     },
   ];
 
