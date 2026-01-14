@@ -1,18 +1,58 @@
 [
   {
-    "title": "Lounge - Social Media",
-    "description": "A social platform that connects pets with their owners and communities.",
+    "title": "Sociable Pet Platform",
+    "description": "A social media platform that connects pets with the community and vet clinics.",
     "images": [
       {
-        "src": "projects/lounge/feed.png",
-        "caption": "The feed from other users."
+        "src": "projects/petsoc/feed_01.png",
+        "caption": "The public community feed that people can participate in."
       },
       {
-        "src": "projects/lounge/landing_page.png",
-        "caption": "Landing page."
+        "src": "projects/petsoc/feed_02.png",
+        "caption": "The public community feed that people can participate in."
+      },
+      {
+        "src": "projects/petsoc/schedule_01.png",
+        "caption": "Pet owners can schedule their vet visit with the clinic. Step 1: Set the date."
+      },
+      {
+        "src": "projects/petsoc/schedule_02.png",
+        "caption": "Pet owners can schedule their vet visit with the clinic. Step 2: Pick a time."
+      },
+      {
+        "src": "projects/petsoc/schedule_03.png",
+        "caption": "Pet owners can schedule their vet visit with the clinic. Step 3: Voice your concerns."
+      },
+      {
+        "src": "projects/petsoc/chat.png",
+        "caption": "The platform also includes a chat system that has real-time interactivity with others."
+      },
+      {
+        "src": "projects/petsoc/shop.png",
+        "caption": "The platform has its own shop that are listed by the community. Think of a marketplace!"
+      },
+      {
+        "src": "projects/petsoc/admin_01.png",
+        "caption": "Admin Only: The dashboard overlooking website analytics."
+      },
+      {
+        "src": "projects/petsoc/admin_02.png",
+        "caption": "Admin Only: The appointments list."
+      },
+      {
+        "src": "projects/petsoc/admin_03.png",
+        "caption": "Admin Only: The registered members list."
+      },
+      {
+        "src": "projects/petsoc/admin_04.png",
+        "caption": "Admin Only: The marketplace products list."
+      },
+      {
+        "src": "projects/petsoc/admin_05.png",
+        "caption": "Admin Only: The authorized admins list that has access to the admin-only pages."
       }
     ],
-    "url": "https://metaanimals.tech",
+    "url": "",
     "category": "Enterprise Solutions",
     "tooltip": "Full Stack",
     "tooltip_design": "blue",
@@ -25,161 +65,40 @@
     ]
   },
   {
-    "title": "MIS Platform",
-    "description": "An all-in-one management platform for admins and employees. Features a neuglassmorphism design and eye-candies as well as a robust backend.",
-    "images": [
-      {
-        "src": "projects/attendance/inquiries_1.png",
-        "caption": "Inquiry charts and graph (Demo data)"
-      },
-      {
-        "src": "projects/attendance/inquiries_2.png",
-        "caption": "Inquiry charts and graph (Demo data)"
-      },
-      {
-        "src": "projects/attendance/inquiries_3.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/inquiries_4.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/inquiries_5.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/inquiries_6.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/inquiries_7.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/email_service_1.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/email_service_2.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/email_service_3.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/employees_1.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/employees_2.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/claims_1.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/claims_2.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/claims_3.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/claims_4.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/ai.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/attendance_department.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/attendance_1.png",
-        "caption": "TODO: Add text"
-      },
-      {
-        "src": "projects/attendance/attendance_2.png",
-        "caption": "TODO: Add text"
-      }
-    ],
-    "url": "",
-    "category": "Enterprise Solutions",
-    "tooltip": "Full Stack",
-    "tooltip_design": "blue",
-    "isGray": false,
-    "icons": [
-      "php/php-original.svg",
-      "codeigniter/codeigniter-plain.svg",
-      "jquery/jquery-original.svg",
-      "html5/html5-original.svg"
-    ]
-  },
-  {
     "title": "Inventory System",
     "description": "A complete inventory system for an entire company's products. Includes purchase/sales orders, invoices, report generation, and more.",
     "images": [
       {
-        "src": "projects/mk9inventory/dashboard.png",
-        "caption": "Dashboard."
+        "src": "projects/inventory/inventory.png",
+        "caption": "The list of products and its inventory count."
       },
       {
-        "src": "projects/mk9inventory/dashboard_backup.png",
-        "caption": "Backs up the entire database for redundancy purposes. Avoids data corruption and data wipe out."
+        "src": "projects/inventory/products_01.png",
+        "caption": "The list of products and its details (how much it costs, which branch it is attached to, the supplier, etc)."
       },
       {
-        "src": "projects/mk9inventory/dashboard_security.png",
-        "caption": "Comprehensive tracking of what happens to the app and how each user uses it. Verbose logs."
+        "src": "projects/inventory/products_02.png",
+        "caption": "New product entry."
       },
       {
-        "src": "projects/mk9inventory/products.png",
-        "caption": "Products page."
-      },
-      {
-        "src": "projects/mk9inventory/product_releasing.png",
+        "src": "projects/inventory/releasing_01.png",
         "caption": "Releasing of products."
       },
       {
-        "src": "projects/mk9inventory/product_restocking.png",
-        "caption": "Restocking of products."
+        "src": "projects/inventory/releasing_02.png",
+        "caption": "Releasing of products."
       },
       {
-        "src": "projects/mk9inventory/inventory.png",
-        "caption": "Inventory list."
+        "src": "projects/inventory/dashboard_01.png",
+        "caption": "The dashboard overlooking data analytics for growth purposes."
       },
       {
-        "src": "projects/mk9inventory/inventory_report.png",
-        "caption": "Generation of report."
+        "src": "projects/inventory/dashboard_02.png",
+        "caption": "Includes the list of admins logged in, with backup and security options for data integrity."
       },
       {
-        "src": "projects/mk9inventory/purchase_orders.png",
-        "caption": "Purchase orders."
-      },
-      {
-        "src": "projects/mk9inventory/purchase_order_create.png",
-        "caption": "Purchase orders creation."
-      },
-      {
-        "src": "projects/mk9inventory/sales_orders.png",
-        "caption": "Sales orders."
-      },
-      {
-        "src": "projects/mk9inventory/sales_order_create.png",
-        "caption": "Sales orders creation."
-      },
-      {
-        "src": "projects/mk9inventory/product_branding.png",
-        "caption": "Product brandings. Includes variations, sizes, etc."
-      },
-      {
-        "src": "projects/mk9inventory/profile_edit.png",
-        "caption": "Profile edit for the app."
+        "src": "projects/inventory/login.png",
+        "caption": "The login page."
       }
     ],
     "url": "",
@@ -195,20 +114,84 @@
     ]
   },
   {
-    "title": "HRIS",
-    "description": "Human resources information system. Made for HRs and employee data.",
+    "title": "Arvo Atlas MIS Platform",
+    "description": "An all-in-one management platform for admins and employees. Features extensive management capabilities, overlooking analytics, and tons of data inputs for the entire company.",
     "images": [
       {
-        "src": "projects/hris/dashboard.png",
-        "caption": "Dashboard."
+        "src": "projects/atlas/inquiries_01.png",
+        "caption": "The dashboard for company inquiries."
       },
       {
-        "src": "projects/hris/new_employee.png",
-        "caption": "Encoding and updating employee data."
+        "src": "projects/atlas/inquiries_02.png",
+        "caption": "The dashboard for company inquiries."
       },
       {
-        "src": "projects/hris/login.png",
-        "caption": "Login page."
+        "src": "projects/atlas/inquiries_03.png",
+        "caption": "The dashboard for company inquiries."
+      },
+      {
+        "src": "projects/atlas/inquiries_04.png",
+        "caption": "Creating new inquiry."
+      },
+      {
+        "src": "projects/atlas/claims_01.png",
+        "caption": "The dashboard for company claims from customers."
+      },
+      {
+        "src": "projects/atlas/claims_02.png",
+        "caption": "A single claim request clicked..."
+      },
+      {
+        "src": "projects/atlas/claims_03.png",
+        "caption": "... and approved!"
+      },
+      {
+        "src": "projects/atlas/hris_01.png",
+        "caption": "The dashboard for employees and applicants."
+      },
+      {
+        "src": "projects/atlas/hris_02.png",
+        "caption": "Extensive record keeping."
+      },
+      {
+        "src": "projects/atlas/hris_03.png",
+        "caption": "Extensive record keeping."
+      },
+      {
+        "src": "projects/atlas/hris_04.png",
+        "caption": "Extensive record keeping."
+      },
+      {
+        "src": "projects/atlas/attendance_01.png",
+        "caption": "The online attendance system for the employees."
+      },
+      {
+        "src": "projects/atlas/attendance_02.png",
+        "caption": "The history for the employee's attendance (calendar format)."
+      },
+      {
+        "src": "projects/atlas/attendance_03.png",
+        "caption": "The history for the employee's attendance (table format)."
+      },
+      {
+        "src": "projects/atlas/attendance_04.png",
+        "caption": "The detailed list of the exact time-in and time-outs. Includes an export to Excel functionality."
+      },
+      {
+        "src": "projects/atlas/attendance_05.png",
+        "caption": "Supervisor Only: The list of the employees' attendance on a department."
+      },
+      {
+        "src": "projects/atlas/pigeon_01.png",
+        "caption": "Email service dashboard for marketing and campaign purposes."
+      },
+      {
+        "src": "projects/atlas/pigeon_02.png",
+        "caption": "Example of a campaign email to be sent to more than 5K+ recipients."
+      },
+      {
+        "src": "projects/atlas/login.png",
+        "caption": "The login page. You will need to enter a 6-character code."
       }
     ],
     "url": "",
@@ -379,11 +362,6 @@
         "src": "projects/cerebrate/cerebrate.png",
         "caption": "Cerebrate Agentic AI",
         "type": "image"
-      },
-      {
-        "src": "https://drive.google.com/file/d/1M_rWC0unfp67QK0muepnpbvJ8u4sc_Oy/view",
-        "caption": "IAGD: Pet analyzer",
-        "type": "video"
       }
     ],
     "url": "",
