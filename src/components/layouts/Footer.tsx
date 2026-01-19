@@ -66,7 +66,7 @@ export default function Footer() {
                   <Link href="/pricing" className="hover:underline ">Professional</Link>
                 </li>
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">Advance</Link>
+                  <Link href="/pricing" className="hover:underline ">E-commerce</Link>
                 </li>
                 <li>
                   <Link href="/pricing" className="hover:underline font-normal" >Custom</Link>

@@ -1,49 +1,34 @@
 "use client"
 
 import CurrencySelector from "@/components/ui/CurrencySelector";
-import { Exchange } from "@/lib/global";
+import { Exchange } from "@/lib/exchange";
+import { useCurrency } from "@/providers/currencyProvider";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Pricing() {
-  const [geoLocation, setGeoLocation] = useState('')
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const geo = await fetch(`https://ip-intelligence.abstractapi.com/v1/?api_key=${process.env.NEXT_PUBLIC_GEO}`);
-        const geoRes = await geo.json();
-        setGeoLocation(geoRes?.currency?.code?.toLowerCase() || 'usd');
-      } catch (error) {
-        console.log('Unexpected Error Occured!')
-        setGeoLocation('usd')
-      }
-    }
-
-    fetchData()
-  }, [])
+  const { currencyCode, setCurrency, loading } = useCurrency(); 
 
   const basic = [
-    <>Up to 3 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 3)</>,
+    <>Up to 3 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 3)</>,
     "Basic SEO",
     "Up to 5 edits",
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
+    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const growth = [
-    <>Up to 7 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 7)</>,
-    <>+<Exchange base={geoLocation} currencies="usd" amount={5} /> Per Social after 2</>,
+    <>Up to 7 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 7)</>,
+    <>+<Exchange base={currencyCode} currencies="usd" amount={5} /> Per Social after 2</>,
     "Advanced SEO",
     "Up to 10 edits",
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
+    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const professional = [
     "Unlimited pages",
-    <>4 customizable features (+<Exchange base={geoLocation} currencies="usd" amount={500} /> per additional feature)</>,
+    <>4 customizable features (+<Exchange base={currencyCode} currencies="usd" amount={500} /> per additional feature)</>,
     "Hosting included",
     "Custom domain included",
     "24/7 Priority Support",
@@ -52,7 +37,7 @@ export default function Pricing() {
   const advance = [
     "Custom-built Shopify store",
     "Dedicated 24/7 Support",
-    <>Unlimited Pages +<Exchange base={geoLocation} currencies="usd" amount={50} /> /month for unlimited edits</>,
+    <>Unlimited Pages +<Exchange base={currencyCode} currencies="usd" amount={50} /> /month for unlimited edits</>,
     "Advanced app configuration",
     "Integrated shipping",
     "Fully editable CMS",
@@ -88,7 +73,7 @@ export default function Pricing() {
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"></div>
 
         <div className="w-full flex justify-end my-6">
-          <CurrencySelector value={geoLocation} onChange={setGeoLocation} />
+          <CurrencySelector value={currencyCode} onChange={setCurrency} />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-6 sm:gap-6 gap-10">
@@ -107,7 +92,7 @@ export default function Pricing() {
               <div className="flex justify-left gap-2 my-2 flex-wrap">
                 <div className="flex flex-col items-left">
                   <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                    <Exchange base={geoLocation} currencies="usd" amount={20} />
+                    <Exchange base={currencyCode} currencies="usd" amount={20} />
                   </span>
                 </div>
               </div>
@@ -115,7 +100,7 @@ export default function Pricing() {
 
             <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
 
-            <p className="text-gray-700 dark:text-gray-300 sm:text-md">Perfect for cafés, small accommodations, rentals, freelancers, and personal brands.</p>
+            {/* <p className="text-gray-700 dark:text-gray-300 sm:text-md">Perfect for cafés, small accommodations, rentals, freelancers, and personal brands.</p> */}
             <ul role="list" className="mb-8 space-y-4 text-left text-white mt-6">
               {basic.map((item, i) => (
                 <li key={i} className="flex items-start space-x-3">
@@ -160,7 +145,7 @@ export default function Pricing() {
               <div className="flex justify-left gap-2 my-2 flex-wrap">
                 <div className="flex flex-col items-left">
                   <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                    <Exchange base={geoLocation} currencies="usd" amount={30} />
+                    <Exchange base={currencyCode} currencies="usd" amount={30} />
                   </span>
                 </div>
               </div>
@@ -168,7 +153,7 @@ export default function Pricing() {
 
             <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
 
-            <p className="text-gray-700 dark:text-gray-300 sm:text-md">Ideal for restaurants, clinics, small resorts, real estate agents, and small online stores.</p>
+            {/* <p className="text-gray-700 dark:text-gray-300 sm:text-md">Ideal for restaurants, clinics, small resorts, real estate agents, and small online stores.</p> */}
             <ul role="list" className="mb-8 space-y-4 text-left text-white mt-6">
               {growth.map((item, i) => (
                 <li key={i} className="flex items-start space-x-3">
@@ -214,21 +199,18 @@ export default function Pricing() {
               <div className="flex justify-left gap-2 my-2 flex-wrap">
                 <div className="flex flex-col items-left">
                   <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                    <Exchange base={geoLocation} currencies="usd" amount={1000} />
+                    <Exchange base={currencyCode} currencies="usd" amount={1000} />
                   </span>
                 </div>
                 <span className="flex justify-center items-end">
-                  +<Exchange base={geoLocation} currencies="usd" amount={20} />
+                  +<Exchange base={currencyCode} currencies="usd" amount={20} />
                   /mo
                 </span>
               </div>
             </div>
 
             <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
-
-            <p className="text-gray-600 dark:text-gray-300 sm:text-md">
-              Best for resorts with booking requests, real estate teams, clinics, and multi-branch service providers.
-            </p>
+            {/* <p className="text-gray-600 dark:text-gray-300 sm:text-md"> Best for resorts with booking requests, real estate teams, clinics, and multi-branch service providers.</p> */}
 
             <ul
               role="list"
