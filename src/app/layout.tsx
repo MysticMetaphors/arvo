@@ -6,6 +6,7 @@ import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 // import { ThemeProvider } from "next-themes";
 // import { ToggleTheme } from "@/components/ui/ToggleTheme";
 import localFont from "next/font/local";
+import { CurrencyProvider } from "@/providers/currencyProvider";
 
 const fontEthnocentric = localFont({
   src: "../../fonts/Ethnocentric-Regular.otf",
@@ -77,11 +78,13 @@ export default function RootLayout({
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
+        <CurrencyProvider>
           <Navigation />
           {children}
           <Footer />
           <ArvoScrollToTopButton />
-          {/* <ToggleTheme className="fixed bottom-20 right-6 z-100 py-2 px-2 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out"/> */}
+        </CurrencyProvider>
+        {/* <ToggleTheme className="fixed bottom-20 right-6 z-100 py-2 px-2 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out"/> */}
         {/* </ThemeProvider> */}
       </body>
     </html>

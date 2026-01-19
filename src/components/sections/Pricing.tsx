@@ -1,30 +1,14 @@
 "use client";
 
-import { Exchange } from "@/lib/global";
+import { Exchange } from "@/lib/exchange";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import CurrencySelector from "../ui/CurrencySelector";
+import { useCurrency } from "@/providers/currencyProvider";
 
 export default function Pricing() {
-  const [geoLocation, setGeoLocation] = useState('')
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const geo = await fetch(`https://ip-intelligence.abstractapi.com/v1/?api_key=${process.env.NEXT_PUBLIC_GEO}`);
-        const geoRes = await geo.json();
-        setGeoLocation(geoRes?.currency?.code?.toLowerCase() || 'usd');
-      } catch (error) {
-        console.log('Unexpected Error Occured!')
-        setGeoLocation('usd')
-      }
-    }
-
-    fetchData()
-  }, [])
-
-  // const geoLocation = 'php'
+  const { currencyCode, setCurrency, loading } = useCurrency(); 
+  // const currencyCode = 'php'
 
   const basic = [
     "Up to 3 pages (+$5 per page after 3)",
@@ -32,20 +16,20 @@ export default function Pricing() {
     "Up to 5 edits",
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
+    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const growth = [
-    <>Up to 7 pages (+<Exchange base={geoLocation} currencies="usd" amount={5} /> per page after 7)</>,
-    <>+<Exchange base={geoLocation} currencies="usd" amount={5} /> Per Social after 2</>,
+    <>Up to 7 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 7)</>,
+    <>+<Exchange base={currencyCode} currencies="usd" amount={5} /> Per Social after 2</>,
     "Advanced SEO",
     "Up to 10 edits",
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={geoLocation} currencies="usd" amount={20} />/month for unlimited edits</>,
+    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
   ]
   const professional = [
     "Unlimited pages",
-    "4 customizable features (+$500 per additional feature)",
+    <>4 customizable features (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits per additional feature)</>,
     "Hosting included",
     "Custom domain included",
     "24/7 Priority Support",
@@ -54,7 +38,7 @@ export default function Pricing() {
   const advance = [
     "Custom-built Shopify store",
     "Dedicated 24/7 Support",
-    <>Unlimited Pages +<Exchange base={geoLocation} currencies="usd" amount={50} /> /month for unlimited edits</>,
+    <>Unlimited Pages +<Exchange base={currencyCode} currencies="usd" amount={50} /> /month for unlimited edits</>,
     "Advanced app configuration",
     "Integrated shipping",
     "Fully editable CMS",
@@ -69,7 +53,7 @@ export default function Pricing() {
             <h2 className="text-4xl leading-tight font-extrabold text-black dark:text-white">Choose the <span className="text-darkgreen-primary dark:text-green-primary">Perfect Plan</span> for Your Needs</h2>
             <p className="mb-5 text-gray-700 dark:text-gray-300 sm:text-md">Choose a plan that fits your needs — from getting started to full-scale growth.</p>
             <div className="w-fit mx-auto">
-              <CurrencySelector value={geoLocation} onChange={setGeoLocation} />
+              <CurrencySelector value={currencyCode} onChange={setCurrency} />
             </div>
           </div>
 
@@ -89,7 +73,7 @@ export default function Pricing() {
                 <div className="flex justify-left gap-2 my-2 flex-wrap">
                   <div className="flex flex-col items-left">
                     <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                      <Exchange base={geoLocation} currencies="usd" amount={20} />
+                      <Exchange base={currencyCode} currencies="usd" amount={20} />
                     </span>
                   </div>
                 </div>
@@ -142,7 +126,7 @@ export default function Pricing() {
                 <div className="flex justify-left gap-2 my-2 flex-wrap">
                   <div className="flex flex-col items-left">
                     <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                      <Exchange base={geoLocation} currencies="usd" amount={30} />
+                      <Exchange base={currencyCode} currencies="usd" amount={30} />
                     </span>
                   </div>
                 </div>
@@ -196,11 +180,11 @@ export default function Pricing() {
                 <div className="flex justify-left gap-2 my-2 flex-wrap">
                   <div className="flex flex-col items-left">
                     <span className="text-4xl font-extrabold text-darkgreen-primary dark:text-green-primary/80">
-                      <Exchange base={geoLocation} currencies="usd" amount={1000} />
+                      <Exchange base={currencyCode} currencies="usd" amount={1000} />
                     </span>
                   </div>
                   <span className="flex justify-center items-end">
-                    +<Exchange base={geoLocation} currencies="usd" amount={20} />/mo
+                    +<Exchange base={currencyCode} currencies="usd" amount={20} />/mo
                   </span>
                 </div>
               </div>
