@@ -81,7 +81,7 @@ export default function Pricing() {
 
               <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
 
-              <p className="text-gray-700 dark:text-gray-300 sm:text-md">Perfect for cafés, small accommodations, rentals, freelancers, and personal brands.</p>
+              {/* <p className="text-gray-700 dark:text-gray-300 sm:text-md">Perfect for cafés, small accommodations, rentals, freelancers, and personal brands.</p> */}
               <ul role="list" className="mb-8 space-y-4 text-left text-white mt-6">
                 {basic.map((item, i) => (
                   <li key={i} className="flex items-start space-x-3">
@@ -134,7 +134,7 @@ export default function Pricing() {
 
               <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
 
-              <p className="text-gray-700 dark:text-gray-300 sm:text-md">Ideal for restaurants, clinics, small resorts, real estate agents, and small online stores.</p>
+              {/* <p className="text-gray-700 dark:text-gray-300 sm:text-md">Ideal for restaurants, clinics, small resorts, real estate agents, and small online stores.</p> */}
               <ul role="list" className="mb-8 space-y-4 text-left text-white mt-6">
                 {growth.map((item, i) => (
                   <li key={i} className="flex items-start space-x-3">
@@ -191,9 +191,9 @@ export default function Pricing() {
 
               <div className="h-[1px] w-full bg-gray-300 my-2 dark:bg-gray-700"></div>
 
-              <p className="text-gray-600 dark:text-gray-300 sm:text-md">
+              {/* <p className="text-gray-600 dark:text-gray-300 sm:text-md">
                 Best for resorts with booking requests, real estate teams, clinics, and multi-branch service providers.
-              </p>
+              </p> */}
 
               <ul
                 role="list"
