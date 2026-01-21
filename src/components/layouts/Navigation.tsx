@@ -43,7 +43,7 @@ export default function Navigation() {
           className="cursor-pointer hover:text-darkgreen-primary dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Contact
         </Link>
-        <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out" isScrollAppear={false} />
+        {/* <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out" isScrollAppear={false} /> */}
       </div>
 
       <div className="md:hidden flex gap-6 items-center">
