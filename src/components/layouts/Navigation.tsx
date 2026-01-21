@@ -47,7 +47,7 @@ export default function Navigation() {
       </div>
 
       <div className="md:hidden flex gap-6 items-center">
-        <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 z-110" animationType="fade-in-out" isScrollAppear={false} />
+        {/* <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 z-110" animationType="fade-in-out" isScrollAppear={false} /> */}
 
         <button
           className="z-110 text-white focus:outline-none"
