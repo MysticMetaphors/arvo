@@ -46,17 +46,5 @@
     "position": "Cloud Developer, Senior Back-End Developer",
     "description": "Harlene manages Arvo's backend systems and cloud infrastructure, ensuring secure, scalable, and reliable performance across projects.",
     "image": "/team/harlene.png"
-  },
-  {
-    "name": "Josh",
-    "position": "Senior Back-End Developer",
-    "description": "A silent powerhouse who ensures Arvo apps stay lightning-fast, secure, and reliable behind the scenes.",
-    "image": "/default.png"
-  },
-  {
-    "name": "Sam",
-    "position": "Shopify, WordPress & CRM Specialist",
-    "description": "manages Arvo's Shopify, WordPress, and CRM development, ensuring smooth integrations and efficient, client-focused digital solutions.",
-    "image": "/default.png"
   }
 ]
