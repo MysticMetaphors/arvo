@@ -22,8 +22,7 @@ export default function HomePage() {
         </h1>
 
         <p className="mt-6 text-gray-700 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-          We craft intelligent, high-performance web solutions that help your
-          business grow — built with clarity, precision, and purpose.
+          We help develop businesses grow with our proven solutions, engineered for reliability, security, and full customization.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

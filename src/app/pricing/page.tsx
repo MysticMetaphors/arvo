@@ -9,40 +9,90 @@ import Link from "next/link";
 export default function Pricing() {
   const { currencyCode, setCurrency, loading } = useCurrency(); 
 
+  const subTextStyle = "block text-xs opacity-70 font-normal mt-0.5";
+
   const basic = [
-    <>Up to 3 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 3)</>,
-    "Basic SEO",
-    "Up to 5 edits",
+    <>
+      Up to 3 pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional page)
+      </span>
+    </>,
+    "Standard SEO setup",
+    <>
+      Weekly updates
+      <span className={subTextStyle}>
+        (up to 5 edits)
+      </span>
+    </>,
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
-  ]
+    <>
+      Add-on: Unlimited edits
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month)
+      </span>
+    </>,
+  ];
+
   const growth = [
-    <>Up to 7 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 7)</>,
-    <>+<Exchange base={currencyCode} currencies="usd" amount={5} /> Per Social after 2</>,
-    "Advanced SEO",
-    "Up to 10 edits",
+    <>
+      Up to 7 pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional page)
+      </span>
+    </>,
+    <>
+      Up to 2 social media integrations
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional integration)
+      </span>
+    </>,
+    "Advanced SEO strategies",
+    <>
+      Weekly updates
+      <span className={subTextStyle}>
+        (up to 10 edits)
+      </span>
+    </>,
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
-  ]
+    <>
+      Add-on: Unlimited edits
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month)
+      </span>
+    </>,
+  ];
+
   const professional = [
     "Unlimited pages",
-    <>4 customizable features (+<Exchange base={currencyCode} currencies="usd" amount={500} /> per additional feature)</>,
+    <>
+      4 Customizable features
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month per extra feature)
+      </span>
+    </>,
     "Hosting included",
-    "Custom domain included",
+    "Free custom domain",
     "24/7 Priority Support",
-    "Installment options"
-  ]
+    "Flexible installment options",
+  ];
+
   const advance = [
     "Custom-built Shopify store",
     "Dedicated 24/7 Support",
-    <>Unlimited Pages +<Exchange base={currencyCode} currencies="usd" amount={50} /> /month for unlimited edits</>,
+    <>
+      Unlimited Pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={50} />/month for unlimited edits)
+      </span>
+    </>,
     "Advanced app configuration",
-    "Integrated shipping",
+    "Integrated shipping solutions",
     "Fully editable CMS",
-    "Complete Shopify onboarding walkthrough"
-  ]
+    "Complete Shopify onboarding",
+  ];
 
   return (
     <section id="projects" className="relative bg-white dark:bg-black-primary overflow-hidden py-20">
@@ -64,7 +114,7 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-600 dark:text-gray-400 mb-6 max-w-lg"
+          className="text-gray-600 dark:text-gray-400 mb-6 w-full"
         >
           Choose a plan that fits your needs — from getting started to full-scale growth.
         </motion.p>
@@ -85,7 +135,7 @@ export default function Pricing() {
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
-            className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+            className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
             <h3 className="text-2xl text-black dark:text-white font-bold">Starter</h3>
             <div className="flex flex-col justify-center my-2">
               <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
@@ -137,7 +187,7 @@ export default function Pricing() {
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
-            className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
+            className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
             <h3 className="text-2xl text-black dark:text-white font-bold">Growth</h3>
 
             <div className="flex flex-col justify-center my-2">
@@ -187,7 +237,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
-            className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
+            className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-900 dark:to-gray-900 text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
             <span className="absolute top-3 right-3 bg-green-600 dark:bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
               Most Popular
             </span>

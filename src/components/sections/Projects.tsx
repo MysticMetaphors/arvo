@@ -237,7 +237,7 @@ export default function Projects() {
             viewport={{ once: true }}
             className=" max-w-2xl mx-auto mb-12 text-gray-600 dark:text-gray-400"
           >
-            A collection of projects that reflect our passion for clean design and smart development.
+            A collection of completed projects that already made real world impacts.
           </motion.p>
         </div>
 
@@ -270,7 +270,7 @@ export default function Projects() {
         />
 
         <div className="flex w-full justify-center mt-10">
-          <Link href="/projects" className="cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-darkgreen-primary text-white hover:shadow-[0_0_40px_#00FF99] dark:bg-green-primary dark:text-black dark:hover:shadow-[0_0_40px_#00FF99]">
+          <Link href="/projects" className="cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
             View More
           </Link>
         </div>

@@ -10,40 +10,90 @@ export default function Pricing() {
   const { currencyCode, setCurrency, loading } = useCurrency(); 
   // const currencyCode = 'php'
 
+  const subTextStyle = "block text-xs opacity-70 font-normal mt-0.5";
+
   const basic = [
-    "Up to 3 pages (+$5 per page after 3)",
-    "Basic SEO",
-    "Up to 5 edits",
+    <>
+      Up to 3 pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional page)
+      </span>
+    </>,
+    "Standard SEO setup",
+    <>
+      Weekly updates
+      <span className={subTextStyle}>
+        (up to 5 edits)
+      </span>
+    </>,
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
-  ]
+    <>
+      Add-on: Unlimited edits
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month)
+      </span>
+    </>,
+  ];
+
   const growth = [
-    <>Up to 7 pages (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per page after 7)</>,
-    <>+<Exchange base={currencyCode} currencies="usd" amount={5} /> Per Social after 2</>,
-    "Advanced SEO",
-    "Up to 10 edits",
+    <>
+      Up to 7 pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional page)
+      </span>
+    </>,
+    <>
+      Up to 2 social media integrations
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={5} /> per additional integration)
+      </span>
+    </>,
+    "Advanced SEO strategies",
+    <>
+      Weekly updates
+      <span className={subTextStyle}>
+        (up to 10 edits)
+      </span>
+    </>,
     "Hosting included",
     "24/7 Support",
-    <>Addon: +<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits</>,
-  ]
+    <>
+      Add-on: Unlimited edits
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month)
+      </span>
+    </>,
+  ];
+
   const professional = [
     "Unlimited pages",
-    <>4 customizable features (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month for unlimited edits per additional feature)</>,
+    <>
+      4 Customizable features
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={20} />/month per extra feature)
+      </span>
+    </>,
     "Hosting included",
-    "Custom domain included",
+    "Free custom domain",
     "24/7 Priority Support",
-    "Installment options"
-  ]
+    "Flexible installment options",
+  ];
+
   const advance = [
     "Custom-built Shopify store",
     "Dedicated 24/7 Support",
-    <>Unlimited Pages +<Exchange base={currencyCode} currencies="usd" amount={50} /> /month for unlimited edits</>,
+    <>
+      Unlimited Pages
+      <span className={subTextStyle}>
+        (+<Exchange base={currencyCode} currencies="usd" amount={50} />/month for unlimited edits)
+      </span>
+    </>,
     "Advanced app configuration",
-    "Integrated shipping",
+    "Integrated shipping solutions",
     "Fully editable CMS",
-    "Complete Shopify onboarding walkthrough"
-  ]
+    "Complete Shopify onboarding",
+  ];
 
   return (
     <>
@@ -66,7 +116,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
+              className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Starter</h3>
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
@@ -118,7 +168,7 @@ export default function Pricing() {
                 ease: "easeOut",
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
+              className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl text-black dark:text-white font-bold">Growth</h3>
 
               <div className="flex flex-col justify-center my-2">
@@ -168,7 +218,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
+              className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-2 col-span-1 bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-green-500/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 dark:text-gray-200 rounded-lg border-2 border-green-400/40 dark:border-green-400/70 shadow-lg dark:shadow-xl ring-1 ring-green-300/30 dark:ring-2 dark:ring-green-500/30">
               <span className="absolute top-3 right-3 bg-green-600 dark:bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Most Popular
               </span>
@@ -220,7 +270,7 @@ export default function Pricing() {
 
               <Link
                 href="/contact"
-                className="mt-auto text-white transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99]00FF99] transition-all duration-200 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+                className="mt-auto flex items-center justify-center font-semibold rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 border focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
                 Choose Professional
               </Link>
@@ -236,13 +286,13 @@ export default function Pricing() {
               viewport={{ once: true, amount: 0.2 }}
               className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/20 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] text-gray-900 rounded-lg border border-gray-200 dark:border-white/10 shadow-md">
               <h3 className="text-2xl font-bold text-black dark:text-white">
-                Ecommerce
+                E-commerce
               </h3>
 
               <div className="h-[1px] w-full bg-gray-300 mt-4 dark:bg-gray-700"></div>
 
               <p className="text-gray-600 dark:text-gray-300 sm:text-md my-4">
-                Enterprise-grade ecommerce solutions tailored to your business needs.
+                Enterprise-grade e-commerce solutions tailored to your business needs.
                 Designed for large-scale stores, custom workflows, and advanced integrations.
               </p>
 
@@ -271,7 +321,7 @@ export default function Pricing() {
 
               <Link
                 href="/contact"
-                className="mt-auto transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99] font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+                className="mt-auto flex items-center justify-center font-semibold rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 border focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
                 Contact Us
               </Link>
@@ -291,7 +341,7 @@ export default function Pricing() {
               <div className="flex flex-wrap flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99]"
+                  className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
                 >
                   Contact
                 </Link>
