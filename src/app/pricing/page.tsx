@@ -287,9 +287,9 @@ export default function Pricing() {
 
             <Link
               href="/contact"
-              className="mt-auto transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99] font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+              className="mt-auto flex items-center justify-center font-semibold rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 border focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
             >
-              Contact Us
+              Choose Professional
             </Link>
           </motion.div>
 
@@ -303,13 +303,13 @@ export default function Pricing() {
             viewport={{ once: true, amount: 0.2 }}
             className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full lg:col-span-3 col-span-1 bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
             <h3 className="text-2xl font-bold text-black dark:text-white">
-              Ecommerce
+              E-commerce
             </h3>
 
             <div className="h-[1px] w-full bg-gray-300 mt-4 dark:bg-gray-700"></div>
 
             <p className="text-gray-600 dark:text-gray-300 sm:text-md my-4">
-              Enterprise-grade ecommerce solutions tailored to your business needs.
+              Enterprise-grade e-commerce solutions tailored to your business needs.
               Designed for large-scale stores, custom workflows, and advanced integrations.
             </p>
 
@@ -338,7 +338,7 @@ export default function Pricing() {
 
             <Link
               href="/contact"
-              className="mt-auto transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99] font-semibold rounded-lg text-sm px-5 py-2.5 text-center"
+              className="mt-auto flex items-center justify-center font-semibold rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 border focus:ring-4 focus:ring-green-300 dark:focus:ring-green-400 bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
             >
               Contact Us
             </Link>
@@ -358,9 +358,9 @@ export default function Pricing() {
             <div className="flex flex-wrap flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-darkgreen-primary text-white shadow-md  hover:bg-green-600 hover:shadow-lg dark:bg-green-400 dark:text-black  dark:shadow-[0_0_5px_#00FF99]  dark:hover:bg-green-600  dark:hover:shadow-[0_0_40px_#00FF99]"
+                className="cursor-pointer sm:px-8 sm:py-3 px-6 py-2 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
-                Contact
+                Let's Talk
               </Link>
 
               {/* <Link
