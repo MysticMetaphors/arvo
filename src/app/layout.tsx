@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Arvo",
     images: [
       {
-        url: "https://arvo.team/og-image.png",
+        url: "https://arvo.team/og-image_v2.png",
         width: 1200,
         height: 630,
         alt: "Arvo IT Solutions",
@@ -54,7 +54,14 @@ export const metadata: Metadata = {
     title: "Arvo | IT Solutions",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
-    images: ["https://arvo.team/og-image.png"],
+    images: [
+      {
+        url: "https://arvo.team/og-image_v2.png",
+        width: 1200,
+        height: 630,
+        alt: "Arvo IT Solutions",
+      },
+    ],
     creator: "@arvo_team",
   },
   icons: {
