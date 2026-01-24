@@ -33,7 +33,7 @@ export default function Footer() {
                 </li>
 
                 <li className="mb-3">
-                  <Link href="/projects" className="hover:underline font-normal">Projects</Link>
+                  <Link href="/solutions" className="hover:underline font-normal">Solutions</Link>
                 </li>
 
                 <li className="mb-3">
@@ -57,19 +57,19 @@ export default function Footer() {
               <h2 className="mb-6 text-lg font-bold uppercase text-green-700 dark:text-green-primary/70">Packages</h2>
               <ul className="text-gray-600 dark:text-gray-200">
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">Starter</Link>
+                  <Link href="/pricing/#starter" className="hover:underline ">Starter</Link>
                 </li>
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">Growth</Link>
+                  <Link href="/pricing/#growth" className="hover:underline ">Growth</Link>
                 </li>
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">Professional</Link>
+                  <Link href="/pricing/#professional" className="hover:underline ">Professional</Link>
                 </li>
                 <li className="mb-3">
-                  <Link href="/pricing" className="hover:underline ">E-commerce</Link>
+                  <Link href="/pricing/#ecommerce" className="hover:underline ">E-commerce</Link>
                 </li>
                 <li>
-                  <Link href="/pricing" className="hover:underline font-normal" >Custom</Link>
+                  <Link href="/pricing/#custom" className="hover:underline font-normal" >Custom</Link>
                 </li>
               </ul>
             </div>
