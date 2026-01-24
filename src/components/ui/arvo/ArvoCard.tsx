@@ -157,7 +157,7 @@ export default function ArvoCard({
                 </div>
 
                 {url ? (
-                  <a href={url} className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                  <a href={url} target="_blank" className="px-6 py-1 bg-green-primary/5 rounded-lg border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
                     Visit
                   </a>
                 ) : (
@@ -171,7 +171,7 @@ export default function ArvoCard({
         </div>
 
         {url ? (
-          <a href={url} className="block sm:hidden absolute bottom-3 right-3 z-30 px-6 py-1 font-bold shadow-[0_0_5px_#00FF99] bg-green-primary rounded-lg border border-green-400 text-green-900 hover:bg-green-400 hover:text-black transition-all duration-300">
+          <a href={url} target="_blank" className="block sm:hidden absolute bottom-3 right-3 z-30 px-6 py-1 font-bold shadow-[0_0_5px_#00FF99] bg-green-primary rounded-lg border border-green-400 text-green-900 hover:bg-green-400 hover:text-black transition-all duration-300">
             Visit
           </a>
         ) : (
