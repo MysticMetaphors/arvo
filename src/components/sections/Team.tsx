@@ -42,7 +42,7 @@ export default function Team() {
 
           <Link
             href="/team"
-            className="px-8 py-3 rounded-full font-semibold transition-all duration-300 bg-darkgreen-primary text-white shadow-md hover:shadow-[0_0_40px_#33FFB3] dark:bg-green-400 dark:text-black dark:shadow-[0_0_5px_#00FF99] dark:hover:bg-green-600 dark:hover:shadow-[0_0_40px_#00FF99]" >
+            className="px-8 py-3 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
             Meet the team
           </Link>
         </div>

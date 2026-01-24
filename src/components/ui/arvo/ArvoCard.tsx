@@ -42,17 +42,19 @@ export default function ArvoCard({
     };
 
   const getTooltipStyles = (color: string) => {
-    switch (color) {
-      case "blue":
-        return "bg-blue-600 shadow-[0_0_5px_#3b82f6] text-white";
-      case "purple":
-        return "bg-purple-600 shadow-[0_0_5px_#a855f7] text-white";
-      case "red":
-        return "bg-red-600 shadow-[0_0_5px_#ef4444] text-white";
-      case "green":
-      default:
-        return "bg-green-600 shadow-[0_0_5px_#00FF99] text-gray-100";
-    }
+    return "border border-gray-700 bg-[#00000085] backdrop-blur-md text-darkgreen-primary shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)]";
+
+    // switch (color) {
+    //   case "blue":
+    //     return "bg-blue-600 shadow-[0_0_5px_#3b82f6] text-white";
+    //   case "purple":
+    //     return "bg-purple-600 shadow-[0_0_5px_#a855f7] text-white";
+    //   case "red":
+    //     return "bg-red-600 shadow-[0_0_5px_#ef4444] text-white";
+    //   case "green":
+    //   default:
+    //     return "bg-green-600 shadow-[0_0_5px_#00FF99] text-gray-100";
+    // }
   };
 
   return (

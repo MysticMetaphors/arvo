@@ -16,9 +16,9 @@ const fontEthnocentric = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Arvo | Creative Web Solutions & Development Studio",
+  title: "Arvo | IT Solutions",
   description:
-    "Arvo crafts high-performing websites, e-commerce platforms, and digital experiences through innovation, design, and technology.",
+    "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
   keywords: [
     "Arvo",
     "web development",
@@ -31,19 +31,19 @@ export const metadata: Metadata = {
     "frontend development",
     "creative agency",
   ],
-  authors: [{ name: "Arvo Team", url: "https://arvo-alpha.vercel.app/" }],
+  authors: [{ name: "Arvo Team", url: "https://arvo.team/" }],
   openGraph: {
-    title: "Arvo | Creative Web Solutions & Development Studio",
+    title: "Arvo | IT Solutions",
     description:
-      "Building modern, responsive, and impactful digital experiences through design and innovation.",
-    url: "https://arvo-alpha.vercel.app/",
+      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    url: "https://arvo.team/",
     siteName: "Arvo",
     images: [
       {
-        url: "https://arvo-alpha.vercel.app/og-image.png",
+        url: "https://arvo.team/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Arvo Web Studio",
+        alt: "Arvo IT Solutions",
       },
     ],
     locale: "en_US",
@@ -51,17 +51,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvo | Creative Web Solutions & Development Studio",
+    title: "Arvo | IT Solutions",
     description:
-      "Arvo creates exceptional web and e-commerce experiences through design, performance, and innovation.",
-    images: ["https://arvo-alpha.vercel.app/og-image.png"],
+      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    images: ["https://arvo.team/og-image.png"],
     creator: "@arvo_team",
   },
   icons: {
     icon: "/favicon.ico",
   },
   alternates: {
-    canonical: "https://arvo-alpha.vercel.app/",
+    canonical: "https://arvo.team/",
   },
 };
 

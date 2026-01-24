@@ -227,7 +227,7 @@ export default function Contact({ onView }: ContactProp) {
 
               <button
                 type="submit"
-                className="mt-5 bg-green-400/80 font-semibold hover:shadow-[0_0_40px_#00FF99] transition-all duration-300 shadow-[0_0_5px_#00FF99] hover:bg-green-primary text-black py-3 px-6 rounded-md"
+                className="mt-5 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
                 Submit
               </button>
