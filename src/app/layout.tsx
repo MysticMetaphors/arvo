@@ -9,6 +9,7 @@ import localFont from "next/font/local";
 import { CurrencyProvider } from "@/providers/currencyProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const fontEthnocentric = localFont({
   src: "../../fonts/Ethnocentric-Regular.otf",
@@ -16,7 +17,7 @@ const fontEthnocentric = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Arvo | IT Solutions",
+  title: "Arvo | Enterprise IT Solutions",
   description:
     "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
   keywords: [
@@ -33,14 +34,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Arvo Team", url: "https://arvo.team/" }],
   openGraph: {
-    title: "Arvo | IT Solutions",
+    title: "Arvo | Enterprise IT Solutions",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     url: "https://arvo.team/",
     siteName: "Arvo",
     images: [
       {
-        url: "https://arvo.team/og-image_v2.png",
+        url: "https://arvo.team/og-image_v3.png",
         width: 1200,
         height: 630,
         alt: "Arvo IT Solutions",
@@ -51,12 +52,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvo | IT Solutions",
+    title: "Arvo | Enterprise IT Solutions",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     images: [
       {
-        url: "https://arvo.team/og-image_v2.png",
+        url: "https://arvo.team/og-image_v3.png",
         width: 1200,
         height: 630,
         alt: "Arvo IT Solutions",
@@ -65,7 +66,11 @@ export const metadata: Metadata = {
     creator: "@arvo_team",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
   },
   alternates: {
     canonical: "https://arvo.team/",
@@ -76,11 +81,15 @@ export const viewport = {
   themeColor: "#0f172a",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Arvo",
+    "alternateName": ["Arvo Team", "arvo.team"],
+    "url": "https://arvo.team/",
+  };
+
   return (
     <html lang="en" className="dark">
       <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
@@ -97,6 +106,14 @@ export default function RootLayout({
         {/* </ThemeProvider> */}
         <SpeedInsights />
         <Analytics />
+
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify(jsonLd)}
+        </Script>
       </body>
     </html>
   );

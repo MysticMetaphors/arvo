@@ -189,7 +189,7 @@ export default function MissionVision() {
                 shadow-lg transition-all duration-300
                 
                 group-hover:-translate-y-2 
-                group-hover:text-gray-900 dark:group-hover:text-green-primary
+                group-hover:text-gray-900
                 group-hover:shadow-[0_10px_20px_-5px_rgba(34,197,94,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(0,255,153,0.4)]
                     ">
                       <i className={`fa-solid fa-${step.icon} text-2xl transition-transform duration-300 group-hover:scale-110`}></i>
