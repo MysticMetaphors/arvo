@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 const bannerTitle = "Core Capabilities";
-const bannerSubtitle = "Strategic development services | for modern enterprises";
+const bannerSubtitle = "Strategic development services for modern enterprises";
 const ogImageUrl = `/api/og?title=${encodeURIComponent(bannerTitle)}&subtitle=${encodeURIComponent(bannerSubtitle)}`;
 
 export const metadata: Metadata = {
