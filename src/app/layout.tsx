@@ -16,7 +16,17 @@ const fontEthnocentric = localFont({
   variable: "--font-ethnocentric-local",
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? `https://${process.env.NEXT_PUBLIC_SITE_URL}`
+  : 'http://localhost:3000';
+
+const ogTitle = "Enterprise-Grade IT Solutions.";
+const ogSubtitle = "Scalable software infrastructure for modern businesses";
+const ogImageUrl = `/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent(ogSubtitle)}`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+
   title: "Arvo | Enterprise IT Solutions",
   description:
     "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
@@ -37,14 +47,14 @@ export const metadata: Metadata = {
     title: "Arvo | Enterprise IT Solutions",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
-    url: "https://arvo.team/",
+    url: "/",
     siteName: "Arvo",
     images: [
       {
-        url: "https://arvo.team/og-image_v3.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Arvo IT Solutions",
+        alt: "Arvo Enterprise IT Solutions",
       },
     ],
     locale: "en_US",
@@ -55,14 +65,7 @@ export const metadata: Metadata = {
     title: "Arvo | Enterprise IT Solutions",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
-    images: [
-      {
-        url: "https://arvo.team/og-image_v3.png",
-        width: 1200,
-        height: 630,
-        alt: "Arvo IT Solutions",
-      },
-    ],
+    images: [ogImageUrl],
     creator: "@arvo_team",
   },
   icons: {
