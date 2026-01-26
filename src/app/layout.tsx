@@ -70,8 +70,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/icon48x48.png", sizes: "48x48" },
+      { url: "/icon144x144.png", sizes: "144x144" },
+      { url: "/icon192x192.png", sizes: "192x192" },
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
       { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
     ],
   },
