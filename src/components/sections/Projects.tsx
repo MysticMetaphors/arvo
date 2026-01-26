@@ -270,7 +270,7 @@ export default function Projects() {
         />
 
         <div className="flex w-full justify-center mt-10">
-          <Link href="/projects" className="cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
+          <Link href="/solutions" className="cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
             View More
           </Link>
         </div>
