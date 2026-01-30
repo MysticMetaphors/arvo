@@ -83,7 +83,7 @@ export default function Footer() {
                   <p className="hover:underline font-normal" >+63 917 115 3726</p>
                 </li>
                 <li className="flex gap-2">
-                  <a
+                  {/* <a
                     href="https://join.slack.com/t/arvo-etb3274/shared_invite/zt-3gphlymiu-8slTUnrz6Ngktj0h3KUc0Q"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function Footer() {
                       <path fill="#2EB67D" d="M449.9 260.9C449.9 235 471.1 213.8 497 213.8C522.9 213.8 544 235 544 260.9C544 286.8 522.8 308 496.9 308L449.8 308L449.8 260.9zM426.2 260.9C426.2 286.8 405 308 379.1 308C353.2 308 332 286.8 332 260.9L332 143.1C332 117.2 353.2 96 379.1 96C405 96 426.2 117.2 426.2 143.1L426.2 260.9z" />
                       <path fill="#ECB22E" d="M379.1 449.9C405 449.9 426.2 471.1 426.2 497C426.2 522.9 405 544 379.1 544C353.2 544 332 522.8 332 496.9L332 449.8L379.1 449.8zM379.1 426.2C353.2 426.2 332 405 332 379.1C332 353.2 353.2 332 379.1 332L496.9 332C522.8 332 544 353.2 544 379.1C544 405 522.8 426.2 496.9 426.2L379.1 426.2z" />
                     </svg>
-                  </a>
+                  </a> */}
                   <a
                     href="https://www.linkedin.com/in/jerrytagle/"
                     className="flex gap-4 items-center text-gray-200">
