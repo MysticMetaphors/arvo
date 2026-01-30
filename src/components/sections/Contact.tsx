@@ -136,7 +136,7 @@ export default function Contact({ onView }: ContactProp) {
                   <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded text-white"></li>
                   <p className="text-md underline underline-offset-5">Jerry Tagle</p>
                 </motion.a>
-                <motion.a
+                {/* <motion.a
                   initial={{ opacity: 0, x: -40 }}
                   {...animationX}
                   transition={{ duration: 0.5, delay: 3 * 0.1, ease: "easeOut" }}
@@ -153,7 +153,7 @@ export default function Contact({ onView }: ContactProp) {
                     </svg>
                   </div>
                   <p className="text-md underline underline-offset-5">Arvo</p>
-                </motion.a>
+                </motion.a> */}
               </div>
 
             </div>
@@ -165,11 +165,10 @@ export default function Contact({ onView }: ContactProp) {
               initial={{ opacity: 0, y: 40 }}
               {...animationY}
               transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
-              action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/10 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] border border-gray-200 dark:border-gray-700/60 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
+              action="" className="bg-gradient-to-t from-darkgreen-primary/20 via-white to-white dark:from-green-primary/8 dark:via-gray-800/[0.50] dark:to-gray-800/[0.50] border border-gray-200 dark:border-gray-700/60 rounded-lg h-full w-full z-10 p-8 md:p-10 flex flex-col gap-5">
 
               <div>
                 <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
-                  <i className="fa-solid fa-user text-darkgreen-primary dark:text-green-primary"></i>
                   Name
                 </label>
                 <input
@@ -177,14 +176,13 @@ export default function Contact({ onView }: ContactProp) {
                   id="name"
                   name="name"
                   placeholder="John Doe"
-                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-slate-800/[0.40] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
-                    <i className="fa-solid fa-envelope text-darkgreen-primary dark:text-green-primary"></i>
                     Email
                   </label>
                   <input
@@ -192,13 +190,12 @@ export default function Contact({ onView }: ContactProp) {
                     id="email"
                     name="email"
                     placeholder="you@company.com"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-slate-800/[0.40] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="number" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
-                    <i className="fa-solid fa-phone text-darkgreen-primary dark:text-green-primary"></i>
                     Number
                   </label>
                   <input
@@ -206,14 +203,13 @@ export default function Contact({ onView }: ContactProp) {
                     id="number"
                     name="number"
                     placeholder="+1 (555) 000-0000"
-                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                    className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-slate-800/[0.40] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-black dark:text-white mb-2 ml-1">
-                  <i className="fa-solid fa-envelope-open-text text-darkgreen-primary dark:text-green-primary"></i>
                   Message
                 </label>
                 <textarea
@@ -221,7 +217,7 @@ export default function Contact({ onView }: ContactProp) {
                   name="message"
                   placeholder="Tell us about your project..."
                   rows={5}
-                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-gray-800/[0.50] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
+                  className="w-full p-3 py-2 rounded-md bg-gray-50 dark:bg-slate-800/[0.40] text-black dark:text-white border border-gray-300 dark:border-gray-700 placeholder-gray-600 dark:placeholder-gray-400 focus:outline-none focus:border-darkgreen-primary dark:focus:border-green-primary"
                 ></textarea>
               </div>
 
@@ -229,7 +225,7 @@ export default function Contact({ onView }: ContactProp) {
                 type="submit"
                 className="mt-5 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
-                Submit
+                Submit Message
               </button>
             </motion.form>
           </div>

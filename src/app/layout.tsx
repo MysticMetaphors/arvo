@@ -9,7 +9,6 @@ import localFont from "next/font/local";
 import { CurrencyProvider } from "@/providers/currencyProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Script from "next/script";
 
 const fontEthnocentric = localFont({
   src: "../../fonts/Ethnocentric-Regular.otf",
@@ -70,11 +69,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon48x48.png", sizes: "48x48" },
-      { url: "/icon144x144.png", sizes: "144x144" },
-      { url: "/icon192x192.png", sizes: "192x192" },
-      { url: "/apple-touch-icon.png", sizes: "180x180" },
-      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
@@ -91,12 +87,38 @@ export const viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Arvo",
-    "alternateName": ["Arvo Team", "arvo.team"],
-    "url": "https://arvo.team/",
-  };
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://arvo.team/#organization",
+      "name": "Arvo Team",
+      "url": "https://arvo.team/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://arvo.team/icon.svg",
+        "width": "1000",
+        "height": "1000",
+        "caption": "Arvo Team Logo"
+      },
+      "description": "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments.",
+      "sameAs": [
+        "https://www.linkedin.com/in/jerrytagle/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://arvo.team/#website",
+      "url": "https://arvo.team/",
+      "name": "Arvo Team",
+      "alternateName": ["Arvo", "arvo.team"],
+      "publisher": {
+        "@id": "https://arvo.team/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+};
 
   return (
     <html lang="en" className="dark">
@@ -115,13 +137,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SpeedInsights />
         <Analytics />
 
-        <Script
-          id="structured-data"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
-        >
-          {JSON.stringify(jsonLd)}
-        </Script>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

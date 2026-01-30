@@ -55,7 +55,7 @@ export default function Team() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="relative flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
+              className="relative dark:hover:border-green-primary flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border-1 border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 loading='lazy'

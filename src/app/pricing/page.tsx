@@ -99,7 +99,7 @@ export default function Pricing() {
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
 
       <div className="px-7 pt-10 pb-8 max-w-7xl mx-auto z-10">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -107,7 +107,7 @@ export default function Pricing() {
           className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white "
         >
           Choose the <span className="text-darkgreen-primary dark:text-green-primary">Perfect Plan</span> for Your Needs
-        </motion.h2>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

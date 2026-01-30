@@ -65,7 +65,7 @@ export default function Projects() {
           {/* Top Row: Title + Search */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <motion.h2
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -73,7 +73,7 @@ export default function Projects() {
                 className="text-4xl leading-tight font-extrabold text-black dark:text-white"
               >
                 Live <span className="text-darkgreen-primary dark:text-green-primary">Solutions</span>
-              </motion.h2>
+              </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -135,7 +135,7 @@ export default function ServicesBento() {
       <div className="max-w-7xl mx-auto px-7 relative z-10 pt-10">
         {/* Header */}
         <div className="mb-16 text-left">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -143,7 +143,7 @@ export default function ServicesBento() {
             className="text-4xl text-black dark:text-white font-extrabold mb-4"
           >
             What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
-          </motion.h2>
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
