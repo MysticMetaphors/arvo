@@ -17,7 +17,7 @@ function parseText(text: string) {
 }
 
 export async function GET(request: Request) {
-  // get user-agent of platforms for logging purposes
+  // Logging for debugging
   const userAgent = request.headers.get('user-agent') || 'Unknown';
   console.log(`[OG HIT] UA: ${userAgent}`);
 
@@ -29,13 +29,18 @@ export async function GET(request: Request) {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'http://localhost:3000';
     const logoUrl = `${baseUrl}/Arvo_logo_rb.png`;
 
-    const userAgent = (request.headers.get('user-agent') || '').toLowerCase();
-    const isSquarePlatform = userAgent.includes('facebook') || userAgent.includes('whatsapp');
+    const userAgentLower = userAgent.toLowerCase();
+    
+    // Update user agents
+    const isSmallPlatform =
+      userAgentLower.includes('instagram') ||
+      userAgentLower.includes('whatsapp') ||
+      userAgentLower.includes('facebookexternalhit');
 
-    const width = isSquarePlatform ? 630 : 1200;
-    const height = 630;
-
-    const scale = isSquarePlatform ? 0.525 : 1; // 630 / 1200 = 0.525
+    // If it's a Meta platform, use the smaller 630x331 ratio.
+    const width = isSmallPlatform ? 630 : 1200;
+    const height = isSmallPlatform ? 331 : 630; 
+    const scale = isSmallPlatform ? 0.525 : 1;
 
     const [fontExtraBold, fontRegular, logoBuffer] = await Promise.all([
       fetch(fontExtraBoldUrl).then((res) => res.arrayBuffer()),
@@ -54,6 +59,7 @@ export async function GET(request: Request) {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
+            overflow: 'hidden',
           }}
         >
           <div style={{
@@ -67,18 +73,10 @@ export async function GET(request: Request) {
             transform: `scale(${scale})`,
             transformOrigin: 'center center',
           }}>
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '16px',
-              backgroundColor: '#19e188'
-            }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '16px', backgroundColor: '#19e188' }} />
             <div style={{ display: 'flex', position: 'absolute', top: 80, left: 70 }}>
               <img src={logoBuffer as any} height="100" alt="Logo" style={{ objectFit: 'contain' }} />
             </div>
-
             <div style={{
               display: 'flex',
               flexDirection: 'column',
@@ -107,6 +105,7 @@ export async function GET(request: Request) {
               </p>
             </div>
 
+            {/* Bottom Right "L" Accent */}
             <div style={{ position: 'absolute', bottom: 60, right: 60, display: 'flex' }}>
               <div style={{ position: 'absolute', bottom: 0, right: 0, width: '80px', height: '12px', backgroundColor: '#19e188' }} />
               <div style={{ position: 'absolute', bottom: 0, right: 0, width: '12px', height: '80px', backgroundColor: '#19e188' }} />
