@@ -17,6 +17,10 @@ function parseText(text: string) {
 }
 
 export async function GET(request: Request) {
+  // get user-agent of platforms for logging purposes
+  const userAgent = request.headers.get('user-agent') || 'Unknown';
+  console.log(`[OG HIT] UA: ${userAgent}`);
+
   try {
     const { searchParams } = new URL(request.url);
     const title = searchParams.get('title') || 'Enterprise-Grade IT Solutions.';
