@@ -26,7 +26,7 @@ export async function GET(request: Request) {
     const logoUrl = `${baseUrl}/Arvo_logo_rb.png`;
 
     const userAgent = (request.headers.get('user-agent') || '').toLowerCase();
-    const isSquarePlatform = userAgent.includes('instagram') || userAgent.includes('whatsapp');
+    const isSquarePlatform = userAgent.includes('facebook') || userAgent.includes('whatsapp');
 
     const width = isSquarePlatform ? 630 : 1200;
     const height = 630;
