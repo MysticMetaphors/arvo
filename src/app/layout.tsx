@@ -26,7 +26,7 @@ const ogImageUrl = `/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${enco
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
-  title: "Arvo | Enterprise IT Solutions",
+  title: "ARVO IT Services",
   description:
     "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
   keywords: [
@@ -40,10 +40,14 @@ export const metadata: Metadata = {
     "CRM integration",
     "frontend development",
     "creative agency",
+    "it services",
+    "enterprise solutions",
+    "software development",
+    "business applications",
   ],
   authors: [{ name: "Arvo Team", url: "https://arvo.team/" }],
   openGraph: {
-    title: "Arvo | Enterprise IT Solutions",
+    title: "ARVO IT Services",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     url: "/",
@@ -61,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvo | Enterprise IT Solutions",
+    title: "ARVO IT Services",
     description:
       "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     images: [ogImageUrl],

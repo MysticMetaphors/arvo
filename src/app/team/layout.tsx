@@ -6,11 +6,11 @@ const bannerSubtitle = "Arvo’s dedicated developers, designer, and researcher 
 const ogImageUrl = `/api/og?title=${encodeURIComponent(bannerTitle)}&subtitle=${encodeURIComponent(bannerSubtitle)}`;
 
 export const metadata: Metadata = {
-  title: "Arvo IT Solutions | Development Team",
+  title: "ARVO IT Services | Development Team",
   description: "Arvo’s dedicated developers, designer, and researcher turning ideas into reliable digital solutions.",
 
   openGraph: {
-    title: "Arvo IT Solutions | Development Team",
+    title: "ARVO IT Services | Development Team",
     description: "Arvo’s dedicated developers, designer, and researcher turning ideas into reliable digital solutions.",
     url: "/pricing", 
     siteName: "Arvo",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Arvo IT Solutions | Development Team",
+    title: "ARVO IT Services | Development Team",
     description: "Arvo’s dedicated developers, designer, and researcher turning ideas into reliable digital solutions.",
     images: [ogImageUrl],
     creator: "@arvo_team",
