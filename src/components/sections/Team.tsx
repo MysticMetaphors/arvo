@@ -41,7 +41,7 @@ export default function Team() {
           </p>
 
           <Link
-            href="/team"
+            href="/members"
             className="px-8 py-3 rounded-full font-semibold transition-all duration-300 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black">
             Meet the team
           </Link>

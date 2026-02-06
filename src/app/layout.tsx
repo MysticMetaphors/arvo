@@ -26,11 +26,11 @@ const ogImageUrl = `/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${enco
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
 
-  title: "ARVO IT Services",
+  title: "AR.VO IT Services",
   description:
-    "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
   keywords: [
-    "Arvo",
+    "Ar.vo",
     "web development",
     "UI/UX design",
     "Next.js",
@@ -45,19 +45,19 @@ export const metadata: Metadata = {
     "software development",
     "business applications",
   ],
-  authors: [{ name: "Arvo Team", url: "https://arvo.team/" }],
+  authors: [{ name: "Ar.vo Team", url: "https://arvo.team/" }],
   openGraph: {
-    title: "ARVO IT Services",
+    title: "AR.VO IT Services",
     description:
-      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+      "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     url: "/",
-    siteName: "Arvo",
+    siteName: "Ar.vo",
     images: [
       {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Arvo Enterprise IT Solutions",
+        alt: "Ar.vo Enterprise IT Solutions",
       },
     ],
     locale: "en_US",
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARVO IT Services",
+    title: "AR.VO IT Services",
     description:
-      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+      "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
     images: [ogImageUrl],
-    creator: "@arvo_team",
+    creator: "@ar.vo_team",
   },
   icons: {
     icon: [
@@ -95,29 +95,29 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://arvo.team/#organization",
-      "name": "Arvo Team",
-      "url": "https://arvo.team/",
+      "@id": "https://ar.vo.team/#organization",
+      "name": "Ar.vo Team",
+      "url": "https://ar.vo.team/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://arvo.team/icon.svg",
+        "url": "https://ar.vo.team/icon.svg",
         "width": "1000",
         "height": "1000",
-        "caption": "Arvo Team Logo"
+        "caption": "Ar.vo Team Logo"
       },
-      "description": "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments.",
+      "description": "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments.",
       "sameAs": [
         "https://www.linkedin.com/in/jerrytagle/"
       ]
     },
     {
       "@type": "WebSite",
-      "@id": "https://arvo.team/#website",
-      "url": "https://arvo.team/",
-      "name": "Arvo Team",
-      "alternateName": ["Arvo", "arvo.team"],
+      "@id": "https://ar.vo.team/#website",
+      "url": "https://ar.vo.team/",
+      "name": "Ar.vo Team",
+      "alternateName": ["Ar.vo", "ar.vo.team"],
       "publisher": {
-        "@id": "https://arvo.team/#organization"
+        "@id": "https://ar.vo.team/#organization"
       },
       "inLanguage": "en-US"
     }

@@ -6,20 +6,20 @@ const bannerSubtitle = "Enterprise-grade solutions accessible to everyone";
 const ogImageUrl = `/api/og?title=${encodeURIComponent(bannerTitle)}&subtitle=${encodeURIComponent(bannerSubtitle)}`;
 
 export const metadata: Metadata = {
-  title: "Transparent Pricing & Packages | ARVO IT Services",
-  description: "View Arvo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
+  title: "Transparent Pricing & Packages | AR.VO IT Services",
+  description: "View Ar.vo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
 
   openGraph: {
-    title: "Transparent Pricing & Packages | ARVO IT Services",
-    description: "View Arvo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
+    title: "Transparent Pricing & Packages | AR.VO IT Services",
+    description: "View Ar.vo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
     url: "/pricing", 
-    siteName: "Arvo",
+    siteName: "Ar.vo",
     images: [
       {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Arvo Pricing and Packages",
+        alt: "Ar.vo Pricing and Packages",
       },
     ],
     locale: "en_US",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Transparent Pricing & Packages | ARVO IT Services",
-    description: "View Arvo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
+    title: "Transparent Pricing & Packages | AR.VO IT Services",
+    description: "View Ar.vo's transparent pricing packages. We offer accessible enterprise-grade solutions for businesses of all sizes, from startups to large-scale operations.",
     images: [ogImageUrl],
     creator: "@arvo_team",
   },

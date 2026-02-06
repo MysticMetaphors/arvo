@@ -155,7 +155,6 @@ export default function Contact({ onView }: ContactProp) {
                   <p className="text-md underline underline-offset-5">Arvo</p>
                 </motion.a> */}
               </div>
-
             </div>
           </div>
 

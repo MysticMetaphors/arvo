@@ -6,14 +6,14 @@ const bannerSubtitle = "Let’s talk—reach out to Arvo and start building solu
 const ogImageUrl = `/api/og?title=${encodeURIComponent(bannerTitle)}&subtitle=${encodeURIComponent(bannerSubtitle)}`;
 
 export const metadata: Metadata = {
-  title: "ARVO IT Services | Contact Us",
+  title: "AR.VO IT Services | Contact Us",
   description: "Have a question or a project in mind? Arvo is here to help you turn your vision into reality. Reach out to us today — let’s collaborate and create something exceptional together.",
 
   openGraph: {
-    title: "ARVO IT Services | Contact Us",
+    title: "AR.VO IT Services | Contact Us",
     description: "Have a question or a project in mind? Arvo is here to help you turn your vision into reality. Reach out to us today — let’s collaborate and create something exceptional together.",
-    url: "/pricing", 
-    siteName: "Arvo",
+    url: "/contact", 
+    siteName: "Ar.vo",
     images: [
       {
         url: ogImageUrl,
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "ARVO IT Services | Contact Us",
+    title: "AR.VO IT Services | Contact Us",
     description: "Have a question or a project in mind? Arvo is here to help you turn your vision into reality. Reach out to us today — let’s collaborate and create something exceptional together.",
     images: [ogImageUrl],
     creator: "@arvo_team",
   },
 
   alternates: {
-    canonical: "/team",
+    canonical: "/contact",
   },
 };
 

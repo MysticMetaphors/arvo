@@ -52,8 +52,8 @@ export default function MissionVision() {
             <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
             <div className="relative z-10">
               <h2 className="text-xl text-darkgreen-primary dark:text-green-primary mb-4 font-bold">Mission</h2>
-              <p className="text-lg text-justify">To deliver reliable, project-based web solutions that empower
-                businesses to launch, grow, and adapt faster in today’s digital-first economy
+              <p className="text-lg text-justify">
+                We design and deliver reliable, project-driven web solutions that empower businesses to launch with confidence, scale with speed, and continuously adapt in a rapidly evolving digital-first world.
               </p>
             </div>
             <div className="flex relative items-center p-8 px-16">
@@ -138,8 +138,8 @@ export default function MissionVision() {
             <BackgroundRippleEffect cols={cols} rows={rows} cellSize={cellSize} />
             <div className="relative z-10">
               <h2 className="text-xl z-10 text-darkgreen-primary dark:text-green-primary mb-4 font-bold">Vision</h2>
-              <p className="text-lg z-10 text-justify">A future where every business, no matter the size, has access to smart,
-                scalable, and affordable technology that drives long-term growth and community impact.
+              <p className="text-lg z-10 text-justify">
+                To shape a future where accessible, intelligent technology enables businesses—big or small—to scale confidently, innovate continuously, and drive lasting community value.
               </p>
             </div>
             <div className="flex relative items-center justify-center p-4 px-0 lg:px-16 py-12">

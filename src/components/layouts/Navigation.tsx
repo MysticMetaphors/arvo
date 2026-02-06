@@ -34,7 +34,7 @@ export default function Navigation() {
           Pricing
         </Link>
         <Link
-          href="/team"
+          href="/members"
           className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary hover:underline underline-offset-4 transition-all">
           Team
         </Link>
