@@ -216,7 +216,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative overflow-hidden bg-white text-black dark:bg-black-primary dark:text-white">
-      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full  bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div>
+      {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full  bg-gradient-to-t from-transparent via-green-primary/20 to-transparent dark:via-green-primary/10 pointer-events-none"></div> */}
 
       <div className="mx-auto px-6 md:px-6 py-20 lg:py-30 z-10">
         <div className="text-center items-center flex flex-col">

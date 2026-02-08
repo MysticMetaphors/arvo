@@ -151,7 +151,7 @@ export default function ArvoCard({
                 <div className="md:flex gap-4 hidden">
                   {icons ?
                     icons.map((icon, i) => (
-                      <Image key={i} width={800} height={800} alt={icon} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
+                      <Image key={i} width={800} height={800} alt={icon} quality={75} src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} className="lg:w-8 md:w-6 " />
                     ))
                     : ''}
                 </div>
