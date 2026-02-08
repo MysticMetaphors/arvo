@@ -109,6 +109,7 @@ export default function FAQ() {
           {/* Load More Button */}
           {loadedFAQ.length < questions.length && (
             <button
+              name="load more faqs"
               onClick={loadMoreFAQs}
               className="cursor-pointer px-4 py-2 rounded-md mx-auto flex items-center gap-2 transition-all duration-300 text-sm font-medium border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
             >

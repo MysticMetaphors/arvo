@@ -225,6 +225,7 @@ export default function Contact({ onView }: ContactProp) {
               </div>
 
               <button
+                name="submit message"
                 type="submit"
                 className="mt-5 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
