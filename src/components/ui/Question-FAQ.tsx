@@ -1,5 +1,7 @@
 "use client"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react";
 
@@ -20,7 +22,7 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
     >
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAnswer}>
         <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">{item.question}</h3>
-        <i className={`fa-solid fa-chevron-down text-darkgreen-primary dark:text-green-primary transition-all duration-500 ${isToggled ? '-rotate-180' : ''}`}></i>
+        <FontAwesomeIcon icon={faChevronDown} className={`text-darkgreen-primary dark:text-green-primary transition-all duration-500 ${isToggled ? '-rotate-180' : ''}`} />
       </div>
 
       <AnimatePresence>

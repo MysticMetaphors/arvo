@@ -1,3 +1,5 @@
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -100,7 +102,7 @@ export default function Footer() {
                     href="https://www.linkedin.com/in/jerrytagle/"
                     className="flex gap-4 items-center text-gray-200">
                     <ul>
-                      <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                      <FontAwesomeIcon icon={faLinkedinIn} className="text-xl px-1 p-1.5 bg-blue-500 rounded-sm text-white dark:bg-blue-500/70" />
                     </ul>
                   </a>
                   {/* <a

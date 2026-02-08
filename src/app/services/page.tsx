@@ -180,9 +180,9 @@ export default function ServicesBento() {
                   <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center group-hover:bg-darkgreen-primary/60 dark:group-hover:bg-green-primary transition-colors duration-300">
                     <i className={`fa-solid fa-${service.icon} text-lg text-black dark:text-gray-300 group-hover:text-white dark:group-hover:text-black transition-colors`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-black dark:text-white">
+                  <h2 className="text-2xl font-bold text-black dark:text-white">
                     {service.service}
-                  </h3>
+                  </h2>
                 </div>
                 <p className="text-md text-gray-600 dark:text-gray-400">
                   {service.description}

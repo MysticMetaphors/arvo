@@ -4,6 +4,8 @@ import { Suspense, useEffect, useState } from "react";
 import { BackgroundRippleEffect } from "@/components/ui/background/background-ripple-effect";
 import Phone from "../mockups/Phone";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLightbulb, faGears, faHandHoldingHeart, faUser, faLayerGroup, faCodeMerge, faChartSimple, faGear } from "@fortawesome/free-solid-svg-icons";
 
 export default function MissionVision() {
   const [cols, setCols] = useState(9);
@@ -32,9 +34,9 @@ export default function MissionVision() {
   }, []);
 
   const steps = [
-    { icon: "lightbulb", label: "Strategy" },
-    { icon: "gears", label: "Development" },
-    { icon: "hand-holding-heart", label: "Impact" }
+    { icon: faLightbulb, label: "Strategy" },
+    { icon: faGears, label: "Development" },
+    { icon: faHandHoldingHeart, label: "Impact" }
   ];
 
   return (
@@ -71,19 +73,19 @@ export default function MissionVision() {
 
                       <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-4 flex justify-between transition-colors duration-300">
                         <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-layer-group"></i>
+                          <FontAwesomeIcon icon={faLayerGroup} className="text-darkgreen-primary dark:text-green-primary" />
                         </div>
                         <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-code-merge"></i>
+                          <FontAwesomeIcon icon={faCodeMerge} className="text-darkgreen-primary dark:text-green-primary" />
                         </div>
                         <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-chart-simple"></i>
+                          <FontAwesomeIcon icon={faChartSimple} className="text-darkgreen-primary dark:text-green-primary" />
                         </div>
                         <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-user"></i>
+                          <FontAwesomeIcon icon={faUser} className="text-darkgreen-primary dark:text-green-primary" />
                         </div>
                         <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-                          <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-gear"></i>
+                          <FontAwesomeIcon icon={faGear} className="text-darkgreen-primary dark:text-green-primary" />
                         </div>
                       </nav>
 
@@ -182,17 +184,8 @@ export default function MissionVision() {
                     <div className="absolute inset-0 rounded-xl bg-darkgreen-primary/60 dark:bg-green-primary/60 animate-ping blur-sm opacity-75 duration-1000" style={{ animationDelay: `${i * 0.1}s` }} />
 
                     {/* Icon Container */}
-                    <div className="
-                relative flex items-center justify-center w-14 h-14 rounded-md 
-                bg-green-primary dark:bg-green-primary 
-                text-white dark:text-gray-900
-                shadow-lg transition-all duration-300
-                
-                group-hover:-translate-y-2 
-                group-hover:text-gray-900
-                group-hover:shadow-[0_10px_20px_-5px_rgba(34,197,94,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(0,255,153,0.4)]
-                    ">
-                      <i className={`fa-solid fa-${step.icon} text-2xl transition-transform duration-300 group-hover:scale-110`}></i>
+                    <div className="relative flex items-center justify-center w-14 h-14 rounded-md  bg-green-primary dark:bg-green-primary  text-white dark:text-gray-900 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:text-gray-900 group-hover:shadow-[0_10px_20px_-5px_rgba(34,197,94,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(0,255,153,0.4)]">
+                      <FontAwesomeIcon icon={step.icon} className="text-2xl transition-transform duration-300 group-hover:scale-110" />
                     </div>
 
                     {/* Label (Tooltip style) */}

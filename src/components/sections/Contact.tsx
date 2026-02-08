@@ -3,6 +3,10 @@
 import { motion } from "framer-motion";
 // import { useState } from "react";
 import { appendToast } from "@/lib/global";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+<li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded text-white"></li>
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 // import { sub } from "framer-motion/client";
 
 type ContactProp = {
@@ -116,7 +120,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 0 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-envelope text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:bg-green-primary/60"></li>
+                  <FontAwesomeIcon icon={faEnvelope} className="text-xl px-1 p-1.5 bg-green-primary rounded-sm text-white dark:bg-green-primary/70" />
                   <p className="text-md">j3rry.tagle@gmail.com</p>
                 </motion.div>
                 <motion.div
@@ -124,7 +128,7 @@ export default function Contact({ onView }: ContactProp) {
                   {...animationX}
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
-                  <li className="fa-solid fa-phone text-lg p-2 rounded-sm bg-darkgreen-primary/70 text-white dark:bg-green-primary/60"></li>
+                  <FontAwesomeIcon icon={faPhone} className="text-xl px-1 p-1.5 bg-green-primary rounded-sm text-white dark:bg-green-primary/70" />
                   <p className="text-md">+63 917 115 3726</p>
                 </motion.div>
                 <motion.a
@@ -133,7 +137,7 @@ export default function Contact({ onView }: ContactProp) {
                   transition={{ duration: 0.5, delay: 2 * 0.1, ease: "easeOut" }}
                   href="https://www.linkedin.com/in/jerrytagle/"
                   className="flex gap-4 items-center">
-                  <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded text-white"></li>
+                  <FontAwesomeIcon icon={faLinkedinIn} className="text-xl px-1 p-1.5 bg-blue-500 rounded-sm text-white dark:bg-blue-500/70" />
                   <p className="text-md underline underline-offset-5">Jerry Tagle</p>
                 </motion.a>
                 {/* <motion.a
@@ -221,6 +225,7 @@ export default function Contact({ onView }: ContactProp) {
               </div>
 
               <button
+                name="submit message"
                 type="submit"
                 className="mt-5 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >

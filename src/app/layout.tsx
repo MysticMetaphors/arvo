@@ -91,43 +91,43 @@ export const viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://ar.vo.team/#organization",
-      "name": "Ar.vo Team",
-      "url": "https://ar.vo.team/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ar.vo.team/icon.svg",
-        "width": "1000",
-        "height": "1000",
-        "caption": "Ar.vo Team Logo"
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ar.vo.team/#organization",
+        "name": "Ar.vo Team",
+        "url": "https://ar.vo.team/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ar.vo.team/icon.svg",
+          "width": "1000",
+          "height": "1000",
+          "caption": "Ar.vo Team Logo"
+        },
+        "description": "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments.",
+        "sameAs": [
+          "https://www.linkedin.com/in/jerrytagle/"
+        ]
       },
-      "description": "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments.",
-      "sameAs": [
-        "https://www.linkedin.com/in/jerrytagle/"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://ar.vo.team/#website",
-      "url": "https://ar.vo.team/",
-      "name": "Ar.vo Team",
-      "alternateName": ["Ar.vo", "ar.vo.team"],
-      "publisher": {
-        "@id": "https://ar.vo.team/#organization"
-      },
-      "inLanguage": "en-US"
-    }
-  ]
-};
+      {
+        "@type": "WebSite",
+        "@id": "https://ar.vo.team/#website",
+        "url": "https://ar.vo.team/",
+        "name": "Ar.vo Team",
+        "alternateName": ["Ar.vo", "ar.vo.team"],
+        "publisher": {
+          "@id": "https://ar.vo.team/#organization"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
+  };
 
   return (
     <html lang="en" className="dark">
       <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        {/* <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
         <CurrencyProvider>

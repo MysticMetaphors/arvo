@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
- 
+
   useEffect(() => {
     const stored = localStorage.getItem("theme") as "light" | "dark" | null;
     if (stored) {
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
     localStorage.setItem("theme", next);
   };
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
 
   return (
     <button
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
                  transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
     >
       {theme === "dark" ? (
-       
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"

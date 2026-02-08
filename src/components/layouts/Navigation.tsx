@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav className="z-100 absolute z-10 top-5 left-1/2 transform -translate-x-1/2 max-w-7xl w-full px-6 py-4 bg-transparent flex items-center justify-between rounded-full">
-      <Image height={800} width={800} src="/Arvo_logo_rb.png" alt="Arvo Logo" className="h-8 w-fit z-110" />
+      <Image height={800} width={800} src="/Arvo_logo_rb.png" priority={true} loading="eager" alt="Arvo Logo" className="h-8 w-fit z-110" />
 
       <div className="hidden md:flex items-center gap-6 text-gray-900 dark:text-white">
         <Link
@@ -50,6 +50,7 @@ export default function Navigation() {
         {/* <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 z-110" animationType="fade-in-out" isScrollAppear={false} /> */}
 
         <button
+          name="mobile-menu"
           className="z-110 text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >

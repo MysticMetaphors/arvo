@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: '2026-01-25', 
+      lastModified: '2026-01-25',
       changeFrequency: 'yearly',
       priority: 1,
     },
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/team`,
+      url: `${baseUrl}/members`,
       lastModified: '2026-01-25',
       changeFrequency: 'monthly',
       priority: 0.8,

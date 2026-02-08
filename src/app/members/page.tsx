@@ -76,9 +76,9 @@ export default function team() {
 
                 <div className="flex flex-col flex-grow">
                   <div className="mb-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
                       {member.name}
-                    </h3>
+                    </h2>
                     <p className="text-sm font-medium tracking-wider mt-1 mb-3 opacity-90 text-gray-900 dark:text-green-primary">
                       {member.position}
                     </p>
@@ -91,7 +91,7 @@ export default function team() {
                 </div>
 
                 <div className="absolute top-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-2 h-2 rounded-full bg-darkgreen-primary dark:bg-green-primary shadow-[0_0_10px_rgba(34,197,94,0.5)] dark:shadow-[0_0_10px_#00FF99]"/>
+                  <div className="w-2 h-2 rounded-full bg-darkgreen-primary dark:bg-green-primary shadow-[0_0_10px_rgba(34,197,94,0.5)] dark:shadow-[0_0_10px_#00FF99]" />
                 </div>
               </div>
             </motion.div>

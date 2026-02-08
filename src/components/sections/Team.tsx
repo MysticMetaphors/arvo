@@ -27,7 +27,7 @@ export default function Team() {
   ]
   return (
     <section id="team" className="relative overflow-hidden py-16 bg-white text-black dark:bg-black-primary dark:text-white">
-      <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div>
+      {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div> */}
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 lg:py-20 lg:px-6 gap-18 items-center">
         <div className="h-full z-10">
@@ -55,7 +55,7 @@ export default function Team() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="relative dark:hover:border-green-primary flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-gray-50 border-1 border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
+              className="relative dark:hover:border-green-primary flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-slate-50 border-1 border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 loading='lazy'
