@@ -82,7 +82,7 @@ export async function GET(request: Request) {
               }}>
                 {parseText(title)}
               </h1>
-              <p style={{ fontSize: 26, fontWeight: 400, color: 'white', lineHeight: 1.4, width: '700px', textAlign: 'left', margin: 0, opacity: 0.9, display: 'block' }}>
+              <p style={{ fontSize: 36, fontWeight: 400, color: 'white', lineHeight: 1.4, width: '800px', textAlign: 'left', margin: 0, opacity: 0.9, display: 'block' }}>
                 {parseText(subtitle)}
               </p>
             </div>

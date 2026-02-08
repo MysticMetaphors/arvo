@@ -103,6 +103,34 @@ export default function Footer() {
                       <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
                     </ul>
                   </a>
+                  {/* <a
+                    href="https://www.linkedin.com/in/jerrytagle/"
+                    className="flex gap-4 items-center text-gray-200">
+                    <ul>
+                      <li className="fa-brands fa-facebook-f bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                    </ul>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jerrytagle/"
+                    className="flex gap-4 items-center text-gray-200">
+                    <ul>
+                      <li className="fa-brands fa-instagram bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                    </ul>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jerrytagle/"
+                    className="flex gap-4 items-center text-gray-200">
+                    <ul>
+                      <li className="fa-brands fa-x-twitter bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                    </ul>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jerrytagle/"
+                    className="flex gap-4 items-center text-gray-200">
+                    <ul>
+                      <li className="fa-brands fa-threads bg-blue-500/70 px-2 text-xl p-1.5 rounded"></li>
+                    </ul>
+                  </a> */}
                 </li>
               </ul>
             </div>
