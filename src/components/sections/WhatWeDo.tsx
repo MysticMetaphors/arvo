@@ -135,7 +135,7 @@ export default function WhatWeDo() {
   return (
     <section id="services" className="py-20 bg-white text-gray-900 dark:bg-black-primary dark:text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -143,7 +143,7 @@ export default function WhatWeDo() {
           className=" mb-4 text-4xl leading-tight font-extrabold text-gray-900 dark:text-white"
         >
           What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
-        </motion.h2>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -177,9 +177,9 @@ export default function WhatWeDo() {
                   <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center group-hover:bg-darkgreen-primary/60 dark:group-hover:bg-green-primary transition-colors duration-300">
                     <FontAwesomeIcon icon={service.icon} className="text-lg text-black dark:text-gray-300 group-hover:text-white dark:group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="text-2xl font-bold text-black dark:text-white">
+                  <h2 className="text-2xl font-bold text-black dark:text-white">
                     {service.service}
-                  </h3>
+                  </h2>
                 </div>
                 <p className="text-md text-gray-600 dark:text-gray-400">
                   {service.description}
