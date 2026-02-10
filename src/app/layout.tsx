@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/layouts/Footer";
 import Navigation from "@/components/layouts/Navigation";
+import SiteBanner from "@/components/layouts/Banner";
 import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 // import { ThemeProvider } from "next-themes";
 // import { ToggleTheme } from "@/components/ui/ToggleTheme";
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <SiteBanner />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
         <CurrencyProvider>
           <Navigation />
