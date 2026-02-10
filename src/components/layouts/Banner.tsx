@@ -30,11 +30,27 @@ export default function SiteBanner() {
     const fetchBanner = async () => {
       try {
         const response = await fetch('https://overmind.arvo.team/api/v1/get_site_banner');
-        if (!response.ok) return;
+
+        if (response.status === 404) {
+          setBannerData(null);
+          return;
+        }
+
+        if (!response.ok) {
+           setBannerData(null);
+           return;
+        }
+
         const data = await response.json();
+
+        if (!data || !data.message) {
+          setBannerData(null);
+          return;
+        }
+
         setBannerData(data);
       } catch (error) {
-        console.error(error);
+        setBannerData(null);
       }
     };
 
@@ -42,8 +58,10 @@ export default function SiteBanner() {
   }, []);
 
   useEffect(() => {
+    // Only trigger visibility if we have valid data and user hasn't closed it
     if (bannerData && !isClosed) {
-      const timer = setTimeout(() => setIsVisible(true), 50);
+      // Small delay to ensure the DOM is ready for the transition
+      const timer = setTimeout(() => setIsVisible(true), 100);
       return () => clearTimeout(timer);
     }
   }, [bannerData, isClosed]);
@@ -60,6 +78,7 @@ export default function SiteBanner() {
     }
   };
 
+  // Immediate return if no data, preventing any render of empty containers
   if (!bannerData || isClosed) return null;
 
   const currentHeight = bannerData.height || DEFAULT_CONFIG.height;
