@@ -120,95 +120,30 @@ export default function Projects() {
       ]
     },
     {
-      "title": "Arvo Atlas MIS Platform",
-      "description": "An all-in-one management platform for admins and employees. Features extensive management capabilities, overlooking analytics, and tons of data inputs for the entire company.",
+      "title": "Cake2Go",
+      "description": "A premium cake shop where every bite feels special, blending handcrafted flavors with indulgent creations designed to delight, celebrate, and satisfy every craving.",
       "images": [
         {
-          "src": "projects/atlas/inquiries_01.png",
-          "caption": "The dashboard for company inquiries."
+          "src": "projects/cake2go/image.png",
+          "caption": ""
         },
         {
-          "src": "projects/atlas/inquiries_02.png",
-          "caption": "The dashboard for company inquiries."
+          "src": "projects/cake2go/image_2.png",
+          "caption": ""
         },
         {
-          "src": "projects/atlas/inquiries_03.png",
-          "caption": "The dashboard for company inquiries."
-        },
-        {
-          "src": "projects/atlas/inquiries_04.png",
-          "caption": "Creating new inquiry."
-        },
-        {
-          "src": "projects/atlas/claims_01.png",
-          "caption": "The dashboard for company claims from customers."
-        },
-        {
-          "src": "projects/atlas/claims_02.png",
-          "caption": "A single claim request clicked..."
-        },
-        {
-          "src": "projects/atlas/claims_03.png",
-          "caption": "... and approved!"
-        },
-        {
-          "src": "projects/atlas/hris_01.png",
-          "caption": "The dashboard for employees and applicants."
-        },
-        {
-          "src": "projects/atlas/hris_02.png",
-          "caption": "Extensive record keeping."
-        },
-        {
-          "src": "projects/atlas/hris_03.png",
-          "caption": "Extensive record keeping."
-        },
-        {
-          "src": "projects/atlas/hris_04.png",
-          "caption": "Extensive record keeping."
-        },
-        {
-          "src": "projects/atlas/attendance_01.png",
-          "caption": "The online attendance system for the employees."
-        },
-        {
-          "src": "projects/atlas/attendance_02.png",
-          "caption": "The history for the employee's attendance (calendar format)."
-        },
-        {
-          "src": "projects/atlas/attendance_03.png",
-          "caption": "The history for the employee's attendance (table format)."
-        },
-        {
-          "src": "projects/atlas/attendance_04.png",
-          "caption": "The detailed list of the exact time-in and time-outs. Includes an export to Excel functionality."
-        },
-        {
-          "src": "projects/atlas/attendance_05.png",
-          "caption": "Supervisor Only: The list of the employees' attendance on a department."
-        },
-        {
-          "src": "projects/atlas/pigeon_01.png",
-          "caption": "Email service dashboard for marketing and campaign purposes."
-        },
-        {
-          "src": "projects/atlas/pigeon_02.png",
-          "caption": "Example of a campaign email to be sent to more than 5K+ recipients."
-        },
-        {
-          "src": "projects/atlas/login.png",
-          "caption": "The login page. You will need to enter a 6-character code."
+          "src": "projects/cake2go/image_3.png",
+          "caption": ""
         }
       ],
-      "url": "",
-      "category": "Enterprise Solutions",
-      "tooltip": "Full Stack",
-      "tooltip_design": "blue",
+      "url": "https://cake2go.vercel.app/",
+      "category": "Landing Pages",
+      "tooltip": "Design Only",
+      "tooltip_design": "green",
       "isGray": false,
       "icons": [
-        "php/php-original.svg",
-        "codeigniter/codeigniter-plain.svg",
-        "jquery/jquery-original.svg",
+        "nextjs/nextjs-original.svg",
+        "tailwindcss/tailwindcss-original.svg",
         "html5/html5-original.svg"
       ]
     },
