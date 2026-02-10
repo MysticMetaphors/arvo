@@ -5,14 +5,18 @@ import Image from "next/image";
 
 export default function TechStack() {
   const stacks = [
-    { name: "Laravel", icon: "devicon-laravel-plain colored" },
-    { name: "CodeIgniter", icon: "devicon-codeigniter-plain colored" },
-    { name: "React.js", icon: "devicon-react-original colored" },
-    { name: "Vue.js", icon: "devicon-vuejs-plain colored" },
-    { name: "Tailwind", icon: "devicon-tailwindcss-plain colored" },
-    { name: "WordPress", icon: "devicon-wordpress-plain" },
-    { name: "Kotlin", icon: "devicon-kotlin-plain colored" },
-    { name: "Java", icon: "devicon-java-plain colored" },
+    { name: "Laravel", src: "/techstack/laravel-original.svg" },
+    { name: "CodeIgniter", src: "/techstack/codeigniter-plain.svg" },
+    { name: "React.js", src: "/techstack/react-original.svg" },
+    { name: "Vue.js", src: "/techstack/vuejs-original.svg" },
+    { name: "Next.js", src: "/techstack/nextjs-original.svg" },
+    { name: "Tailwind", src: "/techstack/tailwindcss-original.svg" },
+    { name: "WordPress", src: "/techstack/wordpress-plain.svg" },
+    { name: "Kotlin", src: "/techstack/kotlin-original.svg" },
+    { name: "Java", src: "/techstack/java-plain.svg" },
+    { name: "Python", src: "/techstack/python-original.svg" },
+    { name: "Wix", src: "/techstack/Wix.png" },
+    { name: "Shopify", src: "/techstack/Shopify.png" },
   ];
 
   // =========================================================================
@@ -29,14 +33,7 @@ export default function TechStack() {
 
 
   return (
-    <section
-      id="techStack"
-      className="
-    py-20 
-    bg-white text-black 
-    dark:bg-black-primary dark:text-white
-  "
-    >
+    <section id="techStack" className="py-20 bg-white text-black dark:bg-black-primary dark:text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         <motion.h2
@@ -44,10 +41,7 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="
-        mb-4 text-4xl leading-tight font-extrabold
-        text-black dark:text-white
-      "
+          className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
         >
           Our <span className="text-darkgreen-primary dark:text-green-primary">Tech Stack</span>
         </motion.h2>
@@ -57,10 +51,7 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="
-        max-w-2xl mx-auto mb-12
-        text-gray-600 dark:text-gray-400
-      "
+          className="max-w-2xl mx-auto mb-12 text-gray-600 dark:text-gray-400"
         >
           We leverage modern, reliable technologies to deliver powerful, scalable, and maintainable digital solutions.
         </motion.p>
@@ -75,122 +66,19 @@ export default function TechStack() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
                 viewport={{ once: true }}
-                className="
-              flex flex-col items-center justify-center shadow-md
-              p-6 w-32 h-32 rounded-xl transition-all duration-500
-
-              bg-gray-50 border border-gray-200 text-black
-              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
-
-              hover:-translate-y-2 hover:shadow-lg
-              hover:shadow-lg
-            "
+                className="flex flex-col hover:border-green-primary items-center justify-center shadow-md p-6 w-32 h-32 rounded-xl transition-all duration-500 bg-gray-50 border border-gray-200 text-black dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-lg"
               >
-                <i className={`${stack.icon} text-5xl mb-3`} />
+                <Image
+                  alt={stack.name}
+                  width={400}
+                  height={400}
+                  src={stack.src}
+                  quality={75}
+                  className={`w-13 mb-3 ${stack.name === "WordPress" ? "invert-100 brightness-0" : ""}`} // if wordpress turn the logo white
+                />
                 <span className="text-sm font-medium">{stack.name}</span>
               </motion.div>
             ))}
-
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (stacks.length + 1) * 0.1, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="
-            flex flex-col items-center justify-center shadow-md
-              p-6 w-32 h-32 rounded-xl transition-all duration-500
-
-              bg-gray-50 border border-gray-200 text-black
-              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
-
-              hover:-translate-y-2 hover:shadow-lg
-              hover:shadow-lg
-          "
-            >
-              <Image
-                alt='python'
-                width={800}
-                height={800}
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
-                className='w-14 mb-3'
-              />
-              <span className="text-sm font-medium">Python</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (stacks.length + 2) * 0.1, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="
-            flex flex-col items-center justify-center shadow-md
-              p-6 w-32 h-32 rounded-xl transition-all duration-500
-
-              bg-gray-50 border border-gray-200 text-black
-              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
-
-              hover:-translate-y-2 hover:shadow-lg
-              hover:shadow-lg
-          "
-            >
-              <Image
-                alt='python'
-                width={800}
-                height={800}
-                src='/Wix.png'
-                className='w-14 mb-3'
-              />
-              <span className="text-sm font-medium">Wix</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (stacks.length + 3) * 0.1, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="
-            flex flex-col items-center justify-center shadow-md
-              p-6 w-32 h-32 rounded-xl transition-all duration-500
-
-              bg-gray-50 border border-gray-200 text-black
-              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
-
-              hover:-translate-y-2 hover:shadow-lg
-              hover:shadow-lg
-          "
-            >
-              <Image
-                alt='python'
-                width={800}
-                height={800}
-                src='/Shopify.png'
-                className='w-14 mb-3'
-              />
-              <span className="text-sm font-medium">Shopify</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (stacks.length + 4) * 0.1, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="
-            flex flex-col items-center justify-center shadow-md
-              p-6 w-32 h-32 rounded-xl transition-all duration-500
-
-              bg-gray-50 border border-gray-200 text-black
-              dark:bg-gray-800/[0.50] dark:border-white/10 dark:text-gray-300
-
-              hover:-translate-y-2 hover:shadow-lg
-              hover:shadow-lg
-          "
-            >
-              <Image
-                alt='python'
-                width={800}
-                height={800}
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg'
-                className='w-14 mb-3'
-              />
-              <span className="text-sm font-medium">Next.js</span>
-            </motion.div>
           </div>
         </div>
       </div>

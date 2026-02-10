@@ -99,7 +99,7 @@ export default function Pricing() {
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full bg-gradient-to-t from-transparent via-green-primary/10 to-transparent pointer-events-none"></div> */}
 
       <div className="px-7 pt-10 pb-8 max-w-7xl mx-auto z-10">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -107,7 +107,7 @@ export default function Pricing() {
           className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white "
         >
           Choose the <span className="text-darkgreen-primary dark:text-green-primary">Perfect Plan</span> for Your Needs
-        </motion.h2>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export default function Pricing() {
               }}
               viewport={{ once: true, amount: 0.2 }}
               className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
-              <h3 className="text-2xl text-black dark:text-white font-bold">Starter</h3>
+              <h2 className="text-2xl text-black dark:text-white font-bold">Starter</h2>
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
                 <div className="flex justify-left gap-2 my-2 flex-wrap">
@@ -193,7 +193,7 @@ export default function Pricing() {
               }}
               viewport={{ once: true, amount: 0.2 }}
               className="w-full relative flex flex-col p-5 lg:p-10 mx-auto max-w-full bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
-              <h3 className="text-2xl text-black dark:text-white font-bold">Growth</h3>
+              <h2 className="text-2xl text-black dark:text-white font-bold">Growth</h2>
 
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Monthly</span>
@@ -249,7 +249,7 @@ export default function Pricing() {
                 Most Popular
               </span>
 
-              <h3 className="text-2xl font-bold text-black dark:text-white">Professional</h3>
+              <h2 className="text-2xl font-bold text-black dark:text-white">Professional</h2>
 
               <div className="flex flex-col justify-center my-2">
                 <span className="text-sm text-gray-700 block font-semibold dark:text-gray-200">Lump-sum</span>
@@ -311,9 +311,9 @@ export default function Pricing() {
               }}
               viewport={{ once: true, amount: 0.2 }}
               className="elative flex flex-col p-5 lg:p-10 mx-auto max-w-full bg-gradient-to-b from-blue-800/0 via-white to-white dark:from-blue-800/30 dark:via-gray-900 dark:to-gray-900 text-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
-              <h3 className="text-2xl font-bold text-black dark:text-white">
+              <h2 className="text-2xl font-bold text-black dark:text-white">
                 E-commerce
-              </h3>
+              </h2>
 
               <div className="h-[1px] w-full bg-gray-300 mt-4 dark:bg-gray-700"></div>
 
@@ -361,7 +361,7 @@ export default function Pricing() {
               viewport={{ once: true, amount: 0.2 }}
               className="relative z-10 w-full max-w-full mx-auto flex flex-col justify-center items-center p-10 rounded-lg shadow-lg text-center text-gray-900 border border-green-400/40 bg-gradient-to-r from-green-50 via-gray-100 to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:text-white dark:border-green-500/30"
             >
-              <h3 className="text-3xl font-bold mb-4 text-green-600 dark:text-green-primary">Need a Custom Plan?</h3>
+              <h2 className="text-3xl font-bold mb-4 text-green-600 dark:text-green-primary">Need a Custom Plan?</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Not sure which package fits your needs? Let’s build a plan that works just for you.
               </p>

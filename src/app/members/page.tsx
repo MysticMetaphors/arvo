@@ -29,7 +29,7 @@ export default function team() {
       {/* <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-full pointer-events-none bg-gradient-to-t from-transparent via-green-primary/10 to-transparent"></div> */}
 
       <div className="px-7 pt-10 pb-8 max-w-7xl mx-auto z-10">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -37,7 +37,7 @@ export default function team() {
           className="mb-4 text-4xl leading-tight font-extrabold text-black dark:text-white"
         >
           Our <span className="text-darkgreen-primary dark:text-green-primary">Team</span>
-        </motion.h2>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -76,9 +76,9 @@ export default function team() {
 
                 <div className="flex flex-col flex-grow">
                   <div className="mb-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
                       {member.name}
-                    </h3>
+                    </h2>
                     <p className="text-sm font-medium tracking-wider mt-1 mb-3 opacity-90 text-gray-900 dark:text-green-primary">
                       {member.position}
                     </p>
@@ -91,7 +91,7 @@ export default function team() {
                 </div>
 
                 <div className="absolute top-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-2 h-2 rounded-full bg-darkgreen-primary dark:bg-green-primary shadow-[0_0_10px_rgba(34,197,94,0.5)] dark:shadow-[0_0_10px_#00FF99]"/>
+                  <div className="w-2 h-2 rounded-full bg-darkgreen-primary dark:bg-green-primary shadow-[0_0_10px_rgba(34,197,94,0.5)] dark:shadow-[0_0_10px_#00FF99]" />
                 </div>
               </div>
             </motion.div>

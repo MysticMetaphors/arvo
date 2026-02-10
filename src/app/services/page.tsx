@@ -135,7 +135,7 @@ export default function ServicesBento() {
       <div className="max-w-7xl mx-auto px-7 relative z-10 pt-10">
         {/* Header */}
         <div className="mb-16 text-left">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -143,7 +143,7 @@ export default function ServicesBento() {
             className="text-4xl text-black dark:text-white font-extrabold mb-4"
           >
             What we <span className="text-darkgreen-primary dark:text-green-primary">do</span>
-          </motion.h2>
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,9 +180,9 @@ export default function ServicesBento() {
                   <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center group-hover:bg-darkgreen-primary/60 dark:group-hover:bg-green-primary transition-colors duration-300">
                     <i className={`fa-solid fa-${service.icon} text-lg text-black dark:text-gray-300 group-hover:text-white dark:group-hover:text-black transition-colors`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-black dark:text-white">
+                  <h2 className="text-2xl font-bold text-black dark:text-white">
                     {service.service}
-                  </h3>
+                  </h2>
                 </div>
                 <p className="text-md text-gray-600 dark:text-gray-400">
                   {service.description}

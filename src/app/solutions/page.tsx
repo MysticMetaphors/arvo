@@ -65,7 +65,7 @@ export default function Projects() {
           {/* Top Row: Title + Search */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <motion.h2
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -73,7 +73,7 @@ export default function Projects() {
                 className="text-4xl leading-tight font-extrabold text-black dark:text-white"
               >
                 Live <span className="text-darkgreen-primary dark:text-green-primary">Solutions</span>
-              </motion.h2>
+              </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -97,6 +97,7 @@ export default function Projects() {
             >
               {CATEGORIES.map((category) => (
                 <button
+                  name={category}
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === category
@@ -157,9 +158,9 @@ export default function Projects() {
                 >
                   <div className="flex items-center gap-3 mb-2 relative">
                     <i className="absolute -left-3 text-[100px] opacity-0 md:opacity-[0.20] md:dark:opacity-[0.08] fa-solid fa-play text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
-                    <h3 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide md:ml-25">
+                    <h2 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide md:ml-25">
                       {category}
-                    </h3>
+                    </h2>
                   </div>
                   {CATEGORY_DESCRIPTIONS[category] && (
                     <p className="text-gray-500 dark:text-gray-400 max-w-3xl md:ml-25 text-sm md:text-base leading-relaxed">

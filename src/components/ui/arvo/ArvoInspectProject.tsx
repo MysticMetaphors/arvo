@@ -137,6 +137,7 @@ export default function ArvoInspectProject({ selectedProject, onSelectedProject,
         >
           {/* Close Button */}
           <button
+            name="close inspect project"
             onClick={() => { onSelectedProject(null); setCurrentImageIndex(0); }}
             className="absolute top-4 right-4 md:top-4 md:left-4 w-fit z-[60] p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-all"
           >
@@ -148,6 +149,7 @@ export default function ArvoInspectProject({ selectedProject, onSelectedProject,
             <div className="relative flex-1 h-full flex items-center justify-center bg-black" onClick={(e) => e.stopPropagation()}>
               {hasImages(selectedProject) && selectedProject.images.length > 1 && (
                 <button
+                  name="previous image"
                   onClick={prevImage}
                   className="absolute left-4 z-10 p-2 bg-black/40 hover:bg-white/10 rounded-full text-white transition-colors"
                 >
@@ -183,6 +185,7 @@ export default function ArvoInspectProject({ selectedProject, onSelectedProject,
 
               {hasImages(selectedProject) && selectedProject.images.length > 1 && (
                 <button
+                  name="next image"
                   onClick={nextImage}
                   className="absolute right-4 z-10 p-2 bg-black/40 hover:bg-white/10 rounded-full text-white transition-colors"
                 >
@@ -240,6 +243,7 @@ export default function ArvoInspectProject({ selectedProject, onSelectedProject,
                   </a>
                 ) : (
                   <button
+                    name="private application"
                     disabled
                     className="flex items-center justify-center gap-2 w-full py-3 bg-gray-100 dark:bg-zinc-800 text-gray-400 cursor-not-allowed font-medium rounded-md border border-gray-200 dark:border-zinc-700"
                   >

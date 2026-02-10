@@ -17,15 +17,15 @@ export default function ArbiterPage() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-slate-950 pt-20 pb-12 px-4 flex flex-col items-center font-sans">
-      <div className="mb-8 flex items-center gap-4 bg-slate-900 p-2 rounded-full border border-slate-700 shadow-lg">
-        <button onClick={() => setDeviceMode('desktop')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'desktop' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+    <main className="min-h-screen w-full bg-black-primary pt-20 pb-12 px-4 flex flex-col items-center font-sans">
+      <div className="mb-8 flex items-center gap-4 bg-zinc-900 p-2 rounded-full border border-zinc-700 shadow-lg">
+        <button onClick={() => setDeviceMode('desktop')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'desktop' ? 'bg-green-primary text-gray-900' : 'text-zinc-400 hover:text-white'}`}>
           <i className="fa-solid fa-desktop"></i> Desktop
         </button>
-        <button onClick={() => setDeviceMode('tablet')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'tablet' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+        <button onClick={() => setDeviceMode('tablet')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'tablet' ? 'bg-green-primary text-gray-900' : 'text-zinc-400 hover:text-white'}`}>
           <i className="fa-solid fa-tablet-screen-button"></i> Tablet
         </button>
-        <button onClick={() => setDeviceMode('mobile')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'mobile' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+        <button onClick={() => setDeviceMode('mobile')} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${deviceMode === 'mobile' ? 'bg-green-primary text-gray-900' : 'text-zinc-400 hover:text-white'}`}>
           <i className="fa-solid fa-mobile-screen-button"></i> Mobile
         </button>
       </div>

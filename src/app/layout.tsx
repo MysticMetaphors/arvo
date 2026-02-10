@@ -10,19 +10,28 @@ import localFont from "next/font/local";
 import { CurrencyProvider } from "@/providers/currencyProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Script from "next/script";
 
 const fontEthnocentric = localFont({
   src: "../../fonts/Ethnocentric-Regular.otf",
   variable: "--font-ethnocentric-local",
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? `${process.env.NEXT_PUBLIC_SITE_URL}`
+  : 'http://localhost:3000';
+
+const ogTitle = "Enterprise-Grade IT Solutions.";
+const ogSubtitle = "Scalable software infrastructure for modern businesses";
+const ogImageUrl = `/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent(ogSubtitle)}`;
+
 export const metadata: Metadata = {
-  title: "Arvo | Enterprise IT Solutions",
+  metadataBase: new URL(baseUrl),
+
+  title: "AR.VO IT Services",
   description:
-    "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
   keywords: [
-    "Arvo",
+    "Ar.vo",
     "web development",
     "UI/UX design",
     "Next.js",
@@ -32,20 +41,24 @@ export const metadata: Metadata = {
     "CRM integration",
     "frontend development",
     "creative agency",
+    "it services",
+    "enterprise solutions",
+    "software development",
+    "business applications",
   ],
-  authors: [{ name: "Arvo Team", url: "https://arvo.team/" }],
+  authors: [{ name: "Ar.vo Team", url: "https://arvo.team/" }],
   openGraph: {
-    title: "Arvo | Enterprise IT Solutions",
+    title: "AR.VO IT Services",
     description:
-      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
-    url: "https://arvo.team/",
-    siteName: "Arvo",
+      "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    url: "/",
+    siteName: "Ar.vo",
     images: [
       {
-        url: "https://arvo.team/og-image_v3.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Arvo IT Solutions",
+        alt: "Ar.vo Enterprise IT Solutions",
       },
     ],
     locale: "en_US",
@@ -53,28 +66,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arvo | Enterprise IT Solutions",
+    title: "AR.VO IT Services",
     description:
-      "Arvo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
-    images: [
-      {
-        url: "https://arvo.team/og-image_v3.png",
-        width: 1200,
-        height: 630,
-        alt: "Arvo IT Solutions",
-      },
-    ],
-    creator: "@arvo_team",
+      "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments. We help develop and launch already proven solutions for your business.",
+    images: [ogImageUrl],
+    creator: "@ar.vo_team",
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
     ],
   },
   alternates: {
-    canonical: "https://arvo.team/",
+    canonical: "/",
   },
 };
 
@@ -85,16 +93,42 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Arvo",
-    "alternateName": ["Arvo Team", "arvo.team"],
-    "url": "https://arvo.team/",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ar.vo.team/#organization",
+        "name": "Ar.vo Team",
+        "url": "https://ar.vo.team/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ar.vo.team/icon.svg",
+          "width": "1000",
+          "height": "1000",
+          "caption": "Ar.vo Team Logo"
+        },
+        "description": "Ar.vo develops enterprise solutions for individuals, growing businesses, and professional environments.",
+        "sameAs": [
+          "https://www.linkedin.com/in/jerrytagle/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ar.vo.team/#website",
+        "url": "https://ar.vo.team/",
+        "name": "Ar.vo Team",
+        "alternateName": ["Ar.vo", "ar.vo.team"],
+        "publisher": {
+          "@id": "https://ar.vo.team/#organization"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
   };
 
   return (
     <html lang="en" className="dark">
       <body className={`${fontEthnocentric.variable} antialiased bg-white text-gray-900 dark:bg-black-primary dark:text-gray-100 transition-colors duration-300`}>
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        {/* <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <SiteBanner />
         {/* <ThemeProvider attribute="class" defaultTheme="system"> */}
@@ -109,13 +143,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SpeedInsights />
         <Analytics />
 
-        <Script
-          id="structured-data"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
-        >
-          {JSON.stringify(jsonLd)}
-        </Script>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

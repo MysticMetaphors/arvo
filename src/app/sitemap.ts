@@ -1,40 +1,42 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://arvo.team'
+
   return [
     {
-      url: 'https://arvo.team',
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified: '2026-01-25',
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: 'https://arvo.team/solutions',
-      lastModified: new Date(),
+      url: `${baseUrl}/solutions`,
+      lastModified: '2026-01-25',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://arvo.team/services',
-      lastModified: new Date(),
+      url: `${baseUrl}/services`,
+      lastModified: '2026-01-25',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://arvo.team/contact',
-      lastModified: new Date(),
+      url: `${baseUrl}/contact`,
+      lastModified: '2026-01-25',
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: '2026-01-25',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://arvo.team/pricing',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://arvo.team/team',
-      lastModified: new Date(),
+      url: `${baseUrl}/members`,
+      lastModified: '2026-01-25',
       changeFrequency: 'monthly',
       priority: 0.8,
     },

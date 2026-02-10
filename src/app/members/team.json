@@ -18,6 +18,12 @@
     "image": "/team/bryan.png"
   },
   {
+    "name": "Darhyl B.",
+    "position": "Junior Back-End Developer",
+    "description": "Darhyl develops application logic and designs database structures to ensure data is organized and functions correctly.",
+    "image": "/team/borcelis.png"
+  },
+  {
     "name": "Nick A.",
     "position": "Lead Researcher",
     "description": "Nick leads Arvo's research direction, uncovering insights that drive innovation and strategic growth.",
