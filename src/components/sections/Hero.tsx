@@ -16,7 +16,7 @@ export default function HomePage() {
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 max-w-3xl"
+        className="relative z-10 max-w-3xl py-20"
       >
         <h1 className="text-shadow-lg text-5xl md:text-7xl font-extrabold tracking-tight leading-tight text-gray-800 dark:text-white">
           Let’s <span className="text-darkgreen-primary dark:text-green-primary">Build Something Smart</span> Together
