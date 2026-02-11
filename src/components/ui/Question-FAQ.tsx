@@ -5,7 +5,13 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react";
 
-export default function Questions_FAQ({ item, i }: { item: { question: string; answer: string }; i: number }) {
+interface FAQItem {
+  question: string;
+  answer: string;
+  children?: React.ReactNode;
+}
+
+export default function Questions_FAQ({ item, i }: { item: FAQItem; i: number }) {
   const [isToggled, setIsToggled] = useState(false)
 
   function toggleAnswer() {
@@ -18,7 +24,7 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="border-gray-200 dark:bg-gray-800/[0.50] shadow-sm border dark:border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-lg dark:hover:shadow-green-primary/20 transition-all duration-500"
+      className="border-gray-200 hover:border-green-primary hover:dark:border-green-primary/50 dark:bg-gray-800/[0.50] shadow-sm border dark:border-gray-800 rounded-md px-5 py-4 hover:shadow-lg hover:shadow-lg dark:hover:shadow-green-primary/20 transition-all duration-500"
     >
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAnswer}>
         <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">{item.question}</h3>
@@ -27,7 +33,7 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
 
       <AnimatePresence>
         {isToggled && (
-          <motion.p
+          <motion.div
             key="answer"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -36,7 +42,10 @@ export default function Questions_FAQ({ item, i }: { item: { question: string; a
             className="text-gray-700 dark:text-gray-400 mt-4 overflow-hidden"
           >
             {item.answer}
-          </motion.p>
+            <div className="my-4">
+              {item.children}
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.div>

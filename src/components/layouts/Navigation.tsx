@@ -89,7 +89,7 @@ export default function Navigation() {
             Pricing
           </Link>
           <Link
-            href="/team"
+            href="/members"
             className="cursor-pointer hover:text-darkgreen-primary font-semibold dark:hover:text-green-primary transition-all"
             onClick={() => setIsOpen(false)}
           >

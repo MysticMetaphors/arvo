@@ -74,7 +74,7 @@ export default function ArvoCard({
         )}
 
         {/* Image/Video Container with Backdrop Effect */}
-        <div className="relative w-full h-[312px] bg-black overflow-hidden">
+        <div className="relative w-full h-[290px] bg-black overflow-hidden">
 
           {/* 1. Blurred Background Layer (The Fill) */}
           {type === 'video' ? (

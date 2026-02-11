@@ -14,6 +14,7 @@ export default function Footer() {
                 <Image
                   height={800}
                   width={800}
+                  quality={75}
                   src="/Arvo_logo_rb.png"
                   className="h-8 w-fit mb-3"
                   alt="Arvo Logo"
@@ -39,7 +40,7 @@ export default function Footer() {
                 </li>
 
                 <li className="mb-3">
-                  <Link href="/team" className="hover:underline font-normal">Team</Link>
+                  <Link href="/members" className="hover:underline font-normal">Team</Link>
                 </li>
 
                 <li className="mb-3">

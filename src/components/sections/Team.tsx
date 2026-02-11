@@ -55,7 +55,7 @@ export default function Team() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="relative dark:hover:border-green-primary flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-slate-50 border-1 border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
+              className="relative group dark:hover:border-green-primary flex flex-col sm:flex-row items-center space-x-0 sm:space-x-10 sm:p-3 p-5 rounded-lg transition-all duration-500 ease-out shadow-md bg-slate-50 border-1 border-gray-300 dark:bg-gray-800/[0.50] dark:border-white/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-green-primary/20"
             >
               <Image
                 loading='lazy'
@@ -75,7 +75,7 @@ export default function Team() {
               </div>
 
               <div className="absolute top-0 right-0 p-3 transition-opacity duration-300">
-                <div className="w-2 h-2 rounded-full bg-darkgreen-primary dark:bg-green-primary shadow-[0_0_10px_rgba(34,197,94,0.5)] dark:shadow-[0_0_10px_#00FF99]" />
+                <div className="w-2 h-2 duration-300 bg-gray-100 dark:bg-gray-800 rounded-full group-hover:bg-darkgreen-primary dark:group-hover:bg-green-primary group-hover:shadow-[0_0_10px_rgba(34,197,94,0.5)] group-hover:dark:shadow-[0_0_10px_#00FF99]" />
               </div>
             </motion.div>
           ))}
