@@ -1,5 +1,12 @@
 import { currencySymbols } from "./currencies";
 
+export type CurrencyInfo = {
+  symbol: string;
+  flag: string;
+  label: string;
+  name: string;
+};
+
 export const EUROZONE = new Set([
   'AT', 'BE', 'CY', 'EE', 'FI', 'FR', 'DE', 'GR', 'IE', 'IT',
   'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'SK', 'SI', 'ES', 'HR'
@@ -35,13 +42,15 @@ export const COUNTRY_MAP: Record<string, keyof typeof currencySymbols> = {
   ES: 'eur', // Spain
 };
 
-export function getCurrencyFromCountry(countryCode: string) {
+export function getCurrencyFromCountry(countryCode: string): string {
   const code = countryCode.toUpperCase();
-  if (EUROZONE.has(code)) return currencySymbols.eur;
+
+  if (EUROZONE.has(code)) return 'eur';
 
   const currencyKey = COUNTRY_MAP[code];
   if (currencyKey && currencySymbols[currencyKey]) {
-    return currencySymbols[currencyKey];
+    return currencyKey;
   }
-  return currencySymbols.usd;
+
+  return 'usd';
 }

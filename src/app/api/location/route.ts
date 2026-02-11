@@ -5,12 +5,16 @@ import { getCurrencyFromCountry } from '@/lib/currencyHelper';
 export const runtime = 'edge';
 
 export async function GET(request: Request) {
+  // Localhost testing
+  const { searchParams } = new URL(request.url);
+  const manualCountry = searchParams.get('country');
+
   const { country } = geolocation(request);
-  const countryCode = country || 'US';
+  const countryCode = manualCountry || country || 'US';
+  const currencyCode = getCurrencyFromCountry(countryCode);
 
-  const currencyInfo = getCurrencyFromCountry(countryCode);
-
-  console.log(`Detected Country: ${country} (Using: ${countryCode})`);
-
-  return NextResponse.json(currencyInfo);
+  return NextResponse.json({
+    detectedCountry: countryCode,
+    currency: currencyCode
+  });
 }
