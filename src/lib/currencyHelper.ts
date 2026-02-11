@@ -43,6 +43,5 @@ export function getCurrencyFromCountry(countryCode: string) {
   if (currencyKey && currencySymbols[currencyKey]) {
     return currencySymbols[currencyKey];
   }
-
   return currencySymbols.usd;
 }

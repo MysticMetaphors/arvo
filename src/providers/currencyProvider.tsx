@@ -31,7 +31,7 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
       // }
 
       try {
-        const res = await fetch("/api/location");
+        const res = await fetch("/api/location", { cache: "no-store" });
         const data = await res.json();
         if (data?.currency && currencySymbols[data.currency]) {
           handleSetCurrency(data.currency);
