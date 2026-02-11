@@ -1,55 +1,19 @@
 [
   {
-    "title": "Sociable Pet Platform",
-    "description": "A social media platform that connects pets with the community and vet clinics.",
+    "title": "Cake2Go",
+    "description": "A premium cake shop where every bite feels special, blending handcrafted flavors with indulgent creations designed to delight, celebrate, and satisfy every craving.",
     "images": [
       {
-        "src": "projects/petsoc/feed_01.png",
-        "caption": "The public community feed that people can participate in."
+        "src": "projects/cake2go/image.png",
+        "caption": ""
       },
       {
-        "src": "projects/petsoc/feed_02.png",
-        "caption": "The public community feed that people can participate in."
+        "src": "projects/cake2go/image_2.png",
+        "caption": ""
       },
       {
-        "src": "projects/petsoc/schedule_01.png",
-        "caption": "Pet owners can schedule their vet visit with the clinic. Step 1: Set the date."
-      },
-      {
-        "src": "projects/petsoc/schedule_02.png",
-        "caption": "Pet owners can schedule their vet visit with the clinic. Step 2: Pick a time."
-      },
-      {
-        "src": "projects/petsoc/schedule_03.png",
-        "caption": "Pet owners can schedule their vet visit with the clinic. Step 3: Voice your concerns."
-      },
-      {
-        "src": "projects/petsoc/chat.png",
-        "caption": "The platform also includes a chat system that has real-time interactivity with others."
-      },
-      {
-        "src": "projects/petsoc/shop.png",
-        "caption": "The platform has its own shop that are listed by the community. Think of a marketplace!"
-      },
-      {
-        "src": "projects/petsoc/admin_01.png",
-        "caption": "Admin Only: The dashboard overlooking website analytics."
-      },
-      {
-        "src": "projects/petsoc/admin_02.png",
-        "caption": "Admin Only: The appointments list."
-      },
-      {
-        "src": "projects/petsoc/admin_03.png",
-        "caption": "Admin Only: The registered members list."
-      },
-      {
-        "src": "projects/petsoc/admin_04.png",
-        "caption": "Admin Only: The marketplace products list."
-      },
-      {
-        "src": "projects/petsoc/admin_05.png",
-        "caption": "Admin Only: The authorized admins list that has access to the admin-only pages."
+        "src": "projects/cake2go/image_3.png",
+        "caption": ""
       }
     ],
     "url": "",
@@ -58,10 +22,11 @@
     "tooltip_design": "blue",
     "isGray": false,
     "icons": [
+      "nextjs/nextjs-original.svg",
+      "tailwindcss/tailwindcss-original.svg",
+      "html5/html5-original.svg",
       "php/php-original.svg",
-      "laravel/laravel-original.svg",
-      "jquery/jquery-original.svg",
-      "html5/html5-original.svg"
+      "laravel/laravel-original.svg"
     ]
   },
   {
@@ -139,34 +104,6 @@
       }
     ],
     "url": "https://sienna-brews.vercel.app/",
-    "category": "Landing Pages",
-    "tooltip": "Design Only",
-    "tooltip_design": "green",
-    "isGray": false,
-    "icons": [
-      "nextjs/nextjs-original.svg",
-      "tailwindcss/tailwindcss-original.svg",
-      "html5/html5-original.svg"
-    ]
-  },
-  {
-    "title": "Cake2Go",
-    "description": "A premium cake shop where every bite feels special, blending handcrafted flavors with indulgent creations designed to delight, celebrate, and satisfy every craving.",
-    "images": [
-      {
-        "src": "projects/cake2go/image.png",
-        "caption": ""
-      },
-      {
-        "src": "projects/cake2go/image_2.png",
-        "caption": ""
-      },
-      {
-        "src": "projects/cake2go/image_3.png",
-        "caption": ""
-      }
-    ],
-    "url": "https://cake2go.vercel.app/",
     "category": "Landing Pages",
     "tooltip": "Design Only",
     "tooltip_design": "green",
