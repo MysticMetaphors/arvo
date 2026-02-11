@@ -24,11 +24,11 @@ export function CurrencyProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const init = async () => {
       const saved = localStorage.getItem("user-currency");
-      if (saved && currencySymbols[saved]) {
-        setCurrencyCode(saved);
-        setLoading(false);
-        return;
-      }
+      // if (saved && currencySymbols[saved]) {
+      //   setCurrencyCode(saved);
+      //   setLoading(false);
+      //   return;
+      // }
 
       try {
         const res = await fetch("/api/location");
