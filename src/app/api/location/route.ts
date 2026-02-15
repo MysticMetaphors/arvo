@@ -10,6 +10,8 @@ export async function GET(request: Request) {
   let countryCode = manualCountry;
   console.log('Manual country from query:', manualCountry);
 
+  console.log('All Headers:', Object.fromEntries(request.headers));
+
   if (!countryCode) {
     countryCode = request.headers.get('x-geo-country') || null;
   }
