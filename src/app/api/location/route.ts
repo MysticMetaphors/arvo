@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getCurrencyFromCountry } from '@/lib/currencyHelper';
 
+export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
 export async function GET(request: Request) {
@@ -18,7 +19,7 @@ export async function GET(request: Request) {
   const currencyCode = getCurrencyFromCountry(finalCountry);
 
   return NextResponse.json({
-    detectedCountry: finalCountry,
+    detectedCountry: countryCode,
     currency: currencyCode,
   });
 }
