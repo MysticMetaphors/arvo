@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   console.log('Manual country from query:', manualCountry);
 
   if (!countryCode) {
-    countryCode = request.headers.get('cf-ipcountry') || null;
+    countryCode = request.headers.get('x-geo-country') || null;
   }
 
   const finalCountry = countryCode || 'US';
