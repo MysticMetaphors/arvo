@@ -1,9 +1,8 @@
 import { ImageResponse } from 'next/og';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 export const runtime = 'nodejs';
-
-const fontRegularUrl = 'https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff';
-const fontExtraBoldUrl = 'https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hjp-Ek-_EeA.woff';
 
 function parseText(text: string) {
   if (!text) return '';
@@ -22,15 +21,14 @@ export async function GET(request: Request) {
     const title = searchParams.get('title') || 'Enterprise-Grade IT Solutions.';
     const subtitle = searchParams.get('subtitle') || 'Scalable software infrastructure for modern businesses';
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'http://localhost:3000';
-    const logoUrl = `${baseUrl}/Arvo_logo_rb.png`;
+    const fontRegularPath = join(process.cwd(), 'fonts', 'Inter_18pt-Regular.ttf');
+    const fontExtraBoldPath = join(process.cwd(), 'fonts', 'Inter_28pt-ExtraBold.ttf');
+    const logoPath = join(process.cwd(), 'public', 'Arvo_logo_rb.png');
 
-
-    const [fontExtraBold, fontRegular, logoBuffer] = await Promise.all([
-      fetch(fontExtraBoldUrl).then((res) => res.arrayBuffer()),
-      fetch(fontRegularUrl).then((res) => res.arrayBuffer()),
-      fetch(logoUrl).then((res) => res.arrayBuffer())
-    ]);
+    // 2. Read Files
+    const fontRegular = readFileSync(fontRegularPath);
+    const fontExtraBold = readFileSync(fontExtraBoldPath);
+    const logoBuffer = readFileSync(logoPath);
 
     return new ImageResponse(
       (
@@ -57,7 +55,7 @@ export async function GET(request: Request) {
           }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '16px', backgroundColor: '#19e188' }} />
             <div style={{ display: 'flex', position: 'absolute', top: 120, left: 110 }}>
-              <img src={logoBuffer as any} height="100" alt="Logo" style={{ objectFit: 'contain' }} />
+              <img src={`data:image/png;base64,${logoBuffer.toString('base64')}`} height="100" alt="Logo" style={{ objectFit: 'contain' }} />
             </div>
             <div style={{
               display: 'flex',
@@ -178,8 +176,8 @@ export async function GET(request: Request) {
         width: 1080,
         height: 1080,
         fonts: [
-          { name: 'Inter', data: fontExtraBold, weight: 800 },
-          { name: 'Inter', data: fontRegular, weight: 400 },
+          { name: 'Inter', data: fontExtraBold.buffer, weight: 800, style: 'normal' },
+          { name: 'Inter', data: fontRegular.buffer, weight: 400, style: 'normal' },
         ],
       }
     );

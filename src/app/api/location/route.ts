@@ -1,20 +1,24 @@
 import { NextResponse } from 'next/server';
-import { geolocation } from '@vercel/edge';
 import { getCurrencyFromCountry } from '@/lib/currencyHelper';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET(request: Request) {
-  // Localhost testing
   const { searchParams } = new URL(request.url);
   const manualCountry = searchParams.get('country');
 
-  const { country } = geolocation(request);
-  const countryCode = manualCountry || country || 'US';
-  const currencyCode = getCurrencyFromCountry(countryCode);
+  let countryCode = manualCountry;
+  console.log('Manual country from query:', manualCountry);
+
+  if (!countryCode) {
+    countryCode = request.headers.get('cf-ipcountry') || null;
+  }
+
+  const finalCountry = countryCode || 'US';
+  const currencyCode = getCurrencyFromCountry(finalCountry);
 
   return NextResponse.json({
-    detectedCountry: countryCode,
-    currency: currencyCode
+    detectedCountry: finalCountry,
+    currency: currencyCode,
   });
 }
