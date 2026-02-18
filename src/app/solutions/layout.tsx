@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Enterprise-Grade IT Solutions. | AR.VO IT Services",
     description: "Discover Ar.vo's IT Solutions. From scalable web architectures to complex system integration, we provide the strategic foundation for business growth.",
-    url: "/services", 
+    url: "/solutions", 
     siteName: "Ar.vo",
     images: [
       {
         url: ogImageUrl,
         width: 1080,
         height: 1080,
-        alt: "Ar.vo Core Capabilities",
+        alt: "Ar.vo Enterprise IT Solutions",
       },
     ],
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "/services",
+    canonical: "/solutions",
   },
 };
 
