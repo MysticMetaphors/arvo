@@ -42,6 +42,8 @@ export const metadata: Metadata = {
     "frontend development",
     "creative agency",
     "it services",
+    "enterprise software",
+    "it solutions",
     "enterprise solutions",
     "software development",
     "business applications",

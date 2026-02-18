@@ -34,7 +34,7 @@ export default function FAQ() {
           {/* Phone */}
           <div className="flex gap-4 items-center">
             <FontAwesomeIcon icon={faPhone} className="text-xl px-1 p-1.5 bg-green-primary rounded-sm text-white dark:bg-green-primary/70" />
-            <span className="text-md">+63 917 115 3726</span>
+            <span className="text-md"><span className="font-bold">(+63)</span>-997-1888-427</span>
           </div>
 
           <div className="flex gap-4 items-center text-gray-600 dark:text-gray-400">

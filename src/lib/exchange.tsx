@@ -17,7 +17,7 @@ export function Exchange({ currencies, amount, base }: ExchangeProps) {
 
     const fetchData = async () => {
       try {
-        console.log(currencies, amount, base);
+        // console.log(currencies, amount, base);
         const res = await fetch(
           `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currencies}.json`
         );

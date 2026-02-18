@@ -170,7 +170,7 @@ export default function Contact({ onView }: ContactProp) {
                   transition={{ duration: 0.5, delay: 1 * 0.1, ease: "easeOut" }}
                   className="flex gap-4 items-center">
                   <FontAwesomeIcon icon={faPhone} className="text-xl px-1 p-1.5 bg-green-primary rounded-sm text-white dark:bg-green-primary/70" />
-                  <p className="text-md">+63 917 115 3726</p>
+                  <p className="text-md"><span className="font-bold">(+63)</span>-997-1888-427</p>
                 </motion.div>
               </div>
             </div>

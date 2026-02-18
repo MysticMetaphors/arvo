@@ -83,7 +83,7 @@ export default function Footer() {
                   <p className="hover:underline font-normal" >jerry.tagle@arvo.team</p>
                 </li>
                 <li className="mb-3">
-                  <p className="hover:underline font-normal" >+63 917 115 3726</p>
+                  <p className="hover:underline font-normal" ><span className="font-bold">(+63)</span>-997-1888-427</p>
                 </li>
                 <li className="flex gap-2">
                   {/* LinkedIn */}
