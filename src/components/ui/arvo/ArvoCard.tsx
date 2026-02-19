@@ -91,6 +91,7 @@ export default function ArvoCard({
               src={`/${image}`}
               alt={`${title} background`}
               fill
+              quality={75}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`object-cover blur-2xl scale-110 opacity-50 transition-all duration-300 ${isGray ? "grayscale group-hover:grayscale-0" : ""}`}
             />

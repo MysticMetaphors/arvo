@@ -22,7 +22,7 @@ export default function HomePage() {
           Let’s <span className="text-darkgreen-primary dark:text-green-primary">Build Something Smart</span> Together
         </h1>
 
-        <p className="mt-6 text-gray-700 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="mt-6 text-gray-700 dark:text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
           We help businesses grow with our proven solutions, developed for reliability, security, and full customization.
         </p>
 

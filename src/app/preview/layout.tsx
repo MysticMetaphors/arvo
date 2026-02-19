@@ -1,0 +1,13 @@
+import Footer from "@/components/layouts/Footer";
+import Navigation from "@/components/layouts/Navigation";
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
+  return (
+    <>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      <Navigation />
+      {children}
+      <Footer />
+    </>
+  );
+}

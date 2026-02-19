@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ToggleTheme } from "../ui/ToggleTheme";
+import { Menu, X } from "lucide-react";
+// import { ToggleTheme } from "../ui/ToggleTheme";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,15 +47,17 @@ export default function Navigation() {
         {/* <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out" isScrollAppear={false} /> */}
       </div>
 
-      <div className="md:hidden flex gap-6 items-center">
+      <div className="md:hidden flex gap-6 items-center relative z-50">
         {/* <ToggleTheme className="py-2 px-2 rounded-full bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 z-110" animationType="fade-in-out" isScrollAppear={false} /> */}
 
         <button
-          name="mobile-menu"
           className="z-110 text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
+          name="menu"
+          aria-label="Toggle menu"
+          
         >
-          <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"} text-2xl text-gray-800 dark:text-white`}></i>
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 

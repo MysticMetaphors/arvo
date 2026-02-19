@@ -55,6 +55,13 @@ html, body {
     100% { opacity: 0.4; }
   }
 
+  --animate-auroraMove: auroraMove 12s ease-in-out infinite alternate;
+  @keyframes auroraMove {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate(-15%, -10%) rotate(4deg) scale(1.1); }
+    100% { transform: translate(10%, 5%) rotate(-3deg) scale(1); }
+  }
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

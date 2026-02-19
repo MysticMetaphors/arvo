@@ -6,6 +6,8 @@ import CartMockup from "@/components/mockups/CartMockup";
 import ChartMockup from "@/components/mockups/ChartMockup";
 import CodeMockup from "@/components/mockups/CodeMockup";
 import Phone from "@/components/mockups/Phone";
+import { faCodeMerge, faLayerGroup, faPenNib, faPlug, faBarsProgress, faBagShopping, faGlobe, faMobile, faChartSimple, faUser, faGear } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 
@@ -23,19 +25,19 @@ export default function ServicesBento() {
 
           <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-4 flex justify-between transition-colors duration-300">
             <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-              <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-layer-group"></i>
+              <FontAwesomeIcon icon={faLayerGroup} className="text-darkgreen-primary dark:text-green-primary" />
             </div>
             <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-              <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-code-merge"></i>
+              <FontAwesomeIcon icon={faCodeMerge} className="text-darkgreen-primary dark:text-green-primary" />
             </div>
             <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-              <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-chart-simple"></i>
+              <FontAwesomeIcon icon={faChartSimple} className="text-darkgreen-primary dark:text-green-primary" />
             </div>
             <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-              <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-user"></i>
+              <FontAwesomeIcon icon={faUser} className="text-darkgreen-primary dark:text-green-primary" />
             </div>
             <div className="flex flex-col items-center text-gray-400 dark:text-slate-300 text-xs cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors">
-              <i className="fa-solid text-darkgreen-primary dark:text-green-primary fa-gear"></i>
+              <FontAwesomeIcon icon={faGear} className="text-darkgreen-primary dark:text-green-primary" />
             </div>
           </nav>
 
@@ -82,7 +84,7 @@ export default function ServicesBento() {
   const services = [
     {
       id: "web",
-      icon: "globe",
+      icon: faGlobe,
       service: "Websites & Landing Pages",
       description: "We craft responsive, high-converting websites and landing pages designed to make a strong first impression and drive results.",
       colSpan: "lg:col-span-2 md:col-span-3", // Spans 2 columns
@@ -90,7 +92,7 @@ export default function ServicesBento() {
     },
     {
       id: "ecom",
-      icon: "bag-shopping",
+      icon: faBagShopping,
       service: "E-commerce",
       description: "Build powerful online stores with secure payment systems, intuitive user experience, and efficient product management tools.",
       colSpan: "lg:col-span-1 md:col-span-3",
@@ -98,7 +100,7 @@ export default function ServicesBento() {
     },
     {
       id: "admin",
-      icon: "bars-progress",
+      icon: faBarsProgress,
       service: "Dashboards",
       description: "Custom-built dashboards that help you track, manage, and analyze your business operations with real-time data insights.",
       colSpan: "lg:col-span-1 md:col-span-3",
@@ -106,7 +108,7 @@ export default function ServicesBento() {
     },
     {
       id: "ai",
-      icon: "plug",
+      icon: faPlug,
       service: "AI & Web3",
       description: "Integrate cutting-edge AI and blockchain solutions to enhance automation, personalization, and digital trust in your platform.",
       colSpan: "lg:col-span-2 md:col-span-3",
@@ -114,7 +116,7 @@ export default function ServicesBento() {
     },
     {
       id: "mobile",
-      icon: "mobile",
+      icon: faMobile,
       service: "Mobile Apps",
       description: "Create cross-platform mobile apps with smooth performance, engaging design, and seamless user experience.",
       colSpan: "lg:col-span-1 md:col-span-3",
@@ -122,7 +124,7 @@ export default function ServicesBento() {
     },
     {
       id: "custom",
-      icon: "pen-nib",
+      icon: faPenNib,
       service: "Custom Web Apps",
       description: "Develop tailored web applications built to meet your specific business needs — from concept to deployment.",
       colSpan: "lg:col-span-2 md:col-span-3",
@@ -178,7 +180,7 @@ export default function ServicesBento() {
               <div className="p-8 z-20 relative">
                 <div className="flex flex-row items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center group-hover:bg-darkgreen-primary/60 dark:group-hover:bg-green-primary transition-colors duration-300">
-                    <i className={`fa-solid fa-${service.icon} text-lg text-black dark:text-gray-300 group-hover:text-white dark:group-hover:text-black transition-colors`} />
+                    <FontAwesomeIcon icon={service.icon} className="text-lg text-black dark:text-gray-300 group-hover:text-white dark:group-hover:text-black transition-colors" />
                   </div>
                   <h2 className="text-2xl font-bold text-black dark:text-white">
                     {service.service}

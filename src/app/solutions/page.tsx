@@ -6,6 +6,9 @@ import ArvoInspectProject from "@/components/ui/arvo/ArvoInspectProject";
 import ProjectSpotlight from "@/components/ui/arvo/ProjectSpotlight";
 import projectsData from "./projects.json";
 import { Project } from "@/types";
+import { Play } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // =========================================================================
 // HOW TO ADD A NEW PROJECT
@@ -118,8 +121,8 @@ export default function Projects() {
               viewport={{ once: true }}
               className="relative w-full md:w-72 order-1 md:order-2"
             >
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <i className="fa-solid fa-magnifying-glass text-zinc-500"></i>
+              <div className="absolute inset-y-0 -left-1 pl-4 flex items-center pointer-events-none">
+                <FontAwesomeIcon icon={faSearch} className="text-zinc-500" />
               </div>
               <input
                 type="text"
@@ -157,7 +160,7 @@ export default function Projects() {
                   className="mb-8 pl-2"
                 >
                   <div className="flex items-center gap-3 mb-2 relative">
-                    <i className="absolute -left-3 text-[100px] opacity-0 md:opacity-[0.20] md:dark:opacity-[0.08] fa-solid fa-play text-darkgreen-primary dark:text-green-primary text-sm mt-12"></i>
+                    <FontAwesomeIcon icon={faPlay} className="absolute -left-10 text-[100px] opacity-0 md:opacity-[0.20] md:dark:opacity-[0.08] text-darkgreen-primary dark:text-green-primary text-sm mt-12" />
                     <h2 className="text-2xl font-bold text-black dark:text-green-primary uppercase tracking-wide md:ml-25">
                       {category}
                     </h2>
