@@ -2,6 +2,8 @@ import Contact from "@/components/sections/Contact";
 
 export default function contact() {
   return (
-    <Contact />
+    <section className="pt-10">
+      <Contact />
+    </section>
   )
 }

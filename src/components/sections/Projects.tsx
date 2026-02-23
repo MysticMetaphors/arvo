@@ -120,7 +120,7 @@ export default function Projects() {
       ]
     },
     {
-      "title": "Cake2Go",
+      "title": "Slice",
       "description": "A premium cake shop where every bite feels special, blending handcrafted flavors with indulgent creations designed to delight, celebrate, and satisfy every craving.",
       "images": [
         {

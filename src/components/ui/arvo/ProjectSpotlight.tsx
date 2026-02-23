@@ -49,7 +49,7 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
         let embedSrc = src;
         if (src.includes("watch?v=")) embedSrc = src.replace("watch?v=", "embed/");
         else if (src.includes("youtu.be/")) embedSrc = src.replace("youtu.be/", "www.youtube.com/embed/");
-        
+
         mediaContent = (
           <iframe
             src={`${embedSrc}?autoplay=1&mute=1&controls=0&loop=1&playlist=${embedSrc.split('/').pop()}`}
@@ -86,17 +86,17 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
     }
 
     return (
-      <div 
-        key={index} 
+      <div
+        key={index}
         onClick={() => onProjectSelect(project, index)}
         className={`relative group overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 cursor-pointer ${className}`}
       >
         {!isExternalVideo && (
-           isVideo ? (
-             <video src={src} muted loop className="absolute inset-0 w-full h-full object-cover opacity-20 blur-xl scale-110" />
-           ) : (
-             <Image src={src} alt="bg" fill className="object-cover opacity-20 blur-xl scale-110" />
-           )
+          isVideo ? (
+            <video src={src} muted loop className="absolute inset-0 w-full h-full object-cover opacity-20 blur-xl scale-110" />
+          ) : (
+            <Image src={src} alt="bg" fill className="object-cover opacity-20 blur-xl scale-110" />
+          )
         )}
         {mediaContent}
         <div className="absolute inset-0 border-2 border-transparent group-hover:border-green-primary/50 rounded-xl transition-colors duration-300 pointer-events-none" />
@@ -114,17 +114,17 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
 
   return (
     <div className="flex flex-col gap-8 py-12 border-b border-gray-200 dark:border-zinc-800 last:border-0">
-      
+
       {/* Header Section */}
       <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-8">
         {/* Text Content */}
         <div className="space-y-4 max-w-4xl flex-1">
           <div className="flex items-center gap-3">
-             <h3 className="text-2xl md:text-3xl font-extrabold text-black dark:text-white tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-black dark:text-white tracking-tight">
               {project.title}
             </h3>
           </div>
-          
+
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line max-w-3xl">
             {project.description.replace(/\[(?:BUTTON|COLOR|LINK):.*?\]/g, "")}
           </p>
@@ -132,29 +132,29 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
           {/* Tech Stack */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
             {project.url ? (
-                <a 
-                href={project.url} 
-                target="_blank" 
+              <a
+                href={project.url}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-transparent hover:bg-green-50 dark:hover:bg-green-900 text-darkgreen-primary dark:text-green-primary border border-darkgreen-primary dark:border-green-primary font-bold rounded-lg transition-all"
-                >
-                {project.url} <ExternalLink size={18} />
-                </a>
+                className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-green-primary/10 hover:bg-green-50 dark:hover:bg-green-900 text-darkgreen-primary dark:text-green-primary border border-darkgreen-primary dark:border-green-primary font-bold rounded-lg transition-all"
+              >
+                Live Demo <ExternalLink size={18} />
+              </a>
             ) : (
-                <div className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-gray-100 dark:bg-zinc-800 text-gray-400 border border-gray-200 dark:border-zinc-700 rounded-lg cursor-not-allowed">
+              <div className="flex items-center justify-center gap-2 px-8 py-3 w-full xl:w-auto bg-gray-100 dark:bg-zinc-800 text-gray-400 border border-gray-200 dark:border-zinc-700 rounded-lg cursor-not-allowed">
                 <Lock size={18} /> Contact us for a demo
-                </div>
+              </div>
             )}
-            <span className="text-gray-600"> — </span> 
+            <span className="text-gray-600"> — </span>
             {project.icons && project.icons.map((icon, i) => (
               <div key={i} className="flex items-center justify-center w-10 h-10 bg-white dark:bg-zinc-800 rounded-md border border-gray-200 dark:border-zinc-700 shadow-sm" title={icon.split('/')[0]}>
-                 <Image 
-                   width={20} 
-                   height={20} 
-                   alt={icon} 
-                   src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`} 
-                   className="w-5 h-5" 
-                 />
+                <Image
+                  width={20}
+                  height={20}
+                  alt={icon}
+                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`}
+                  className="w-5 h-5"
+                />
               </div>
             ))}
           </div>
@@ -162,12 +162,11 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
       </div>
 
       {/* Dynamic Bento Grid */}
-      <div className={`grid gap-4 w-full ${
-        displayImages.length === 1 ? 'grid-cols-1 h-[300px] md:h-[500px]' : 
+      <div className={`grid gap-4 w-full ${displayImages.length === 1 ? 'grid-cols-1 h-[300px] md:h-[500px]' :
         displayImages.length === 2 ? 'grid-cols-1 md:grid-cols-2 h-[600px] md:h-[400px]' :
-        displayImages.length === 3 ? 'grid-cols-1 md:grid-cols-3 md:grid-rows-2 h-[900px] md:h-[500px]' :
-        'grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-[800px] md:h-[600px]'
-      }`}>
+          displayImages.length === 3 ? 'grid-cols-1 md:grid-cols-3 md:grid-rows-2 h-[900px] md:h-[500px]' :
+            'grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-[800px] md:h-[600px]'
+        }`}>
         {displayImages.map((img, i) => {
           let className = "w-full h-full";
           const isLast = i === displayImages.length - 1;
@@ -176,7 +175,7 @@ export default function ProjectSpotlight({ project, onProjectSelect }: ProjectSp
             if (i === 0) className = "md:col-span-2 md:row-span-2";
             else className = "md:col-span-1 md:row-span-1";
           }
-          
+
           return renderMedia(img, i, className, isLast);
         })}
       </div>

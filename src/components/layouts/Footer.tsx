@@ -76,7 +76,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="sm:col-span-1 col-span-2">
               <h2 className="mb-6 text-lg font-bold uppercase text-green-700 dark:text-green-primary/70">Contact</h2>
               <ul className="text-gray-600 dark:text-gray-200">
                 <li className="mb-3">
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li className="mb-3">
                   <p className="hover:underline font-normal" ><span className="font-bold">(+63)</span>-997-1888-427</p>
                 </li>
-                <li className="flex gap-2">
+                <li className="flex flex-wrap gap-2">
                   {/* LinkedIn */}
                   <a
                     href="https://www.linkedin.com/in/jerrytagle/"
@@ -156,7 +156,7 @@ export default function Footer() {
 
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-            © 2025 <Link href="#" className="hover:underline font-normal">Arvo™</Link>. All Rights Reserved.
+            © 2025 <Link href="#" className="hover:underline font-normal">AR.VO IT Services</Link>. All Rights Reserved.
           </span>
         </div>
 

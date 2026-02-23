@@ -18,11 +18,17 @@ export default function Team() {
       description: "Romel drives Arvo's coding standards and innovation, turning creative concepts into efficient, high-quality digital experiences.",
       image: '/team/romel.png',
     },
+    // {
+    //   name: 'Von Bryan B.',
+    //   position: 'UI/UX / Junior Front-End Developer',
+    //   description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
+    //   image: '/team/bryan.png',
+    // },
     {
-      name: 'Von Bryan B.',
-      position: 'UI/UX / Junior Front-End Developer',
-      description: "Bryan leads Arvo's UI/UX and front-end direction, ensuring design excellence and seamless user experiences.",
-      image: '/team/bryan.png',
+      "name": "Darhyl B.",
+      "position": "Junior Back-End Developer",
+      "description": "Darhyl develops application logic and designs database structures to ensure data is organized and functions correctly.",
+      "image": "/team/borcelis.png"
     },
   ]
   return (
@@ -75,7 +81,7 @@ export default function Team() {
               </div>
 
               <div className="absolute top-0 right-0 p-3 transition-opacity duration-300">
-                <div className="w-2 h-2 duration-300 bg-gray-100 dark:bg-gray-800 rounded-full group-hover:bg-darkgreen-primary dark:group-hover:bg-green-primary group-hover:shadow-[0_0_10px_rgba(34,197,94,0.5)] group-hover:dark:shadow-[0_0_10px_#00FF99]" />
+                <div className="w-2 h-2 duration-300 bg-gray-100 dark:bg-transparent rounded-full group-hover:bg-darkgreen-primary dark:group-hover:bg-green-primary group-hover:shadow-[0_0_10px_rgba(34,197,94,0.5)] group-hover:dark:shadow-[0_0_10px_#00FF99]" />
               </div>
             </motion.div>
           ))}

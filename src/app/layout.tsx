@@ -8,8 +8,6 @@ import ArvoScrollToTopButton from "@/components/ui/arvo/ArvoScrollToTopButton";
 // import { ToggleTheme } from "@/components/ui/ToggleTheme";
 import localFont from "next/font/local";
 import { CurrencyProvider } from "@/providers/currencyProvider";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontEthnocentric = localFont({
   src: "../../fonts/Ethnocentric-Regular.otf",
@@ -141,8 +139,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </CurrencyProvider>
         {/* <ToggleTheme className="fixed bottom-20 right-6 z-100 py-2 px-2 bg-gray-100 border border-gray-300 dark:bg-gray-800 dark:border-gray-700" animationType="fade-in-out"/> */}
         {/* </ThemeProvider> */}
-        <SpeedInsights />
-        <Analytics />
 
         <script
           type="application/ld+json"

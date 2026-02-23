@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function HomePage() {
 
   return (
-    <section className="relative flex flex-col inset-shadow- items-center justify-center min-h-screen text-center overflow-hidden px-6 bg-white dark:bg-black-primary">
+    <section className="relative flex flex-col inset-shadow- items-center justify-center min-h-screen text-center overflow-hidden px-6 min-h-screen w-full bg-[#061214] bg-[radial-gradient(ellipse_200%_200%_at_top_center,rgba(96,239,187,0.42)_0%,rgba(10,60,50,0.1)_45%,transparent_80%)] flex flex-col items-center justify-center">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)]"></div>
       <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,white_100%)] dark:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)]"></div>
       <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100\\' height=\\'100\\' fill=\\'none\\' stroke=\\'%2300FF99\\' stroke-width=\\'0.5\\'/></svg>')] dark:opacity-10"></div>
@@ -37,7 +37,11 @@ export default function HomePage() {
         </div>
       </motion.div>
 
-      <AuroraBackground />
+      {/* spotlight effect */}
+      {/* <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.08)_0%,transparent_70%)]"></div>
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,white_100%)] dark:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,#0a0a0a_100%)]"></div>
+      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><rect width=\'100\' height=\'100\' fill=\'none\' stroke=\'%2300FF99\' stroke-width=\'0.5\'/></svg>')] dark:opacity-10"></div> */}
+      {/* <AuroraBackground /> */}
 
       <div className="absolute bottom-0 left-0 z-40 w-full h-14 bg-linear-to-t from-white to-transparent dark:from-black-primary dark:to-transparent"></div>
     </section>

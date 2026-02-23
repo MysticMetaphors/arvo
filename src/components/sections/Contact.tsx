@@ -7,6 +7,8 @@ import { faFacebookF, faInstagram, faLinkedinIn, faThreads, faXTwitter } from "@
 <li className="fa-brands fa-linkedin-in bg-blue-500/70 px-2 text-xl p-1.5 rounded text-white"></li>
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 // import { sub } from "framer-motion/client";
 
 type ContactProp = {
@@ -14,11 +16,11 @@ type ContactProp = {
 }
 
 export default function Contact({ onView }: ContactProp) {
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
 
     const submitButton = e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement;
     submitButton.disabled = true;
@@ -36,6 +38,7 @@ export default function Contact({ onView }: ContactProp) {
       appendToast('append-toast', 'error', 'Please complete the form before submitting.')
       submitButton.disabled = false;
       submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
+      setLoading(false);
       return;
     }
 
@@ -63,13 +66,17 @@ export default function Contact({ onView }: ContactProp) {
 
     const result = await response.json();
     submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
-    // setLoading(false);
+    submitButton.disabled = false;
+    setLoading(false);
 
     if (result.success) {
       appendToast('append-toast', 'success', 'Thanks for reaching out at Arvo!')
       form.reset();
     } else {
       appendToast('append-toast', 'error', 'Unexpected Error Occured!')
+      submitButton.classList.remove('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
+      submitButton.disabled = false;
+      setLoading(false);
     }
   }
 
@@ -114,7 +121,7 @@ export default function Contact({ onView }: ContactProp) {
                 Reach out to us today — let’s collaborate and create something exceptional together.
               </motion.p>
 
-              <div className="space-y-8 p-8">
+              <div className="space-y-8 md:p-8 p-0">
                 {/* Socials Row */}
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
@@ -241,9 +248,9 @@ export default function Contact({ onView }: ContactProp) {
               <button
                 name="submit message"
                 type="submit"
-                className="mt-5 border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
+                className="mt-5 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none flex items-center gap-2 justify-center border bg-darkgreen-primary/5 text-darkgreen-primary border-darkgreen-primary font-semibold transition-all duration-300 py-3 px-6 rounded-md hover:bg-darkgreen-primary hover:text-white dark:bg-green-primary/5 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-400 dark:hover:text-black"
               >
-                Submit Message
+                {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Submit Message"}
               </button>
             </motion.form>
           </div>
