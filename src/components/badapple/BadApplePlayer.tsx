@@ -1,10 +1,11 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Meta = { width: number; height: number; fps: number; count: number };
 type Cue = { start: number; end: number; text: string };
 
-const CELL = 8;
+const CELL = 32;
 const STAR = 42;
 
 const toSec = (s: string) => {
@@ -40,6 +41,7 @@ export function BadApplePlayer() {
   const [subtitle, setSubtitle] = useState("");
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const drawFrame = useCallback((frameStr: string) => {
     const ctx = ctxRef.current;
@@ -67,14 +69,28 @@ export function BadApplePlayer() {
         fetch("/badapple/meta.json").then((r) => r.json() as Promise<Meta>),
         fetch("/badapple/frames.txt.gz").then(async (r) => {
           if (!r.body) throw new Error("no body");
-          const stream = r.body.pipeThrough(new DecompressionStream("gzip"));
+          const total = Number(r.headers.get("Content-Length") || 0);
+          const reader = r.body.getReader();
+          const chunks: Uint8Array[] = [];
+          let received = 0;
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            received += value.length;
+            if (total) setProgress(Math.min(1, received / total));
+          }
+          if (!total) setProgress(1);
+          const stream = new Blob(chunks as BlobPart[])
+            .stream()
+            .pipeThrough(new DecompressionStream("gzip"));
           return new Response(stream).text();
         }),
         fetch("/badapple/bad_apple_ja.srt").then((r) => r.text()),
       ]);
 
       const dot = new Image();
-      dot.src = "/badapple/dot_v2.png";
+      dot.src = "/badapple/dot_v3.png";
       try {
         await dot.decode();
       } catch {
@@ -96,7 +112,6 @@ export function BadApplePlayer() {
         if (ctx) {
           ctx.imageSmoothingEnabled = false;
           ctxRef.current = ctx;
-          drawFrame(framesRef.current[0] ?? "");
         }
       }
 
@@ -163,24 +178,59 @@ export function BadApplePlayer() {
   };
 
   return (
-    <div className="flex min-h-[80vh] flex-col items-center justify-center bg-black py-12">
-      <div className="relative w-[480px] h-[360px]">
+    <div className="flex min-h-[80vh] flex-col items-center justify-center bg-black pt-32 pb-12">
+      <div className="relative aspect-[4/3] w-[min(900px,85vw,calc(70vh*4/3))]">
         <canvas
           ref={canvasRef}
           className="block h-full w-full"
           style={{ imageRendering: "pixelated" }}
         />
-        {ready && !playing && (
-          <button
-            onClick={onPlay}
-            className="absolute inset-0 flex items-center justify-center bg-black/60 text-white"
-          >
-            ▶ Play
-          </button>
+        {!playing && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black">
+            {ready ? (
+              <button
+                onClick={onPlay}
+                aria-label="Play"
+                className="group flex items-center justify-center"
+              >
+                <span className="relative flex h-24 w-24 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full border-2 border-[#0f9] opacity-60" />
+                  <span className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-[#0f9] bg-black shadow-[0_0_24px_#0f9] transition-transform duration-200 group-hover:scale-110">
+                    <span className="ml-1 block h-0 w-0 border-y-[14px] border-l-[24px] border-y-transparent border-l-[#0f9]" />
+                  </span>
+                </span>
+              </button>
+            ) : (
+              <div className="flex w-2/3 max-w-md flex-col items-center gap-3">
+                <div className="h-2 w-full overflow-hidden rounded-full border border-[#0f9]/40 bg-black">
+                  <div
+                    className="h-full bg-[#0f9] shadow-[0_0_12px_#0f9] transition-[width] duration-100 ease-linear"
+                    style={{ width: `${Math.round(progress * 100)}%` }}
+                  />
+                </div>
+                <div className="font-mono text-sm text-[#0f9]">
+                  Loading {Math.round(progress * 100)}%
+                </div>
+              </div>
+            )}
+          </div>
         )}
       </div>
-      <div className="mt-4 h-12 max-w-[80%] whitespace-pre-line text-center text-sm text-white">
-        {subtitle}
+      <div className="mt-6 flex h-20 max-w-[80%] items-start justify-center text-center text-2xl text-[#0f9]">
+        <AnimatePresence mode="wait">
+          {subtitle && (
+            <motion.div
+              key={subtitle}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="whitespace-pre-line"
+            >
+              {subtitle}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <audio ref={audioRef} src="/badapple/bad-apple.mp3" preload="auto" />
     </div>
