@@ -58,18 +58,26 @@ export default function Projects() {
       icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
     },
     {
-      title: "Solara Grand",
-      description: "A luxury resort where every moment feels truly premium, blending refined comfort with unforgettable adventures and immersive experiences designed to excite, inspire, and indulge.",
-      images: [
-        { src: "projects/solara-grand/image.png", caption: "" },
-      ],
-      url: "https://solara-grand.vercel.app/",
-      category: "Landing Pages",
-      tooltip: "Design Only",
-      tooltip_design: "purple",
-      isGray: false,
-      icons: ["nextjs/nextjs-original.svg", "tailwindcss/tailwindcss-original.svg", "html5/html5-original.svg"]
-    },
+    "title": "Cerebrate",
+    "description": "Cerebrate is an agentic AI model designed to communicate intelligently with internal systems.\nUpon receiving user inputs from a web app, Cerebrate processes the raw data. Usually, it specifically inspects uploaded images or videos to understand the context before taking action.\nIt acts as a bridge by contacting the relevant backend microsystems and returning the correct system responses.\nSimultaneously, it replies to the user while writing every event to a persistent log for auditing.\n\n[BUTTON:View an Example Use|]",
+    "images": [
+      {
+        "src": "projects/cerebrate/cerebrate.png",
+        "caption": "Cerebrate Agentic AI",
+      }
+    ],
+    "url": "",
+    "category": "Dev Ops",
+    "tooltip": "Backend Only",
+    "tooltip_design": "blue",
+    "isGray": false,
+    "icons": [
+      "mysql/mysql-original.svg",
+      "debian/debian-original.svg",
+      "python/python-original.svg",
+      "docker/docker-original.svg"
+    ]
+  },
     {
       "title": "Inventory System",
       "description": "A complete inventory system for an entire company's products. Includes purchase/sales orders, invoices, report generation, and more.",
